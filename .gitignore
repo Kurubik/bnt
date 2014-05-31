@@ -1,0 +1,9 @@
+.idea/
+vendor/
+/nbproject/private/
+/access.log
+/error.log
+/cache
+node_modules
+public
+bower_components

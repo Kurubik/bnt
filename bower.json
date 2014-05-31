@@ -1,0 +1,16 @@
+{
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components"
+    ],
+
+    "name"        : "start",
+    "version"     : "1.0.0",
+    "dependencies": {
+        "backbone-amd": "latest",
+        "underscore-amd": "latest",
+        "requirejs": "latest",
+        "normalize.styl": "~3.0.0"
+    }
+}

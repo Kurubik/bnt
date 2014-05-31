@@ -1,0 +1,7 @@
+{
+    "require": {
+        "twig/twig": "1.*",
+        "silex/silex": "~1.2",
+        "swiftmailer/swiftmailer": ">=4.1.2,<4.2-dev"
+    }
+}
