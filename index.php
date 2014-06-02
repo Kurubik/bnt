@@ -28,5 +28,30 @@ $app->get('/{_locale}/', function () use ($app) {
     ->value('_locale', 'ru')
     ->bind('home');
 
+$routes = array (
+    'about',
+    'deal',
+    'buy',
+    'invest',
+    'owners',
+    'contacts',
+    'deal-map',
+    'disclaimer',
+);
+
+$createRoute = function ($routeName, $app) use ($app) {
+    return function () use ($app, $routeName) {
+        return $app['twig']->render($routeName.'.twig', array(
+            'index' => require __DIR__ . '/app/data_'.  $app['locale'] .'/'. $routeName.'.php',
+            'data' => require __DIR__ . '/app/data_'.  $app['locale'] .'/data.php',
+        ));
+    };
+};
+
+foreach ($routes as $routeName) {
+    $app->get('/{_locale}/'.$routeName.'/', $createRoute($routeName, $app))
+        ->bind($routeName);
+}
+
 
 $app->run();
