@@ -87,7 +87,7 @@ gulp.task 'concat', ->
   .pipe(concat(paths.scripts.all_files))
   .pipe(gulp.dest(paths.scripts.destination))
 
-  
+
 gulp.task 'styles', ->
   styles = gulp
   .src paths.styles.source
@@ -125,5 +125,5 @@ gulp.task "watch", ->
 
   .emit 'update'
 
-gulp.task "build", ['scripts', 'styles', 'assets', 'concat']
+gulp.task "build", ['scripts', 'styles', 'assets']
 gulp.task "default", ["build", "watch"]

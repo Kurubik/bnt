@@ -3,7 +3,7 @@ vendor/
 /nbproject/private/
 /access.log
 /error.log
-/cache
-node_modules
-public
+/app/cache/
+/node_modules
+/public
 bower_components
