@@ -1,7 +1,6 @@
 path       = require 'path'
 gulp       = require 'gulp'
 gutil      = require 'gulp-util'
-jade       = require 'gulp-jade'
 stylus     = require 'gulp-stylus'
 CSSmin     = require 'gulp-minify-css'
 browserify = require 'browserify'
@@ -21,27 +20,41 @@ production = process.env.NODE_ENV is 'production'
 
 paths =
   scripts:
-    source: './src/coffee/main.coffee'
+    source: './app/src/coffee/index.coffee'
     destination: './public/js/'
     filename: 'project.js'
-    all : './src/coffee/*.*'
-    all_files: 'project-all.js'
+    all : './app/src/coffee/*.*'
+    all_files: 'project.min.js'
 
   templates:
-    source: './src/jade/*.jade'
-    watch: './src/jade/*.jade'
-    destination: './public/'
+    source: './app/src/jade/*.jade'
+    watch: './app/src/jade/*.jade'
+    destination: './public/templates/'
 
   styles:
-    source: './src/styles/index.styl'
-    watch: './src/styles/*.styl'
+    source: './app/src/stylus/*.styl'
+    watch: './app/src/stylus/**/*.styl'
     destination: './public/css/'
+    min: './public/css/index.css'
 
   assets:
-    source: './src/assets/**/*.*'
-    watch: './src/assets/**/*.*'
+    source: './app/src/assets/**/*.*'
+    watch: './app/src/assets/**/*.*'
     destination: './public/'
 
+  images:
+    source: './src/assets/images/background/resize/*.jpg'
+    destination: './public/images/resize/mobile/'
+    width: 640
+    height: 475
+
+  imagesMin:
+    source: './public/images/resize/*'
+    destination: './public/images/resize'
+
+  concat:
+    scripts: ['']
+    destination: './public/min/js/'
 
 
 handleError = (err) ->
@@ -74,18 +87,7 @@ gulp.task 'concat', ->
   .pipe(concat(paths.scripts.all_files))
   .pipe(gulp.dest(paths.scripts.destination))
 
-
-gulp.task 'templates', ->
-  gulp
-  .src paths.templates.source
-  .pipe(jade(
-      pretty: not production
-    ))
-  .on 'error', handleError
-  .pipe gulp.dest paths.templates.destination
-
-
-
+  
 gulp.task 'styles', ->
   styles = gulp
   .src paths.styles.source
