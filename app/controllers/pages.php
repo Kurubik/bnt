@@ -7,9 +7,6 @@
 
 use app\data\Data;
 
-use Silex\Application\UrlGeneratorTrait;
-use Symfony\Component\HttpFoundation\Response;
-
 $pages = $app['controllers_factory'];
 
 $pages->get('/', function() use ($app) {
@@ -18,6 +15,7 @@ $pages->get('/', function() use ($app) {
 
 
 $routes = array (
+    'home',
     'service',
     'plans',
     'support',
@@ -27,8 +25,8 @@ $routes = array (
 
 $createRoute = function ($routeName, $app) use ($app) {
     return function () use ($app, $routeName) {
-        return $app['twig']->render($routeName.'.twig', array(
-            'index' => '',
+        return $app['twig']->render('/pages/' . $routeName . '.twig', array(
+            'index' => Data\Translates::pageTranslates($app['locale'], $routeName),
             'data' => Data\Translates::translateArray($app['locale']),
           ));
     };

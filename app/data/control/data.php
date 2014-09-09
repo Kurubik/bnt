@@ -12,4 +12,15 @@ Class Translates
         return require_once ROOT . '/app/data/data_'. $locale .'.php';
     }
 
+
+    /**
+     * @param $locale
+     * @param $page
+     * @return array
+     */
+    public static function pageTranslates($locale, $page)
+    {
+        return require_once ROOT . '/app/data/pages/'. $page .'_'. $locale .'.php';
+    }
+
 }

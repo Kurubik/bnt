@@ -9,10 +9,10 @@ $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 
 
 $app->register(new Silex\Provider\TwigServiceProvider(), array (
-    'twig.path' => ROOT . '/app/views',
+    'twig.path' => ROOT . '/app/templates',
     'twig.options' => array (
-//       'cache' => ROOT . '/app/cache/twig.cache',
-       'debug' => false,
+//       'cache' => ROOT . '/app/cache/twig,
+//       'debug' => false,
        'auto_reload' => false,
        'strict_variables' => false,
        'optimizations' => -1,

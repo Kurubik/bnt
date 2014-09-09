@@ -1,0 +1,44 @@
+{% extends 'index.twig' %}
+
+{% block page %}
+<section class="img-B_h">
+  <img alt="" src="{{ app.request.basepath }}/public/images/home.jpg" title="" class="img-B">
+
+  <div class="img-B_text">
+    <h1 class="e-heading c__b">{{ index.heading }}</h1>
+    <div class="img-B_title">{{ index.subheading }}</div>
+  </div>
+
+  <div class="img-B_info-box">{{ index.info_box | raw }}</div>
+
+  <a href="{{ path(index.plans_button.link, {_locale: app.request.locale}) }}" class="text_banner">
+    <span class="text_banner-t">{{ index.plans_button.text }}</span>
+    <div class="text_banner-h">{{ index.plans_button.title }}</div>
+  </a>
+
+  <a href="" class="e-link e-link_ico">
+    <i class="ico-support"></i>
+    <span>{{ data.support }}</span>
+  </a>
+</section>
+
+<section class="plans-b">
+  {% for plans,items in index.plans_banner %}
+      <div class="plans-s">
+        <h3 class="e-title__it">{{ plans }}</h3>
+        {% for banner in items %}
+          <div class="plans-i">
+            <h4 class="e-title__hv hv_big">{{ banner.title }}</h4>
+            <div class="plans-t_text">{{ banner.top_text }}</div>
+            <div class="plans-b_text">{{ banner.bottom_text }}</div>
+            <a href="{{ path( banner.link, {_locale: app.request.locale} ) }}" class="plans-l">{{ banner.text }}</a>
+            <a href="" class="plans-button {{ banner.color }}">{{ banner.button_text }}</a>
+          </div>
+        {% endfor %}
+      </div>
+  {% endfor %}
+</section>
+
+{% include 'interface/banners.twig' %}
+
+{% endblock %}

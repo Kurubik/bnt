@@ -1,0 +1,45 @@
+/**
+ .menu-t => text field menu
+ .menu-i => menu item
+**/
+
+.menu
+  list-style none
+  margin 0
+  padding 0
+  font-family bold
+  font-size 16px
+  &.home
+    color basecolor
+
+  &.inner
+    color #fff
+
+  .header &
+    position absolute
+    right 205px
+    top 51px
+
+  .footer &
+    color #fff
+    position relative
+    margin 0 auto
+    display table
+    padding-right 30px
+
+
+.menu-i
+  display inline-block
+  + .menu-i
+    margin-left 34px
+
+.menu-t
+  display block
+  &:first-letter
+    text-transform uppercase
+  a&
+    transition color .3s ease-in-out
+    &:hover
+      color menuHover
+
+

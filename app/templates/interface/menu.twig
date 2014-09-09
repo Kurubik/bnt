@@ -1,0 +1,13 @@
+<ul class="menu {{ app.request.attributes.get('_route') == 'home' ? 'home' : 'inner' }}">
+  {% for menu, title in data.menu %}
+    {% if app.request.attributes.get('_route') == menu %}
+      <li class="menu-i">
+        <span class="menu-t">{{ title }}</span>
+      </li>
+    {% else %}
+      <li class="menu-i">
+        <a class="menu-t" href="{{ path(menu, {_locale: app.request.locale})}}">{{ title }}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>

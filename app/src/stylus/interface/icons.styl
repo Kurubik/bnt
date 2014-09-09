@@ -1,0 +1,57 @@
+.ico-a
+  position absolute
+  width 12px
+  height 14px
+  display block
+  right 0
+  top 0
+  &.a-bottom
+    &.c__d:after, &.c__d:before
+      background-color basecolor
+    &:after
+      position absolute
+      content ''
+      transform rotate(45deg)
+      height 1px
+      width 6px
+      top 6px
+    &:before
+      position absolute
+      content ''
+      transform rotate(-45deg)
+      height 1px
+      width 6px
+      left 4px
+      top 6px
+
+
+.ico-social
+  width 32px
+  height 32px
+  display inline-block
+  background-position center
+  background-repeat no-repeat
+  transition background-color .3s ease-in-out
+  vertical-align top
+  &:hover
+    background-color rgba(255,255,255, 0.3)
+  + .ico-social
+    margin-left 15px
+
+  &.social_fb
+    background-image url('../images/fb.png')
+
+  &.social_tw
+    background-image url('../images/twitter.png')
+
+
+.ico-vcg
+  position absolute
+  display block
+  right 0
+  top 40px
+  transition opacity .3s ease-in-out
+  &:hover
+    opacity .7
+  img
+    display block
