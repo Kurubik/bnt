@@ -1,3 +1,7 @@
+/**
+  //TODO renew icons arrow styles
+**/
+
 .ico-a
   position absolute
   width 12px
@@ -23,6 +27,55 @@
       width 6px
       left 4px
       top 6px
+
+
+.ico-a_big-right
+  position absolute
+  width 10px
+  height 10px
+  display block
+  top 50%
+  margin-top -5px
+  right 0
+  &:after
+    position absolute
+    content ''
+    transform rotate(45deg)
+    width 10px
+    height 3px
+    background-color #fff
+  &:before
+    position absolute
+    content ''
+    transform rotate(-45deg)
+    width 10px
+    height 3px
+    background-color #fff
+    top 5px
+
+.ico-a_right
+  position absolute
+  width 9px
+  height 10px
+  display block
+  top 50%
+  margin-top -4px
+  right 0
+  &:after
+    position absolute
+    content ''
+    transform rotate(45deg)
+    width 9px
+    height 2px
+    background-color #fff
+  &:before
+    position absolute
+    content ''
+    transform rotate(-45deg)
+    width 9px
+    height 2px
+    background-color #fff
+    top 5px
 
 
 .ico-social
@@ -55,3 +108,20 @@
     opacity .7
   img
     display block
+
+
+
+.ico-support
+  display inline-block
+  width 29px
+  height 100%
+  vertical-align middle
+  margin-right 8px
+  svg
+    width 29px
+    position absolute
+    height h = 30px
+    top 50%
+    transform translateY(-50%)
+    .filled
+      fill #fff !important

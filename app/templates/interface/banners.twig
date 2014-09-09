@@ -1,7 +1,9 @@
 <section class="f-banner">
   {% for banner in index.bottom_section %}
     <div class="f-banner_b">
-      <img alt="" src="{{ app.request.basepath }}/{{ banner.ico }}" title="">
+      <div class="f-banner_svg">
+        {{ banner.svg | raw }}
+      </div>
       <h3 class="e-title__hv hv_med">{{ banner.title }}</h3>
       <div class="f-banner_t">{{ banner.text }}</div>
     </div>

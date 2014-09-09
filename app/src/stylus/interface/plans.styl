@@ -1,0 +1,99 @@
+.plans-b
+  margin 148px 100px 0 100px
+  clearfix()
+
+.plans-t_text
+  font-size 14px
+  line-height 18px
+  font-family italic
+  color rgb(156,156,156)
+  margin-top 8px
+
+
+.plans-b_text
+  font-size 14px
+  line-height 20px
+  font-family reg
+  color rgba(0,0,0, 0.65)
+  position absolute
+  bottom 25px
+  display block
+
+.plans-l
+  color #fff
+  font-family italic
+  display block
+  margin-top 7px
+
+
+.plans-button
+  color #fff
+  display block
+  position absolute
+  font-family italic
+  font-size 18px
+  height 60px
+  width 160px
+  box-sizing border-box
+  bottom -40px
+  right -15px
+  &_text
+    top 26px
+    right 15px
+    position absolute
+    padding-right 17px
+    white-space nowrap
+    box-sizing border-box
+
+
+
+.plans-s
+  float left
+  &:nth-child(even)
+    margin-left 30px
+
+
+.plans-bg
+  position absolute
+  top 0
+  left 0
+  bottom 0
+  right 0
+  z-index 2
+
+
+.plans-content
+  position relative
+  z-index 3
+  height 100%
+
+
+.plans-i
+  width 226px
+  height 305px
+  display inline-block
+  position relative
+  vertical-align top
+  box-sizing border-box
+  padding 15px 20px 0 20px
+  + .plans-i
+    margin-left 32px
+  .individual &
+    &:nth-child(2)
+      .plans-button
+        background-color gray
+    &:nth-child(3)
+      .plans-button
+        background-color yellow
+    &:nth-child(4)
+      .plans-button
+        background-color green
+    .plans-bg
+      background-color rgba(0,0,0, 0.53)
+  .business &
+    &:nth-child(2)
+      .plans-button
+        background-color seagreen
+    .plans-bg
+      background-color rgba(0,0,0, 0.3)
+

@@ -4,22 +4,91 @@
   font-family heavy
   font-size 48px
   line-height 60px
+  margin 0
+  padding 0
 
 .e-title__hv
   font-family heavy
   color #fff
+  margin 0
+  padding 0
   &.hv_big
     font-size 24px
     line-height 28px
-  &.hv_smal
-    font-size 20px
+    text-transform uppercase
+    letter-spacing 0.1em
+  &.hv_med
+    font-size 21px
+  .plans-i &
+    width 80%
+
+
+/*
+  .text_banner-t => banner text area
+  .text_banner-h => banner title
+*/
+
+.t-banner_t
+  font-size 16px
+  line-height 22px
+  font-family italic
+  color #fff
+  display block
+  width 266px
+  margin-bottom 34px
+
+
+.t-banner_h
+  font-size 20px
+  color #fff
+  font-family heavy
+  text-transform uppercase
+  letter-spacing 0.15em
+  position relative
+  display inline-block
+  padding-right 20px
+  white-space nowrap
+  text-overflow ellipsis
+  overflow hidden
+  max-width 100%
+  box-sizing border-box
+
+
+.t-banner
+  position absolute
+  display block
+  width 416px
+  height 160px
+  box-sizing border-box
+  padding 30px
+  bottom -65px
+  right -100px
+
+.t-banner_s
+  position relative
+
+
+.e-title__it
+  font-size 24px
+  color #fff
+  margin 0
+  padding 0
+  font-family italic
+  .plans-s &
+    border-bottom 2px solid rgba(98, 105, 103, 0.2)
+    padding-bottom 15px
+    margin-bottom 25px
+  &:first-letter
+    text-transform uppercase
+
 
 
 /*
   c__* => color {black/green/yellow}
 */
 
-
 .c__b
   color #000
 
+.bg__brown
+  background-color rgba(60,46,36, 0.86)
