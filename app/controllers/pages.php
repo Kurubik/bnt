@@ -15,13 +15,23 @@ $pages->get('/', function() use ($app) {
 
 
 $routes = array (
-    'home',
     'service',
     'plans',
     'support',
     'contacts',
     'company'
 );
+
+
+$pages->get('/{_locale}/', function() use ($app) {
+    return $app['twig']->render('/pages/home.twig', array (
+         'index' =>  Data\Translates::pageTranslates($app['locale'], 'home'),
+          'data' => Data\Translates::translateArray($app['locale']),
+      ));
+})
+  ->assert('_lcoale', 'en')
+  ->bind('home');
+
 
 $createRoute = function ($routeName, $app) use ($app) {
     return function () use ($app, $routeName) {
