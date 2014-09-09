@@ -4,6 +4,17 @@ return array (
     'page_heading' => 'International mobile operator with flat rates.',
     'download_text' => 'Download fact sheet',
 
+
+    'business' => array (
+        'title' => 'Business pull',
+        'list' => array (
+            'Morbi quis bibendum arcu. Etiam metus lorem, sagittis ac odio at, semper finibus velit. ',
+            'Quisque diam leo, mattis a mi a, laoreet maximus augue.',
+            'Sed tincidunt diam at dui rutrum, vel ullamcorper neque sagittis.',
+            'Nullam lobortis nisl nisi, vel sodales felis dictum sit amet. Suspendisse enim urna, rhoncus in nunc non, accumsan ornare nulla. '
+        )
+    ),
+
     'plans' => array (
         array (
             'title' => 'Dialoq fuji',

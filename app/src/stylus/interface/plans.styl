@@ -115,7 +115,7 @@
 
   &.hidden
     opacity 0
-    height 328px
+    height 376px
     overflow hidden
   i
     font-family italic
@@ -128,6 +128,12 @@
   display inline-block
   position relative
   margin-top 65px
+  vertical-align top
+  &.business
+    width 225px
+    border-top 2px solid rgba(98,105,103, 0.2)
+  + .plans_info
+    margin-left 30px
   .suspend
     color rgb(135,135,135)
 
@@ -170,3 +176,22 @@
   font-size 14px
   line-height 16px
   margin-left 14px
+
+
+.business_heading
+  margin 39px 0 0 0
+  padding 0
+  font-family italic
+  font-size 24px
+  color #fff
+  font-weight 100
+
+
+.business_list
+  list-style none
+  margin 0
+  padding 0
+  li
+    padding 15px 0
+    + li
+      border-top 1px dashed

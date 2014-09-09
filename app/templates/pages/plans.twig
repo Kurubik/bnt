@@ -39,15 +39,22 @@
         </div>
       {% endfor %}
 
-
       <ul class="plan_general-list">
         <li>{{ data.time_connect }}&nbsp;<strong>{{ index.plans[0].list.conntect }}</strong></li>
         <li>{{ data.per_minute }}<br><strong>{{ index.plans[0].list.per_min }}</strong></li>
-        <li>{{ data.out_sms }}<strong>{{ index.plans[0].list.outgoing_sms }}</strong></li>
-        <li>{{ data.tarif_internet }}<strong>{{ index.plans[0].list.overage_internet }}</strong></li>
+        <li>{{ data.out_sms }}<br><strong>{{ index.plans[0].list.outgoing_sms }}</strong></li>
+        <li>{{ data.tarif_internet }}<br><strong>{{ index.plans[0].list.overage_internet }}</strong></li>
         <li class="suspend">{{ index.plans[0].list.suspend }}</li>
       </ul>
+    </div>
 
+    <div class="plans_info business">
+      <h3 class="business_heading">{{ index.business.title }}</h3>
+      <ul class="business_list">
+        {% for list in index.business.list %}
+          <li>{{ list }}</li>
+        {% endfor %}
+      </ul>
     </div>
 
   </div>
