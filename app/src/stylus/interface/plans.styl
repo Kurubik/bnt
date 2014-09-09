@@ -8,6 +8,7 @@
   font-family italic
   color rgb(156,156,156)
   margin-top 8px
+  padding-bottom 22px
 
 
 .plans-b_text
@@ -15,8 +16,7 @@
   line-height 20px
   font-family reg
   color rgba(0,0,0, 0.65)
-  position absolute
-  bottom 25px
+  margin-top 50px
   display block
 
 .plans-l
@@ -33,14 +33,17 @@
   font-family italic
   font-size 18px
   height 60px
-  width 160px
+  min-width 160px
   box-sizing border-box
   bottom -40px
   right -15px
+  clearfix()
+  padding-left 13px
   &_text
     top 26px
-    right 15px
-    position absolute
+    margin-right 15px
+    float right
+    position relative
     padding-right 17px
     white-space nowrap
     box-sizing border-box
@@ -70,7 +73,7 @@
 
 .plans-i
   width 226px
-  height 305px
+  min-height 305px
   display inline-block
   position relative
   vertical-align top
@@ -79,21 +82,91 @@
   + .plans-i
     margin-left 32px
   .individual &
-    &:nth-child(2)
+    &.plan_1
       .plans-button
         background-color gray
-    &:nth-child(3)
+    &.plan_2
       .plans-button
         background-color yellow
-    &:nth-child(4)
+    &.plan_3
       .plans-button
         background-color green
     .plans-bg
       background-color rgba(0,0,0, 0.53)
   .business &
-    &:nth-child(2)
+    &.plan_1
       .plans-button
         background-color seagreen
     .plans-bg
       background-color rgba(0,0,0, 0.3)
 
+
+.plan_info-list
+  margin 8px 0 15px 0
+  padding 0
+  color #fff
+  list-style none
+  font-size 16px
+  line-height 24px
+
+  .base_tarif
+    display block
+    margin-top 3px
+
+  &.hidden
+    opacity 0
+    height 328px
+    overflow hidden
+  i
+    font-family italic
+
+  li
+    padding 10px 0
+
+
+.plans_info
+  display inline-block
+  position relative
+  margin-top 65px
+  .suspend
+    color rgb(135,135,135)
+
+
+.plan_general-list
+  position absolute
+  bottom 110px
+  z-index 3
+  right 0
+  width 100%
+  margin 0
+  background rgba(0,0,0, 0.5)
+  padding 0
+  text-align center
+  color #fff
+  list-style none
+  font-size 16px
+  line-height 24px
+  li
+    padding 19px 0 17px 0
+    margin 0 25px
+    + li
+      border-top 1px dashed rgba(98, 105, 103, 0.1)
+
+.plan_download
+  text-align center
+  padding 29px 0 35px 0
+
+.plan_download-content
+  display inline-block
+  padding-left 5px
+
+
+.plan_download-text
+  display inline-block
+  width 80px
+  vertical-align middle
+  color rgb(135,135,135)
+  font-family italic
+  font-size 14px
+  line-height 16px
+  margin-left 14px

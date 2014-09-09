@@ -12,6 +12,8 @@
   &.a-bottom
     &.c__d:after, &.c__d:before
       background-color basecolor
+      .inner &
+        background-color #fff
     &:after
       position absolute
       content ''
@@ -125,3 +127,29 @@
     transform translateY(-50%)
     .filled
       fill #fff !important
+
+
+.ico-a_download
+  display inline-block
+  position relative
+  height 15px
+  width 1px
+  background-color rgb(135,135,135)
+  transform scale(-1)
+  vertical-align middle
+  &:after, &:before
+    content ''
+    display block
+    position absolute
+    top 3px
+    height 1px
+    background-color rgb(135,135,135)
+    width 8px
+
+  &:after
+    transform rotate(45deg)
+    left 0
+
+  &:before
+    transform rotate(-45deg)
+    right 0
