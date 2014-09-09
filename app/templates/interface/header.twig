@@ -1,5 +1,11 @@
 <header class="header">
-  <img alt="dialoq" src="{{ app.request.basepath }}/public/images/logo.png" title="dialoq" class="logo">
+  {% if app.request.attributes.get('_route') == 'home' %}
+    <img alt="dialoq" src="{{ app.request.basepath }}/public/images/logo.png" title="dialoq" class="logo">
+  {% else %}
+    <a href="">
+      <img alt="dialoq" src="{{ app.request.basepath }}/public/images/logo_inner.png" title="dialoq" class="logo">
+    </a>
+  {% endif %}
   {% include 'interface/menu.twig' %}
   {% include 'interface/lang.twig' %}
 </header>
