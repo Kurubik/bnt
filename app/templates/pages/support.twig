@@ -29,5 +29,26 @@
           </a>
       </div>
     </div>
+
+    <section class="support_section">
+      <div class="left_side">
+        {% for list in index.support_list %}
+          <div class="support_list">
+            <h3 class="e-title__hv hv_small-upper">{{ list.title }}</h3>
+            <ul class="e_list">
+              {% for item in list.list %}
+                <li class="e_list-item">
+                  <span class="e_list-title">{{ item.title }}<i class="ico-a_circle"></i></span>
+                  <div class="e_list-hidden">{{ item.list }}</div>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="right_side">
+        <h3 class="e-title__it title_border">{{ index.right_section.title }}</h3>
+      </div>
+    </section>
   </section>
 {% endblock %}
