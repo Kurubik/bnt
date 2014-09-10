@@ -1,7 +1,9 @@
 <?php
  return array(
-    'title' => 'We are here 24/7 for your comfort',
-     'address' => '',
+    'title' => 'We are here 24/7<br>for your comfort',
+     'contactInfo' => 'Dialoq CIA
+                       <br>ProiQuai de l’Ile 17 — CP 2251
+                       <br>1211 Genève 2em',
      'phones' => array(
          'usa' => array(
              'name' => 'USA',
