@@ -1,6 +1,6 @@
 {% extends 'layout.twig' %}
 {% block content %}
-<div class="content {{ app.request.attributes.get('_route') == 'home' ? 'home' : '' }}">
+<div class="content {{ app.request.attributes.get('_route') == 'home' ? 'home' : 'inner' }}">
   <div class="wrapper">
     {% include 'interface/header.twig' %}
     {% block page %}{% endblock %}

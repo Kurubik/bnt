@@ -2,7 +2,7 @@
   {% if app.request.attributes.get('_route') == 'home' %}
     <img alt="dialoq" src="{{ app.request.basepath }}/public/images/logo.png" title="dialoq" class="logo">
   {% else %}
-    <a href="">
+    <a href="{{ path('home', {_locale: app.request.locale}) }}">
       <img alt="dialoq" src="{{ app.request.basepath }}/public/images/logo_inner.png" title="dialoq" class="logo">
     </a>
   {% endif %}

@@ -1,6 +1,7 @@
 <?php
  return array(
-    'title' => 'We are here 24/7<br>for your comfort',
+    'page_title' => 'We are here 24/7<br>for your comfort',
+     'title' => 'Company',
      'contactInfo' => 'Dialoq CIA
                        <br>ProiQuai de l’Ile 17 — CP 2251
                        <br>1211 Genève 2em',
