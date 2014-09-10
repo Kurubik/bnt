@@ -153,3 +153,37 @@
   &:before
     transform rotate(-45deg)
     right 0
+
+
+
+.ico-a_circle
+  width 16px
+  height 16px
+  position relative
+  display inline-block
+  border-radius 50%
+  margin-left 8px
+  background-color rgba(255,255,255, 0.5)
+  transition all .25s ease-in-out
+  top 1px
+  &.sel
+    transform scale(-1)
+    background rgba(255,255,255, 1)
+    &:after, &:before
+      margin-top -1px
+  &:after, &:before
+    display block
+    position absolute
+    content ''
+    width 5px
+    height 2px
+    top 50%
+    left 4px
+    background-color #2f2f2e
+    transition all .3s ease-in-out
+  &:after
+    transform rotate(-45deg)
+    margin-left 3px
+
+  &:before
+    transform rotate(45deg)
