@@ -39,5 +39,29 @@ return array(
             'message' => 'Your question or message. 1000 characters max.',
         ),
     ),
+    'email' => 'E-mail',
 
+
+  'contacts' => array(
+        array(
+          'name' => 'USA',
+          'number' => '+1 973 652-33-10',
+        ),
+        array(
+          'name' => 'Russia',
+          'number' => '+7 964 771-38-00',
+        ),
+        array(
+          'name' => 'Europe',
+          'number' => '+371 277-35-235',
+        ),
+        array(
+          'name' => 'Ukraine',
+          'number' => '+380 44 392-21-75',
+        ),
+    ),
+
+    'emails' => array (
+        'support@dialoq.com'
+    )
 );

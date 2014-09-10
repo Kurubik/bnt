@@ -1,4 +1,6 @@
 @import 'icons'
+@import 'list'
+@import 'contacts'
 
 .e-heading
   font-family heavy
@@ -38,6 +40,12 @@
     font-size 21px
   .plans-i &
     width 80%
+  &.hv_small
+    font-size 20px
+  &.hv_small-upper
+    text-transform uppercase
+    letter-spacing 0.15em
+    font-size 20px
 
 
 /*
@@ -91,7 +99,7 @@
   margin 0
   padding 0
   font-family italic
-  .plans-s &
+  &.title_border
     border-bottom 2px solid rgba(98, 105, 103, 0.2)
     padding-bottom 15px
     margin-bottom 25px
@@ -103,8 +111,6 @@
 /*
   c__* => color {black/green/yellow}
 */
-
-inputgrey = rgb(135,135,135)
 
 .c__b
   color #000
@@ -137,7 +143,6 @@ inputgrey = rgb(135,135,135)
   position relative
   line-height 46px
   box-sizing border-box
-  padding 0 35px 0 30px
-
-.e-form_holder
-  position relative
+  padding 0 40px 0 28px
+  .e-heading-inner &
+    margin-top 34px
