@@ -1,6 +1,7 @@
 @import 'icons'
 @import 'list'
 @import 'contacts'
+@import 'banner'
 
 .e-heading
   font-family heavy
@@ -123,7 +124,10 @@
 
 .e-support_holder
   position relative
-  width 226px
+  .right_side &
+    border-top 2px solid rgba(98,105,103,0.2)
+    padding-top 30px
+
 
 .e-support-text
   margin-bottom 15px
@@ -139,7 +143,7 @@
   color #fff
   display inline-block
   height 46px
-  /*min-width 226px*/
+  white-space nowrap
   position relative
   line-height 46px
   box-sizing border-box

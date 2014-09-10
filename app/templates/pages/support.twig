@@ -64,7 +64,32 @@
             {% endfor %}
           {% endif %}
         </ul>
+        <div class="right_form c__w">
+          {% include 'interface/form.twig' %}
+        </div>
+        <div class="e-support_holder">
+          {% include 'interface/online_support.twig' %}
+        </div>
       </div>
+    </section>
+    <section class="two_banner">
+      {% for banner in index.banners %}
+        <div class="banner_info">
+          <div class="plans-bg"></div>
+          <div class="banner_content">
+            <h4 class="e-title__hv hv_big">{{ banner.title }}</h4>
+            <div class="banner_text">
+              <i class="banner_svg">{% include 'svg/blump.twig' %}</i>
+              <div class="banner_text-content">{{ banner.text }}</div>
+            </div>
+          </div>
+        {% if banner.button is defined %}
+          <a href="" class="plans-button brown">
+            <div class="plans-button_text">{{ banner.button }}<i class="ico-a_right"></i></div>
+          </a>
+        {%  endif %}
+        </div>
+      {% endfor %}
     </section>
   </section>
 {% endblock %}
