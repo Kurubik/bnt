@@ -2,7 +2,7 @@
 
 {% block page %}
 
-<section class="p_inner">
+<section class="p_inner {{ app.request.attributes.get('_route') == 'plans' ? 'top_style' : '' }}">
   <div class="inner_content">
     <div class="e-inner_heading">
       <h1 class="e-heading c__w">{{ index.page_heading }}</h1>
@@ -55,6 +55,13 @@
           <li>{{ list }}</li>
         {% endfor %}
       </ul>
+      <a href="" class="business_button">
+        <div class="business_button_text">{{ index.business.button_text }}</div>
+        <div class="business_button-arrow">
+          {{ index.business.button_short_text }}
+          <i class="ico-a_right"></i>
+        </div>
+      </a>
     </div>
 
   </div>

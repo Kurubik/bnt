@@ -12,7 +12,9 @@ return array (
             'Quisque diam leo, mattis a mi a, laoreet maximus augue.',
             'Sed tincidunt diam at dui rutrum, vel ullamcorper neque sagittis.',
             'Nullam lobortis nisl nisi, vel sodales felis dictum sit amet. Suspendisse enim urna, rhoncus in nunc non, accumsan ornare nulla. '
-        )
+        ),
+        'button_text' => 'Account for business purposes. With possibility to use couple of numbers.',
+        'button_short_text' => 'Get a quote'
     ),
 
     'plans' => array (
