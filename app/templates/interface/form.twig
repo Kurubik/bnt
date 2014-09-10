@@ -7,5 +7,8 @@
   <input id="phone_number" type="text" placeholder="{{ data.contact_form.placeholder.phone }}">
   <label for="your_message">{{ data.contact_form.labels.message }}</label>
   <textarea id="your_message" placeholder="{{ data.contact_form.placeholder.message }}"></textarea>
-  <button>{{ data.contact_form.labels.send }}</button>
+  <button class="form_button" type="submit">
+    {{ data.contact_form.labels.send }}
+    <i class="ico-a_right"></i>
+  </button>
 </form>
