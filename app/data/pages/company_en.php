@@ -7,19 +7,19 @@
      'phones' => array(
          'usa' => array(
              'name' => 'USA',
-             'number' => '+1 973 652-33-10',
+             'number' => '<a href="tel:+19736523310">+1 973 652-33-10</a>',
          ),
          'russia' => array(
              'name' => 'Russia',
-             'number' => '+7 964 771-38-00',
+             'number' => '<a href="tel:+79647713800">+7 964 771-38-00</a>',
          ),
          'europe' => array(
              'name' => 'Europe',
-             'number' => '+371 277-35-235',
+             'number' => '<a href="tel:+37127735235">+371 277-35-235</a>',
          ),
          'ukraine' => array(
              'name' => 'Ukraine',
-             'number' => '+380 44 392-21-75',
+             'number' => '<a href="tel:+380443922175">+380 44 392-21-75</a>',
          ),
      ),
  );

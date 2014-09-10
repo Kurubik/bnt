@@ -10,6 +10,14 @@
     <div class="e-contactInformation c__w">
         {{ index.contactInfo|raw }}
     </div>
+    <div class="e-country_contacts c__w">
+        {% for country in index.phones %}
+            <ul>
+                <li>{{ country.name|raw }}</li>
+                <li>{{ country.number|raw }}</li>
+            </ul>
+        {% endfor %}
+    </div>
 </div>
     <a href="" class="support-link bg__brown">
         <i class="ico-support">
