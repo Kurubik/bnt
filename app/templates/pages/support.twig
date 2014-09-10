@@ -48,6 +48,22 @@
       </div>
       <div class="right_side">
         <h3 class="e-title__it title_border">{{ index.right_section.title }}</h3>
+        <ul class="contacts_list">
+          {% for item in data.contacts %}
+            <li>
+              <span>{{ item.name }}</span><br>
+              <strong><a href="tel:{{ item.number }}">{{  item.number }}</a></strong>
+            </li>
+          {% endfor %}
+          {% if data.emails is defined %}
+            {% for email in data.emails %}
+              <li>
+                <span>{{ data.email }}</span><br>
+                <i><a href="mailto:{{ email }}">{{ email }}</a></i>
+              </li>
+            {% endfor %}
+          {% endif %}
+        </ul>
       </div>
     </section>
   </section>
