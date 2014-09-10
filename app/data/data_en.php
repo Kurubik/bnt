@@ -20,6 +20,7 @@ return array(
     'time_connect' => 'One time connection fee',
     'per_minute' => 'Overage — per minutes',
     'out_sms' => 'Overage — outgoing SMS',
-    'tarif_internet' => 'Overage — internet'
+    'tarif_internet' => 'Overage — internet',
+    'find' => 'Find out',
 
 );
