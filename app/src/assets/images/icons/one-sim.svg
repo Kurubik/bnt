@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd">
 <svg version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-	 x="0px" y="0px" width="60px" height="40px" viewBox="0 0 60 40" xml:space="preserve">
+	 x="0px" y="0px" width="60px" height="52px" viewBox="0 0 60 40" xml:space="preserve">
 <g>
 	<polygon fill="none" points="2,2 2,40 60,40 60,15.346 46.653,2 	"/>
 	<path fill="#626967" d="M1,1v40h60V14.932L47.067,1H1z M60,40H2V2h44.654L60,15.346V40z"/>
