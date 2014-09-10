@@ -86,4 +86,17 @@ return array (
         )
     ),
 
+
+    'banners' => array (
+        array (
+            'title' => 'did you know',
+            'text' => 'Nunc ut erat felis. Sed dapibus vel dui a sollicitudin. Ut fermentum venenatis augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.',
+            'button' => 'Plans'
+        ),
+        array (
+            'title' => 'more than that',
+            'text' => 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.  Nunc ut erat felis. Sed dapibus vel dui a sollicitudin. Ut fermentum venenatis augue. Vestibulum ante ipsum primis in faucibus orci luctus'
+        ),
+    )
+
 );

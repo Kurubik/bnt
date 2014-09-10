@@ -1,0 +1,14 @@
+<form class="e-contact_form">
+  <label for="your_name">{{ data.contact_form.labels.name }}</label>
+  <input id="your_name" type="text" placeholder="{{ data.contact_form.placeholder.name }}">
+  <label for="email">{{ data.contact_form.labels.mail }}</label>
+  <input id="email" type="text" placeholder="{{ data.contact_form.placeholder.mail }}">
+  <label for="phone_number">{{ data.contact_form.labels.phone }}</label>
+  <input id="phone_number" type="text" placeholder="{{ data.contact_form.placeholder.phone }}">
+  <label for="your_message">{{ data.contact_form.labels.message }}</label>
+  <textarea id="your_message" placeholder="{{ data.contact_form.placeholder.message }}"></textarea>
+  <button class="form_button" type="submit">
+    {{ data.contact_form.labels.send }}
+    <i class="ico-a_right"></i>
+  </button>
+</form>
