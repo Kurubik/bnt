@@ -4,7 +4,7 @@
 <div class="block-B">
     <div class="e-heading-inner">
         <h1 class="e-heading c__w">
-            {{ index.title|raw }}
+            {{ index.page_title|raw }}
         </h1>
     </div>
     <div class="e-contactInformation c__w">
@@ -13,7 +13,6 @@
 </div>
     <a href="" class="support-link bg__brown">
         <i class="ico-support">
-            {% verbatim %}
             <?xml version="1.0" encoding="utf-8"?>
             <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd">
             <svg version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 48 51" xml:space="preserve">
@@ -42,7 +41,6 @@
               C20.947,46.971,20.97,47.125,20.992,47.279z"/>
           </g>
         </svg>
-            {% endverbatim %}
         </i>
         <span>{{ data.support }}</span>
     </a>
