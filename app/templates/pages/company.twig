@@ -20,12 +20,15 @@
     </div>
 </div>
 <section class="e-contact_form_holder">
-    <div class="e-support_holder e-support_holder-company"></div>
-    <a href="" class="support-link bg__brown">
-        <i class="ico-support">
-            <?xml version="1.0" encoding="utf-8"?>
-            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd">
-            <svg version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 48 51" xml:space="preserve">
+    <div class="e-support_holder e-support_holder-company">
+        <div class="e-support-text">
+            {{ data.support_text }}
+        </div>
+        <a href="" class="e-link bg__brown">
+            <i class="ico-support">
+                <?xml version="1.0" encoding="utf-8"?>
+                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd">
+                <svg version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 48 51" xml:space="preserve">
           <g>
               <path fill="none" d="M41.982,20.864h-0.42c0-0.08-0.011-0.156-0.012-0.236c-0.814-0.398-1.712-0.648-2.658-0.714v14.918
               c3.811-0.263,6.832-3.507,6.832-7.458C45.725,24.583,44.212,22.148,41.982,20.864z"/>
@@ -51,9 +54,23 @@
               C20.947,46.971,20.97,47.125,20.992,47.279z"/>
           </g>
         </svg>
-        </i>
-        <span>{{ data.support }}</span>
-    </a>
+            </i>
+            <span>{{ data.support }}</span>
+        </a>
+    </div>
+    <div class=".e-form_holder e-form_holder-company c__w">
+        <form class="e-contact_form">
+            <label for="your_name">{{ data.contact_form.labels.name }}</label>
+            <input id="your_name" type="text" placeholder="{{ data.contact_form.placeholder.name }}">
+            <label for="email">{{ data.contact_form.labels.mail }}</label>
+            <input id="email" type="text" placeholder="{{ data.contact_form.placeholder.mail }}">
+            <label for="phone_number">{{ data.contact_form.labels.phone }}</label>
+            <input id="phone_number" type="text" placeholder="{{ data.contact_form.placeholder.phone }}">
+            <label for="your_message">{{ data.contact_form.labels.message }}</label>
+            <textarea id="your_message" placeholder="{{ data.contact_form.placeholder.message }}"></textarea>
+            <button>{{ data.contact_form.labels.send }}</button>
+        </form>
+    </div>
 </section>
 </section>
 {% endblock %}
