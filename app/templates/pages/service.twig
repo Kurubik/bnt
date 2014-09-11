@@ -1,0 +1,21 @@
+{% extends 'index.twig' %}
+
+{% block page %}
+  <section class="p_inner">
+    <div class="block-B">
+      <div class="e-heading-inner">
+        <h1 class="e-heading c__w">{{ index.page_title | raw }}</h1>
+      </div>
+      <a href="{{ path(data.plans_button.link, {_locale: app.request.locale}) }}" class="e-inner-banner bg__trans_grey">
+        <div class="t-banner_s">
+          <span class="t-banner_t">{{ data.plans_button.text }}</span>
+          <div class="t-banner_h">{{ data.plans_button.title }}<i class="ico-a_big-right"></i></div>
+        </div>
+      </a>
+    </div>
+  <section class="e-content_container">
+    <div class="e-left_column"></div>
+    <div class="e-right_column"></div>
+  </section>
+  </section>
+{% endblock %}
