@@ -42,7 +42,14 @@ return array (
         'title' => 'Payment methods',
         'text' => 'Ut sodales risus gravida fringilla laoreet. Praesent vitae diam rhoncus, vulputate erat quis, malesuada lectus. Nam a ultricies mauris. Sed at mauris consectetur, iaculis nisi vel, consequat orci:',
         'methods' => array (
-            ''
+            '/public/images/payment/visa.jpg',
+            '/public/images/payment/master.jpg',
+            '/public/images/payment/ae.jpg',
+            '/public/images/payment/hz.jpg',
+            '/public/images/payment/paypal.jpg',
+            '/public/images/payment/wu.jpg',
+            '/public/images/payment/skrill.jpg',
+            '/public/images/payment/wp.jpg',
         ),
         'short_text' => 'More ways to pay'
     ),

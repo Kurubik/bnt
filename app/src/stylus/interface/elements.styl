@@ -102,7 +102,7 @@
   padding 0
   font-family italic
   &.title_border
-    border-bottom 2px solid rgba(98, 105, 103, 0.2)
+    border-bottom 2px solid rgba(255, 255, 255, 0.2)
     padding-bottom 15px
     margin-bottom 25px
   &:first-letter
@@ -182,7 +182,7 @@ inputgrey = rgb(135,135,135)
 .e-right_column
   margin-left 30px
   &.margin_top
-    margin-top 135px  margin-top 135px
+    margin-top 135px
 
 .e-column_block
   position relative
@@ -222,3 +222,70 @@ inputgrey = rgb(135,135,135)
   position relative
   margin 0 auto
   margin-bottom -30px
+
+
+.column_columns
+  list-style none
+  margin 30px 0 0 0
+  padding 0
+  li
+    display inline-block
+    vertical-align top
+    position relative
+    width 29%
+    border-top 1px solid #fff
+    padding-top 20px
+    + li
+      margin-left 6.2%
+
+.columns_title
+  color rgb(188,197,203)
+  text-transform uppercase
+  font-family heavy
+  font-size 14px
+  letter-spacing 0.1em
+  margin 0
+  padding 0
+
+.columns_text
+  font-family italic
+  font-size 14px
+  line-height 20px
+  color #fff
+  margin-top 12px
+
+.service_banner-right_svg
+  position absolute
+  top 50%
+  transform translateY(-50%)
+  width 48%
+  right 20px
+
+
+.svg_section
+  display inline-block
+  vertical-align middle
+  + .svg_section
+    margin-left 15px
+  &.svg_section-width
+    margin-left 12px
+
+.svg_white
+  svg
+    path
+      fill #fff
+    line, rect
+      stroke #fff
+
+
+.svg_section-width
+  width 90px
+  margin-left 13px
+  img
+    display inline-block
+    margin 2px 3px
+
+.svg_section
+  .svg_charges
+    width 37px
+    height auto

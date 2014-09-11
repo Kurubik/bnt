@@ -202,6 +202,7 @@
   width 40px
   font-style normal
   margin-right 15px
+  text-indent -3px
 
 
 .ico-a_small
@@ -215,12 +216,48 @@
     transform rotate(45deg)
     width 10px
     height 1px
-    background-color rgba(255,255,255, 0.4)
+    background-color rgba(255,255,255, 0.5)
   &:before
     position absolute
     content ''
     transform rotate(-45deg)
     width 10px
     height 1px
-    background-color rgba(255,255,255, 0.4)
+    background-color rgba(255,255,255, 0.5)
     top 7px
+
+
+.ico_arrow-button
+  width 20px
+  height 20px
+  border-radius 50%
+  border none
+  &:after, &:before
+    display block
+    position absolute
+    content ''
+    width 7px
+    height 2px
+    top 50%
+    left 50%
+    margin-left -3px
+    background-color #fff
+    transition all .3s ease-in-out
+    margin-top 1px
+  &:after
+    transform rotate(-45deg)
+  &:before
+    transform rotate(45deg)
+    top 6px
+
+  &.button_absolute
+    position absolute
+    .map_input &
+      right 10px
+      top 50%
+      transform translateY(-50%)
+
+  &:focus
+    border none
+    outline none
+
