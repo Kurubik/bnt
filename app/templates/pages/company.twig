@@ -35,17 +35,36 @@
                     </section>
                 </div>
             </div>
-            <div class="e-right_column">
+            <div class="e-right_column margin_top">
                 <div class="e-column_block">
                     <h3 class="e-title__it title_border">{{ index.posts.seurity_level.heading }}</h3>
                     <section>
                         {{ index.posts.seurity_level.text1 }}
                     </section>
-                    <img class="e-column_img" src="/public/images/icons/map.svg">
+                    <div class="e-column_img">
+                        {{ index.posts.seurity_level.map|raw }}
+                    </div>
                     <section>
                         {{ index.posts.seurity_level.text2 }}
                     </section>
                 </div>
+            </div>
+            <div class="e-after_column_content">
+                <div class="explore_holder c__w">
+                    <div class="explore_ico">
+                        {{ index.posts.bottom_info.logo|raw }}
+                    </div>
+                    <div class="explore_text">
+                        {{ index.posts.bottom_info.logo_text|raw }}
+                    </div>
+                    <a href="">
+                        <div class="explore_link">
+                            {{ index.posts.bottom_info.explore|raw }}
+                            <i class="ico-a_big-right"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="e-heading bottom_heading c__w">{{ index.posts.bottom_info.bigHeading|raw }}</div>
             </div>
         </section>
     </section>

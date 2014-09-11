@@ -114,7 +114,7 @@
   c__* => color {black/green/yellow}
 */
 
-inputgrey = rgb(135,135,135)
+
 
 .c__b
   color #000
@@ -170,7 +170,7 @@ inputgrey = rgb(135,135,135)
   display block
   position relative
   margin 0 auto
-  margin-top 60px
+  margin-top 62px
   width 1000px
 
 .e-left_column, .e-right_column
@@ -208,6 +208,7 @@ inputgrey = rgb(135,135,135)
     font-size 14px
     line-height 16px
     letter-spacing 0.1em
+    text-transform uppercase
     &:first-child
       font-size 36px
       line-height 43px
@@ -216,12 +217,21 @@ inputgrey = rgb(135,135,135)
       font-family italic
       line-height 20px
       letter-spacing normal
+      text-transform none
 
 .e-column_img
   display block
   position relative
   margin 0 auto
   margin-bottom -30px
+  svg
+    display inherit
+    position relative
+    margin auto
+
+.e-after_column_content
+  margin-top 70px
+  margin-bottom 120px
 
 
 .column_columns
