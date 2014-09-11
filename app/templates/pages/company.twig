@@ -41,7 +41,9 @@
                     <section>
                         {{ index.posts.seurity_level.text1 }}
                     </section>
-                    <img class="e-column_img" src="{{ index.posts.seurity_level.map }}">
+                    <div class="e-column_img">
+                        {{ index.posts.seurity_level.map|raw }}
+                    </div>
                     <section>
                         {{ index.posts.seurity_level.text2 }}
                     </section>
