@@ -29,6 +29,9 @@ return array(
     'out_sms' => 'Overage — outgoing SMS',
     'tarif_internet' => 'Overage — internet',
     'find' => 'Find out',
+    'availability' => 'Availability check:',
+    'type_country' => 'Type country name',
+
 
     'contact_form' => array(
         'labels' => array(
@@ -69,5 +72,5 @@ return array(
 
     'emails' => array (
         'support@dialoq.com'
-    )
+    ),
 );

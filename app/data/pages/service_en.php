@@ -35,6 +35,43 @@ return array (
     'country' => array (
         'title' => 'Countries & Coverage',
         'heading' => 'Dialoq available in 235 countries all over the World.',
+        'sub_title' => 'Except North Korea',
+    ),
 
+    'payment' => array (
+        'title' => 'Payment methods',
+        'text' => 'Ut sodales risus gravida fringilla laoreet. Praesent vitae diam rhoncus, vulputate erat quis, malesuada lectus. Nam a ultricies mauris. Sed at mauris consectetur, iaculis nisi vel, consequat orci:',
+        'methods' => array (
+            ''
+        ),
+        'short_text' => 'More ways to pay'
+    ),
+
+    'business' => array (
+        'title' => 'Dialoq for business',
+        'text' => 'Nam condimentum, nisi nec egestas venenatis, sem est rutrum dui, eu cursus dui lectus eu lorem. Morbi eget purus diam. Aliquam luctus ac felis et bibendum. Donec tempor quis est vitae tincidunt. Integer hendrerit congu.',
+        'banner' => array (
+            'left_text' => 'Dialoq mobile could be an ultimate corporate tool. Create your own custom business account with certain amount of numbers and just one bill. Go Worldwide! ',
+
+        )
+    ),
+
+    'footer_banners' => array (
+        array (
+            'title' => 'Best operators',
+            'text' => 'Curabitur gravida lectus vitae arcu sollicitudin sollicitudin. Duis ultricies ipsum eu turpis iaculis.',
+        ),
+        array (
+            'title' => 'Data service',
+            'text' => 'Ohasellus cursus dui ut fringilla vehicula. Nulla orci est, congue non turpis nec, scelerisque porttitor felis. Duis semper arcu vel lacus.',
+        ),
+        array (
+            'title' => 'Plans to choose',
+            'text' => 'Ut eu tellus fringilla, lacinia turpis at, feugiat neque. Maecenas in arcu sed diam fermentum tempor.',
+        ),
+        array (
+            'title' => '24h service',
+            'text' => 'Ohasellus cursus dui ut fringilla vehicula. Nulla orci est, congue non turpis nec, scelerisque porttitor felis.'
+        )
     )
 );
