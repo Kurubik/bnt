@@ -28,7 +28,7 @@ return array (
             'first_number' => '+44',
             'first_number_title' => 'Local number<br>United Kingdom',
             'second_number' => '+39',
-            'second_number_title' => 'Local number France'
+            'second_number_title' => 'Local number<br> France'
         )
     ),
 
