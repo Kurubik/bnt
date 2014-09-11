@@ -41,11 +41,28 @@
                     <section>
                         {{ index.posts.seurity_level.text1 }}
                     </section>
-                    <img class="e-column_img" src="/public/images/icons/map.svg">
+                    <img class="e-column_img" src="{{ index.posts.seurity_level.map }}">
                     <section>
                         {{ index.posts.seurity_level.text2 }}
                     </section>
                 </div>
+            </div>
+            <div class="e-after_column_content">
+                <div class="explore_holder c__w">
+                    <div class="explore_ico">
+                        {{ index.posts.bottom_info.logo|raw }}
+                    </div>
+                    <div class="explore_text">
+                        {{ index.posts.bottom_info.logo_text|raw }}
+                    </div>
+                    <a href="">
+                        <div class="explore_link">
+                            {{ index.posts.bottom_info.explore|raw }}
+                            <i class="ico-a_big-right"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="e-heading bottom_heading c__w">{{ index.posts.bottom_info.bigHeading|raw }}</div>
             </div>
         </section>
     </section>
