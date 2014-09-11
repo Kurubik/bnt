@@ -7,6 +7,12 @@
                     {{ index.page_title|raw }}
                 </h1>
             </div>
+            <a href="{{ path(data.plans_button.link, {_locale: app.request.locale}) }}" class="t-banner bg__brown">
+                <div class="t-banner_s">
+                    <span class="t-banner_t">{{ data.plans_button.text }}</span>
+                    <div class="t-banner_h">{{ data.plans_button.title }}<i class="ico-a_big-right"></i></div>
+                </div>
+            </a>
         </div>
 </section>
 {% endblock %}

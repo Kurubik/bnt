@@ -12,10 +12,10 @@
 
   <div class="img-B_info-box">{{ index.info_box | raw }}</div>
 
-  <a href="{{ path(index.plans_button.link, {_locale: app.request.locale}) }}" class="t-banner bg__brown">
+  <a href="{{ path(data.plans_button.link, {_locale: app.request.locale}) }}" class="t-banner bg__brown">
     <div class="t-banner_s">
-      <span class="t-banner_t">{{ index.plans_button.text }}</span>
-      <div class="t-banner_h">{{ index.plans_button.title }}<i class="ico-a_big-right"></i></div>
+      <span class="t-banner_t">{{ data.plans_button.text }}</span>
+      <div class="t-banner_h">{{ data.plans_button.title }}<i class="ico-a_big-right"></i></div>
     </div>
   </a>
 

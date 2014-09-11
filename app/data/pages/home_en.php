@@ -6,11 +6,7 @@ return array(
     'subheading' => 'No callbacks, no apps, just your phone and Dialoq sim.',
     'info_box' => 'Dialoq — mobile operator for frequent travellers. We provide dedicated,<br>transparent and reliable international voice and data services.',
 
-    'plans_button' => array (
-        'title' => 'Plans & pricing',
-        'text' => 'Rational plans with flat rates from anywhere in the world.',
-        'link' => 'home'
-    ),
+
 
     'plans_banner' => array (
         'individual' => array (

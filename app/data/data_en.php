@@ -8,6 +8,12 @@ return array(
         'company' => 'company',
     ),
 
+    'plans_button' => array (
+        'title' => 'Plans & pricing',
+        'text' => 'Rational plans with flat rates from anywhere in the world.',
+        'link' => 'home'
+    ),
+
     'languages' => array (
       'en' => 'en'
     ),
