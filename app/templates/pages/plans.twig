@@ -13,7 +13,7 @@
         <div class="plans-i plan_{{ loop.index }}">
           <div class="plans-bg"></div>
           <div class="plans-content">
-            <h4 class="e-title__hv hv_big">{{ plan.title }}</h4>
+            <h4 class="e-title__hv hv_big">{{ plan.title | raw }}</h4>
             <div class="plans-b_text">{{ plan.text }}</div>
             <ul class="plan_info-list">
               <li><strong>{{ plan.list.units }}</strong><br><i class="base_tarif">{{ plan.list.tarif }}</i></li>

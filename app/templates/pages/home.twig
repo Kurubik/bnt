@@ -35,7 +35,7 @@
           <div class="plans-i plan_{{ loop.index }}">
             <div class="plans-bg"></div>
             <div class="plans-content">
-              <h4 class="e-title__hv hv_big">{{ banner.title }}</h4>
+              <h4 class="e-title__hv hv_big">{{ banner.title | raw }}</h4>
               <div class="plans-t_text">{{ banner.top_text }}</div>
               <a href="" class="plans-b_text">{{ banner.bottom_text }}<div class="plans-l">{{ banner.link_text }}</div></a>
             </div>
