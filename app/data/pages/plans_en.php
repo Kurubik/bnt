@@ -6,7 +6,7 @@ return array (
 
 
     'business' => array (
-        'title' => 'Business pull',
+        'title' => 'Business pool',
         'list' => array (
             'Morbi quis bibendum arcu. Etiam metus lorem, sagittis ac odio at, semper finibus velit. ',
             'Quisque diam leo, mattis a mi a, laoreet maximus augue.',
