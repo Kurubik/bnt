@@ -34,10 +34,10 @@
         {% for banner in items.content %}
           <div class="plans-i plan_{{ loop.index }}">
             <div class="plans-bg"></div>
-            <div class="plans-content">
+            <div class="plans-content banner_state">
               <h4 class="e-title__hv hv_big">{{ banner.title | raw }}</h4>
               <div class="plans-t_text">{{ banner.top_text }}</div>
-              <a href="" class="plans-b_text">{{ banner.bottom_text }}<div class="plans-l">{{ banner.link_text }}</div></a>
+              <a href="" class="plans-b_text-more">{{ banner.bottom_text }}<div class="plans-l">{{ banner.link_text }}</div></a>
             </div>
             <a href="" class="plans-button">
               <div class="plans-button_text">{{ banner.button_text }}<i class="ico-a_right"></i></div>
