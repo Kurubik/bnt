@@ -7,7 +7,9 @@ return array(
         'contacts' => 'contacts',
         'company' => 'company',
     ),
-
+    'temp_menu' => array (
+        'terms' => 'Terms',
+    ),
     'plans_button' => array (
         'title' => 'Plans & pricing',
         'text' => 'Rational plans with flat rates from anywhere in the world.',

@@ -1,0 +1,14 @@
+<footer class="footer">
+    <ul class="menu {{ app.request.attributes.get('_route') == 'home' ? 'home' : 'inner' }}">
+        {% for menu, title in data.temp_menu %}
+                <li class="menu-i menu-i-tmp">
+                    <span class="menu-t">{{ title }}</span>
+                </li>
+        {% endfor %}
+    </ul>
+    <div class="social">
+        <a href="" class="ico-social social_fb"></a>
+        <a href="" class="ico-social social_tw"></a>
+    </div>
+    <a href="" class="ico-vcg"><img alt="" src="{{ app.request.basepath }}/public/images/vcg.png" title=""></a>
+</footer>

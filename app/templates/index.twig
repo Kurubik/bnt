@@ -1,10 +1,15 @@
 {% extends 'layout.twig' %}
 {% block content %}
 <div class="content {{ app.request.attributes.get('_route') == 'home' ? 'home' : 'inner' }}">
+  {#<div class="wrapper">#}
+    {#{% include 'interface/header.twig' %}#}
+    {#{% block page %}{% endblock %}#}
+    {#{% include 'interface/footer.twig' %}#}
+  {#</div>#}
   <div class="wrapper">
-    {% include 'interface/header.twig' %}
-    {% block page %}{% endblock %}
-    {% include 'interface/footer.twig' %}
+      {% include 'interface/header.twig' %}
+      {% block page %}{% endblock %}
+      {% include 'interface/temporary_footer.twig' %}
   </div>
 </div>
 {% endblock %}
