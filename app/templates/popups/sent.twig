@@ -4,12 +4,10 @@
             <i class="ico-cross_left"></i>
             <i class="ico-cross_right"></i>
         </div>
-        <h1>{{ data.popups.terms.heading }}</h1>
-        <ol class="terms_conditions popup_text">
-            {% for term in data.popups.terms.tnc %}
-                <li>{{ term }}</li>
-            {% endfor %}
-        </ol>
+        <h1>{{ data.popups.sent.heading }}</h1>
+        <div class="popup_sent_text popup_text">
+            {{ data.popups.sent.text }}
+        </div>
         <button class="popup_button">
             {{ data.popups.terms.button }}
             <i class="ico-a_right"></i>

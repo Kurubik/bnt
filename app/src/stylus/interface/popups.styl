@@ -1,6 +1,174 @@
+.e-popup_container
+  h1
+    display block
+    text-align center
+    padding 0
+    margin 0
+    font-family heavy
+    font-size 21px
+    line-height 47px
+    color #ffffff
+  h2
+    padding 0
+    margin 0
+    font-family italic
+    font-size 16px
+    line-height 47px
+    color #ffffff
+
 .close_popup
   display block
   position absolute
-  right 20px
-  top 20px
-  width 13px
+  right 26px
+  top 29px
+  cursor pointer
+  &:hover
+    .ico-cross_left:after, .ico-cross_left:before, .ico-cross_right:after, .ico-cross_right:before
+      background-color #ffffff
+
+.ico-cross_left:after, .ico-cross_left:before, .ico-cross_right:after, .ico-cross_right:before
+  transition all 0.3s ease-in-out
+
+.ico-cross_left
+  width 10px
+  height 10px
+  display block
+  top 50%
+  margin-top -5px
+  right 0
+  &:after
+    position absolute
+    content ''
+    transform rotate(45deg)
+    width 10px
+    height 2px
+    background-color #595959
+  &:before
+    position absolute
+    content ''
+    transform rotate(-45deg)
+    width 10px
+    height 2px
+    background-color #595959
+    top 2px
+
+.ico-cross_right
+  display block
+  width 10px
+  height 10px
+  top 50%
+  margin-top -5px
+  right 0
+  &:after
+    position absolute
+    top 2px
+    left 7px
+    content ''
+    transform rotate(45deg)
+    width 10px
+    height 2px
+    background-color #595959
+  &:before
+    position absolute
+    content ''
+    transform rotate(-45deg)
+    width 10px
+    height 2px
+    background-color #595959
+    top -5px
+    left 7px
+
+.terms_conditions
+  width 406px
+  list-style-type: none;
+  counter-reset: li-counter;
+  li
+    position relative
+    margin-bottom 8px
+    &:before
+      position absolute
+      left -28px
+      top 0
+      color #ffffff
+      content counter(li-counter) '.'
+      counter-increment li-counter
+
+.popup_button
+  display block
+  position relative
+  height 46px
+  margin 0 auto
+  margin-top 30px
+  border none
+  border-radius 0
+  padding 0 46px 0 28px
+  background-color rgb(71,68,63)
+  font-family italic
+  font-size 18px
+  line-height 46px
+  color #FFFFFF
+  .ico-a_right
+    margin-top -3px
+    right 33px
+
+.popup_sent_text
+  width 378px
+  margin-top 15px
+  margin-bottom 60px
+  padding 0 40px
+  box-sizing border-box
+
+.popup_text
+  color rgba(255,255,255,0.65)
+  font-size 14px
+  line-height 20px
+
+.popup_form
+  display block
+  width 390px
+  input, label
+    display inline-block
+    vertical-align middle
+
+.form_center
+  display block
+  position relative
+  margin 0 auto
+  text-align center
+  input
+    margin-right 10px
+  label
+    margin-right 40px
+    &:last-child
+      margin-right 0
+
+.popup-title
+  font-family italic
+  font-size 16px
+  color #ffffff
+  &.title_border
+    border-bottom 2px solid rgba(255, 255, 255, 0.2)
+    padding-bottom 7px
+    margin-bottom 20px
+  &:first-letter
+    text-transform uppercase
+
+.form_input
+  margin-bottom 17px
+  &:last-child
+    margin-bottom 0
+  label,input
+    display inline-block
+    vertical-align middle
+    border-radius 0
+    border none
+    box-sizing border-box
+  label
+    width 100px
+  input
+    width 280px
+    height 24px
+    padding 0 5px
+    color #000000
+    font-size 14px
+    line-height 24px
