@@ -5,6 +5,7 @@
  */
 
 require_once ROOT . '/app/data/control/data.php';
+require_once ROOT . '/app/lib/SignatureGenerator.php';
 
 $app->mount('/', require ROOT . '/app/controllers/pages.php');
 

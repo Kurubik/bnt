@@ -6,6 +6,7 @@
  */
 
 use app\data\Data;
+use lib\Signature;
 
 $pages = $app['controllers_factory'];
 
@@ -24,9 +25,21 @@ $routes = array (
 
 
 $pages->get('/{_locale}/', function() use ($app) {
+
+    $generator = new lib\Signature\SignatureGenerator('A4KedhE55XeqWHXN3+exDKES4p8=');
+
+    $requestParams = array (
+        'amount' => 100,
+        'site_id' => 245,
+        'external_id' => 1,
+    );
+
+    $testSignature = $requestParams['signature'] = $generator->assemble($requestParams);
+
     return $app['twig']->render('/pages/temporary.twig', array (
          'index' =>  Data\Translates::pageTranslates($app['locale'], 'home'),
           'data' => Data\Translates::translateArray($app['locale']),
+          'signature' => $testSignature
       ));
 })
   ->assert('_lcoale', 'en')
