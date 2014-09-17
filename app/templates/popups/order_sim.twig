@@ -1,67 +1,61 @@
-<div class="e-popup_holder">
-    <div class="e-popup_container">
-        <div class="close_popup">
-            <i class="ico-cross_left"></i>
-            <i class="ico-cross_right"></i>
-        </div>
-        <h1>{{ data.popups.order_sim.heading }}</h1>
-        <form class="popup_form popup_text">
-            <section class="form_center">
-                <input type="radio" name="plan_type" id="individual">
-                <label for="individual">{{ data.popups.order_sim.order_type.individual }}</label>
-                <input type="radio" name="plan_type" id="legal_entity">
-                <label for="legal_entity">{{ data.popups.order_sim.order_type.legal_entity }}</label>
-            </section>
-            <h3 class="popup-title title_border">{{ data.popups.order_sim.form.headings.pers_info }}</h3>
-            <div class="form_input">
-                <label for="name">{{ data.popups.order_sim.form.info_fields.titles.name }}</label>
-                <input type="text" name="name" id="name" class="input_error">
-                <div class="pers_info_input_error">{{ data.popups.order_sim.form.info_fields.errors.name }}</div>
-            </div>
-            <div class="form_input">
-                <label for="phone">{{ data.popups.order_sim.form.info_fields.titles.phone }}</label>
-                <input type="text" name="phone" id="phone">
-                <div class="pers_info_input_error">{{ data.popups.order_sim.form.info_fields.errors.phone }}</div>
-            </div>
-            <div class="form_input">
-                <label for="email">{{ data.popups.order_sim.form.info_fields.titles.email }}</label>
-                <input type="text" name="email" id="email">
-                <div class="pers_info_input_error">{{ data.popups.order_sim.form.info_fields.errors.email }}</div>
-            </div>
-            <h3 class="popup-title title_border">{{ data.popups.order_sim.form.headings.plan }}</h3>
-            <section class="plan_holder">
-                <span class="plan_title">{{ data.popups.order_sim.form.headings.plan }}</span>
-                <div class="form_input">
-                    <input type="radio" name="plan" id="dialoq3">
-                    <label for="dialoq3">{{ data.popups.order_sim.form.plans.1.title }}</label>
-                    <span class="plan_conditions">{{ data.popups.order_sim.form.plans.1.conditions }}</span>
-                </div>
-                <div class="form_input">
-                    <input type="radio" name="plan" id="dialoq5">
-                    <label for="dialoq5">{{ data.popups.order_sim.form.plans.2.title }}</label>
-                    <span class="plan_conditions">{{ data.popups.order_sim.form.plans.2.conditions }}</span>
-                </div>
-                <div class="form_input">
-                    <input type="radio" name="plan" id="dialoq10">
-                    <label for="dialoq10">{{ data.popups.order_sim.form.plans.3.title }}</label>
-                    <span class="plan_conditions">{{ data.popups.order_sim.form.plans.3.conditions }}</span>
-                </div>
-            </section>
-            <div class="form_input sim_type">
-                <div class="form_sim_heading">{{ data.popups.order_sim.form.headings.sim }}</div>
-                <input type="radio" name="sim" id="nano">
-                <label for="nano">{{ data.popups.order_sim.form.sim_types.nano }}</label>
-                <input type="radio" name="sim" id="micro">
-                <label for="micro">{{ data.popups.order_sim.form.sim_types.micro }}</label>
-            </div>
-            <div class="form_condition_agreement">
-                <input type="checkbox" name="agree" id="agree">
-                <label for="agree">{{ data.popups.order_sim.form.headings.agreement }}</label>
-            </div>
-            <button class="popup_button">
-                {{ data.popups.order_sim.button }}
-                <i class="ico-a_right"></i>
-            </button>
-        </form>
-    </div>
+<div data-popup="plan" class="e-popup_section">
+  <h1>{{ data.popups.order_sim.heading }}</h1>
+  <form class="popup_form popup_text">
+      <section class="form_center">
+          <input type="radio" name="plan_type" id="individual">
+          <label for="individual">{{ data.popups.order_sim.order_type.individual }}</label>
+          <input type="radio" name="plan_type" id="legal_entity">
+          <label for="legal_entity">{{ data.popups.order_sim.order_type.legal_entity }}</label>
+      </section>
+      <h3 class="popup-title title_border">{{ data.popups.order_sim.form.headings.pers_info }}</h3>
+      <div class="form_input">
+          <label for="name">{{ data.popups.order_sim.form.info_fields.titles.name }}</label>
+          <input type="text" name="name" id="name" class="input_error">
+          <div class="pers_info_input_error">{{ data.popups.order_sim.form.info_fields.errors.name }}</div>
+      </div>
+      <div class="form_input">
+          <label for="phone">{{ data.popups.order_sim.form.info_fields.titles.phone }}</label>
+          <input type="text" name="phone" id="phone">
+          <div class="pers_info_input_error">{{ data.popups.order_sim.form.info_fields.errors.phone }}</div>
+      </div>
+      <div class="form_input">
+          <label for="email">{{ data.popups.order_sim.form.info_fields.titles.email }}</label>
+          <input type="text" name="email" id="email">
+          <div class="pers_info_input_error">{{ data.popups.order_sim.form.info_fields.errors.email }}</div>
+      </div>
+      <h3 class="popup-title title_border">{{ data.popups.order_sim.form.headings.plan }}</h3>
+      <section class="plan_holder">
+          <span class="plan_title">{{ data.popups.order_sim.form.headings.plan }}</span>
+          <div class="form_input">
+              <input type="radio" name="plan" id="dialoq3">
+              <label for="dialoq3">{{ data.popups.order_sim.form.plans.1.title }}</label>
+              <span class="plan_conditions">{{ data.popups.order_sim.form.plans.1.conditions }}</span>
+          </div>
+          <div class="form_input">
+              <input type="radio" name="plan" id="dialoq5">
+              <label for="dialoq5">{{ data.popups.order_sim.form.plans.2.title }}</label>
+              <span class="plan_conditions">{{ data.popups.order_sim.form.plans.2.conditions }}</span>
+          </div>
+          <div class="form_input">
+              <input type="radio" name="plan" id="dialoq10">
+              <label for="dialoq10">{{ data.popups.order_sim.form.plans.3.title }}</label>
+              <span class="plan_conditions">{{ data.popups.order_sim.form.plans.3.conditions }}</span>
+          </div>
+      </section>
+      <div class="form_input sim_type">
+          <div class="form_sim_heading">{{ data.popups.order_sim.form.headings.sim }}</div>
+          <input type="radio" name="sim" id="nano" checked>
+          <label for="nano">{{ data.popups.order_sim.form.sim_types.nano }}</label>
+          <input type="radio" name="sim" id="micro">
+          <label for="micro">{{ data.popups.order_sim.form.sim_types.micro }}</label>
+      </div>
+      <div class="form_condition_agreement">
+          <input type="checkbox" name="agree" id="agree">
+          <label for="agree">{{ data.popups.order_sim.form.headings.agreement }}</label>
+      </div>
+      <button class="popup_button">
+          {{ data.popups.order_sim.button }}
+          <i class="ico-a_right"></i>
+      </button>
+  </form>
 </div>

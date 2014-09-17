@@ -1,16 +1,10 @@
-<div class="e-popup_holder">
-    <div class="e-popup_container">
-        <div class="close_popup">
-            <i class="ico-cross_left"></i>
-            <i class="ico-cross_right"></i>
-        </div>
-        <h1>{{ data.popups.sent.heading }}</h1>
-        <div class="popup_sent_text popup_text">
-            {{ data.popups.sent.text }}
-        </div>
-        <button class="popup_button">
-            {{ data.popups.terms.button }}
-            <i class="ico-a_right"></i>
-        </button>
-    </div>
+<div data-popup="sent" class="e-popup_section">
+  <h1>{{ data.popups.sent.heading }}</h1>
+  <div class="popup_sent_text popup_text">
+      {{ data.popups.sent.text }}
+  </div>
+  <button class="popup_button">
+      {{ data.popups.terms.button }}
+      <i class="ico-a_right"></i>
+  </button>
 </div>

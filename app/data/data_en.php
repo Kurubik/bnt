@@ -8,7 +8,7 @@ return array(
         'company' => 'company',
     ),
     'temp_menu' => array (
-        'terms' => 'Terms',
+        'terms' => 'Terms & Conditions',
     ),
     'plans_button' => array (
         'title' => 'Plans & pricing',

@@ -13,44 +13,44 @@ return array(
             'title' => 'individual usage',
             'content' =>
               array (
-                array (
-                    'title' => 'Dialoq <br>3',
-                    'top_text' => '2 500 units (minutes and megabytes) for 375 €',
-                    'button_text' => 'Order now',
-                    'bottom_text' => 'Starters pack is perfectly suitable for active travellers and explorers.',
-                    'link_text' => 'Learn more',
-                    'link' => 'home',
-                ),
-                array (
-                  'title' => 'Dialoq <br>5',
-                  'top_text' => '4 000 units (minutes and megabytes) for 450 €',
-                  'button_text' => 'Order now',
-                  'bottom_text' => 'Excellent solution for frequent business trips and active internet users.',
-                  'link_text' => 'Learn more',
-                  'link' => 'home',
-                ),
-                array (
-                    'title' => 'Dialoq <br>10',
-                    'top_text' => '10 000 units (minutes and megabytes) for 750 €',
-                    'button_text' => 'Order now',
-                    'bottom_text' => 'Excellent solution for frequent business trips and active internet users.',
-                    'link_text' => 'Learn more',
-                    'link' => 'home',
-                ),
+                'dialoq3' => array (
+                        'title' => 'Dialoq <br>3',
+                        'top_text' => '2 500 units (minutes and megabytes) for 375 €',
+                        'button_text' => 'Order now',
+                        'bottom_text' => 'Starters pack is perfectly suitable for active travellers and explorers.',
+                        'link_text' => 'Learn more',
+                        'link' => 'home',
+                    ),
+                'dialoq5' => array (
+                      'title' => 'Dialoq <br>5',
+                      'top_text' => '4 000 units (minutes and megabytes) for 450 €',
+                      'button_text' => 'Order now',
+                      'bottom_text' => 'Excellent solution for frequent business trips and active internet users.',
+                      'link_text' => 'Learn more',
+                      'link' => 'home',
+                    ),
+                'dialoq10' => array (
+                        'title' => 'Dialoq <br>10',
+                        'top_text' => '10 000 units (minutes and megabytes) for 750 €',
+                        'button_text' => 'Order now',
+                        'bottom_text' => 'Excellent solution for frequent business trips and active internet users.',
+                        'link_text' => 'Learn more',
+                        'link' => 'home',
+                    ),
             )
         ),
 
         'business' => array (
             'title' => 'business',
             'content' => array (
-                array (
-                    'title' => 'Business Pool',
-                    'top_text' => 'Units (minutes and megabytes) by sign up',
-                    'button_text' => 'Get a quote',
-                    'bottom_text' => 'Account for business purposes. With possibility to use couple of numbers.',
-                    'link_text' => 'Learn more',
-                    'link' => 'home',
-                ),
+                'business' => array (
+                                'title' => 'Business Pool',
+                                'top_text' => 'Units (minutes and megabytes) by sign up',
+                                'button_text' => 'Get a quote',
+                                'bottom_text' => 'Account for business purposes. With possibility to use couple of numbers.',
+                                'link_text' => 'Learn more',
+                                'link' => 'home',
+                            ),
             )
         )
     ),

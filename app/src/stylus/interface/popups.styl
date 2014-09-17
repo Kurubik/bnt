@@ -21,64 +21,39 @@
 .close_popup
   display block
   position absolute
-  right 26px
-  top 29px
+  right 18px
+  top 20px
   cursor pointer
+  width 20px
+  height 20px
   &:hover
-    .ico-cross_left:after, .ico-cross_left:before, .ico-cross_right:after, .ico-cross_right:before
-      background-color #ffffff
-
-.ico-cross_left:after, .ico-cross_left:before, .ico-cross_right:after, .ico-cross_right:before
-  transition all 0.3s ease-in-out
+    .ico-cross_left , .ico-cross_right
+      background-color #fff
 
 .ico-cross_left
-  width 10px
-  height 10px
+  width 2px
+  height 20px
   display block
-  top 50%
-  margin-top -5px
+  transform rotate(45deg)
+  background #595959
+  position absolute
   right 0
-  &:after
-    position absolute
-    content ''
-    transform rotate(45deg)
-    width 10px
-    height 2px
-    background-color #595959
-  &:before
-    position absolute
-    content ''
-    transform rotate(-45deg)
-    width 10px
-    height 2px
-    background-color #595959
-    top 2px
+  margin-right 8px
+  -webkit-backface-visibility hidden
+  transition all .25s ease-in-out
 
 .ico-cross_right
   display block
-  width 10px
-  height 10px
-  top 50%
-  margin-top -5px
-  right 0
-  &:after
-    position absolute
-    top 2px
-    left 7px
-    content ''
-    transform rotate(45deg)
-    width 10px
-    height 2px
-    background-color #595959
-  &:before
-    position absolute
-    content ''
-    transform rotate(-45deg)
-    width 10px
-    height 2px
-    background-color #595959
-    top -5px
-    left 7px
+  width 2px
+  height 20px
+  transform rotate(-45deg)
+  background #595959
+  position absolute
+  left 0
+  margin-left 10px
+  -webkit-backface-visibility hidden
+  transition all .25s ease-in-out
+
 
 .terms_conditions
   width 406px
