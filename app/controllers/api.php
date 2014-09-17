@@ -14,7 +14,7 @@ $api = $app['controllers_factory'];
 $api->post('/payment/', function() use ($app) {
     $generator = new lib\Signature\SignatureGenerator('A4KedhE55XeqWHXN3+exDKES4p8=');
     $site_id = 245;
-    $external_id = 2;
+    $external_id = rand();
     $amount = (int)$_POST['plan'];
 
     $requestParams = array (
