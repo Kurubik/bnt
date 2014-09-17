@@ -1,1 +1,1 @@
-console.log 'gg'
+$('.close_popup').click -> $('.e-popup_holder').fadeOut(500)
