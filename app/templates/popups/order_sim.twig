@@ -1,8 +1,8 @@
 <div data-popup="plan" class="e-popup_section">
   <h1>{{ data.popups.order_sim.heading }}</h1>
-  <form class="popup_form popup_text">
+  <form class="popup_form popup_text" id="popup_form">
       <section class="form_center">
-          <input type="radio" name="plan_type" id="individual">
+          <input type="radio" name="plan_type" id="individual" checked>
           <label for="individual">{{ data.popups.order_sim.order_type.individual }}</label>
           <input type="radio" name="plan_type" id="legal_entity">
           <label for="legal_entity">{{ data.popups.order_sim.order_type.legal_entity }}</label>
@@ -10,34 +10,34 @@
       <h3 class="popup-title title_border">{{ data.popups.order_sim.form.headings.pers_info }}</h3>
       <div class="form_input">
           <label for="name">{{ data.popups.order_sim.form.info_fields.titles.name }}</label>
-          <input type="text" name="name" id="name" class="input_error">
+          <input type="text" name="name" id="name" class="validate" data-validate="text">
           <div class="pers_info_input_error">{{ data.popups.order_sim.form.info_fields.errors.name }}</div>
       </div>
       <div class="form_input">
           <label for="phone">{{ data.popups.order_sim.form.info_fields.titles.phone }}</label>
-          <input type="text" name="phone" id="phone">
+          <input type="text" name="phone" id="phone" class="validate" data-validate="phone">
           <div class="pers_info_input_error">{{ data.popups.order_sim.form.info_fields.errors.phone }}</div>
       </div>
       <div class="form_input">
           <label for="email">{{ data.popups.order_sim.form.info_fields.titles.email }}</label>
-          <input type="text" name="email" id="email">
+          <input type="text" name="email" id="email" class="validate" data-validate="email">
           <div class="pers_info_input_error">{{ data.popups.order_sim.form.info_fields.errors.email }}</div>
       </div>
       <h3 class="popup-title title_border">{{ data.popups.order_sim.form.headings.plan }}</h3>
       <section class="plan_holder">
           <span class="plan_title">{{ data.popups.order_sim.form.headings.plan }}</span>
           <div class="form_input">
-              <input type="radio" name="plan" id="dialoq3">
+              <input type="radio" name="plan" id="dialoq3" value="37500">
               <label for="dialoq3">{{ data.popups.order_sim.form.plans.1.title }}</label>
               <span class="plan_conditions">{{ data.popups.order_sim.form.plans.1.conditions }}</span>
           </div>
           <div class="form_input">
-              <input type="radio" name="plan" id="dialoq5">
+              <input type="radio" name="plan" id="dialoq5" value="45000">
               <label for="dialoq5">{{ data.popups.order_sim.form.plans.2.title }}</label>
               <span class="plan_conditions">{{ data.popups.order_sim.form.plans.2.conditions }}</span>
           </div>
           <div class="form_input">
-              <input type="radio" name="plan" id="dialoq10">
+              <input type="radio" name="plan" id="dialoq10" value="75000">
               <label for="dialoq10">{{ data.popups.order_sim.form.plans.3.title }}</label>
               <span class="plan_conditions">{{ data.popups.order_sim.form.plans.3.conditions }}</span>
           </div>
@@ -50,10 +50,10 @@
           <label for="micro">{{ data.popups.order_sim.form.sim_types.micro }}</label>
       </div>
       <div class="form_condition_agreement">
-          <input type="checkbox" name="agree" id="agree">
+          <input type="checkbox" name="agree" id="agree" data-validate="checkbox" class="validate">
           <label for="agree">{{ data.popups.order_sim.form.headings.agreement }}</label>
       </div>
-      <button class="popup_button">
+      <button class="popup_button" type="submit">
           {{ data.popups.order_sim.button }}
           <i class="ico-a_right"></i>
       </button>

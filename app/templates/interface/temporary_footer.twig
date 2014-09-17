@@ -1,7 +1,7 @@
 <footer class="footer">
     <ul class="menu {{ app.request.attributes.get('_route') == 'home' ? 'home' : 'inner' }}">
         {% for menu, title in data.temp_menu %}
-                <li class="menu-i menu-i-tmp">
+                <li class="menu-i menu-i-tmp" data-action="terms">
                     <span class="menu-t">{{ title }}</span>
                 </li>
         {% endfor %}

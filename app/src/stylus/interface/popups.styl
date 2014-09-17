@@ -85,7 +85,6 @@
   line-height 46px
   color #FFFFFF
   .ico-a_right
-    margin-top -3px
     right 33px
 
 .popup_sent_text
@@ -103,9 +102,20 @@
 .popup_form
   display block
   width 390px
+  label
+    transition color .15s ease-in-out
+  input[type="text"]
+    border 1px solid transparent
   input, label
     display inline-block
     vertical-align middle
+
+input:checked + label
+  color #fff
+
+
+input[type="checkbox"].input_error + label
+  color #f00
 
 .form_center
   display block
@@ -201,3 +211,12 @@
 
 .input_error
   border 1px solid red !important
+
+
+#iframe
+  position absolute
+  height 100%
+  width 100%
+  top 0
+  left 0
+  display none
