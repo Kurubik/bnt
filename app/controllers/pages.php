@@ -29,7 +29,7 @@ $pages->get('/{_locale}/', function() use ($app) {
           'data' => Data\Translates::translateArray($app['locale']),
       ));
 })
-  ->assert('_lcoale', 'en')
+  ->assert('_locale', 'en')
   ->bind('home');
 
 

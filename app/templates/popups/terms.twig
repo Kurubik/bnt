@@ -1,11 +1,11 @@
-<div data-popup="terms" class="e-popup_section">
+<div data-popup="terms" class="e-popup_section terms">
   <h1>{{ data.popups.terms.heading }}</h1>
   <ol class="terms_conditions popup_text">
       {% for term in data.popups.terms.tnc %}
-          <li>{{ term }}</li>
+          <li>{{ term | raw }}</li>
       {% endfor %}
   </ol>
-  <button class="popup_button">
+  <button class="popup_button" id="confirm_terms" type="button">
       {{ data.popups.terms.button }}
       <i class="ico-a_right"></i>
   </button>

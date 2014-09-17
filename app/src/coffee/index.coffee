@@ -5,9 +5,10 @@ $(->
 
 Popups =
   init: ->
-    $clickItem = $('[data-plan]')
+    $clickItem = $('.show_popup')
     self = @
     $closePopup = $('.close_popup')
+    $confirmButton = $('#confirm_terms')
     @$popup = $('#popup')
     $('form').on 'submit', Validation.submit
 
@@ -22,6 +23,10 @@ Popups =
     @$popup.on 'click', (e) ->
       if self.$popup.is(e.target)
         self.popupDispose()
+
+    $confirmButton.on 'click', (e) ->
+      e.preventDefault()
+      self.popupDispose()
 
 
   popupDispose: ->
@@ -39,6 +44,7 @@ Popups =
 
 
   showTerms: ->
+    console.log 'terms'
 
 
   switchAction: ($item) ->
@@ -50,7 +56,7 @@ Popups =
 
 
   popupDefaultAction: ($item) ->
-    @$popup.find("[data-popup='#{$item.data('action')}']").css('display' , 'block')
+    @$popup.find("[data-popup='#{$item.data('action')}']").css('display' , 'block').siblings('.e-popup_section').css('display', 'none')
     @$container = $('.e-popup_container')
     self = @
     @$popup.fadeIn(300, ->
