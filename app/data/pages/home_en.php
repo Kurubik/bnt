@@ -14,7 +14,7 @@ return array(
             'content' =>
               array (
                 'dialoq3' => array (
-                        'title' => 'Dialoq <br>3',
+                        'title' => 'Dialoq <br>3K',
                         'top_text' => '2 500 units (minutes and megabytes) for 375 €',
                         'button_text' => 'Order now',
                         'bottom_text' => 'Starters pack is perfectly suitable for active travellers and explorers.',
@@ -22,7 +22,7 @@ return array(
                         'link' => 'home',
                     ),
                 'dialoq5' => array (
-                      'title' => 'Dialoq <br>5',
+                      'title' => 'Dialoq <br>5K',
                       'top_text' => '4 000 units (minutes and megabytes) for 450 €',
                       'button_text' => 'Order now',
                       'bottom_text' => 'Excellent solution for frequent business trips and active internet users.',
@@ -30,7 +30,7 @@ return array(
                       'link' => 'home',
                     ),
                 'dialoq10' => array (
-                        'title' => 'Dialoq <br>10',
+                        'title' => 'Dialoq <br>10K',
                         'top_text' => '10 000 units (minutes and megabytes) for 750 €',
                         'button_text' => 'Order now',
                         'bottom_text' => 'Excellent solution for frequent business trips and active internet users.',

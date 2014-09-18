@@ -44,7 +44,7 @@ return array (
 
     'plans' => array (
         array (
-            'title' => 'Dialoq <br>3',
+            'title' => 'Dialoq <br>3K',
             'text' => 'Starters pack is perfectly suitable for active travelers and explorers.',
             'list' => array (
                 'units' => '2500 units for 375 €',
@@ -62,7 +62,7 @@ return array (
             )
         ),
           array (
-            'title' => 'Dialoq <br>5',
+            'title' => 'Dialoq <br>5K',
             'text' => 'Excellent solution for frequent business trips and active internet users.',
             'list' => array (
               'units' => '4000 units for 450 €',
@@ -79,7 +79,7 @@ return array (
             )
           ),
           array (
-            'title' => 'Dialoq <br>10',
+            'title' => 'Dialoq <br>10K',
             'text' => 'Super-saver plan for the man of the world. Up to 50% of economy.',
             'list' => array (
               'units' => '10000 units for 750 €',
