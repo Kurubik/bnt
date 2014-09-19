@@ -27,6 +27,7 @@ $pages->get('/{_locale}/', function() use ($app) {
     return $app['twig']->render('/pages/temporary.twig', array (
          'index' =>  Data\Translates::pageTranslates($app['locale'], 'home'),
           'data' => Data\Translates::translateArray($app['locale']),
+          'countries' => Data\Translates::countryList()
       ));
 })
   ->assert('_locale', 'en')

@@ -7,6 +7,7 @@
           <input type="radio" name="plan_type" id="legal_entity">
           <label for="legal_entity">{{ data.popups.order_sim.order_type.legal_entity }}</label>
       </section>
+
       <h3 class="popup-title title_border">{{ data.popups.order_sim.form.headings.pers_info }}</h3>
       <div class="form_input">
           <label for="name">{{ data.popups.order_sim.form.info_fields.titles.name }}</label>
@@ -23,6 +24,45 @@
           <input type="text" name="email" id="email" class="validate" data-validate="email">
           <div class="pers_info_input_error">{{ data.popups.order_sim.form.info_fields.errors.email }}</div>
       </div>
+
+      <h3 class="popup-title title_border">{{ data.popups.order_sim.form.headings.address }}</h3>
+      <div class="form_input">
+        <label for="country">{{ data.popups.order_sim.form.address_fields.titles.country }}</label>
+        <select id="country" name="country">
+          {% for country, title in countries %}
+            <option value="{{ country }}">{{ title }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="form_input">
+        <label for="city">{{ data.popups.order_sim.form.address_fields.titles.city }}</label>
+        <input type="text" class="validate" id="city" name="city" data-validate="text">
+        <div class="pers_info_input_error">{{ data.popups.order_sim.form.info_fields.errors.city }}</div>
+      </div>
+      <div class="form_input">
+        <label for="address">{{ data.popups.order_sim.form.address_fields.titles.address }}</label>
+        <input type="text" class="validate" id="address" name="address" data-validate="text">
+        <div class="pers_info_input_error">{{ data.popups.order_sim.form.info_fields.errors.address }}</div>
+      </div>
+
+
+      <h3 class="popup-title title_border">{{ data.popups.order_sim.form.headings.invoice }}</h3>
+      <div class="form_radio">
+        <input type="radio" name="invoice" id="invoice_email" checked>
+        <label for="invoice_email">{{ data.popups.order_sim.form.invoice_fields.email }}</label>
+        <input type="radio" name="invoice" id="postal_address">
+        <label for="postal_address">{{ data.popups.order_sim.form.invoice_fields.credit }}</label>
+      </div>
+
+
+      <h3 class="popup-title title_border">{{ data.popups.order_sim.form.headings.currency }}</h3>
+      <div class="form_radio">
+        {% for currency, title in data.popups.order_sim.form.currency %}
+          <input type="radio" name="currency" id="currency_{{ currency }}" checked>
+          <label for="currency_{{ currency }}">{{ title }}</label>
+        {% endfor %}
+      </div>
+
       <h3 class="popup-title title_border">{{ data.popups.order_sim.form.headings.plan }}</h3>
       <section class="plan_holder">
           <span class="plan_title">{{ data.popups.order_sim.form.headings.plan }}</span>
@@ -39,17 +79,22 @@
               <label for="dialoq10">{{ data.popups.order_sim.form.plans.3.title }}<span class="plan_conditions">{{ data.popups.order_sim.form.plans.3.conditions }}</span></label>
           </div>
       </section>
+
       <div class="form_input sim_type">
           <div class="form_sim_heading">{{ data.popups.order_sim.form.headings.sim }}</div>
-          <input type="radio" name="sim" id="nano" checked>
+          <input type="radio" name="sim" id="standard" checked>
+          <label for="standard">{{ data.popups.order_sim.form.sim_types.standard }}</label>
+          <input type="radio" name="sim" id="nano">
           <label for="nano">{{ data.popups.order_sim.form.sim_types.nano }}</label>
           <input type="radio" name="sim" id="micro">
           <label for="micro">{{ data.popups.order_sim.form.sim_types.micro }}</label>
       </div>
+
       <div class="form_condition_agreement">
           <input type="checkbox" name="agree" id="agree" data-validate="checkbox" class="validate">
           <label for="agree">{{ data.popups.order_sim.form.headings.agreement }}</label>
       </div>
+
       <button class="popup_button" type="submit">
           {{ data.popups.order_sim.button }}
           <i class="ico-a_right"></i>

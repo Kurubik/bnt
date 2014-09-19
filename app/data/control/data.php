@@ -23,4 +23,9 @@ Class Translates
         return require_once ROOT . '/app/data/pages/'. $page .'_'. $locale .'.php';
     }
 
+    public static function countryList()
+    {
+        return require_once ROOT . '/app/data/country.php';
+    }
+
 }

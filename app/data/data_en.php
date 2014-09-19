@@ -192,9 +192,22 @@ Please check your e-mail for more details.',
             'form' => array(
                 'headings' => array(
                     'pers_info' => 'Personal info',
+                    'address' => 'Address',
                     'plan' => 'Plan',
+                    'currency' => 'Currency',
+                    'invoice' => 'Payment method',
                     'sim' => 'Sim-card',
                     'agreement' => 'I have read and agree to the terms and conditions',
+                ),
+
+                'currency' => array (
+                  'EUR' => 'EUR, €',
+                  'USD' => 'USD, $'
+                ),
+
+                'invoice_fields' => array (
+                  'email' => 'By e-mail',
+                  'credit' => 'Credit card'
                 ),
                 'info_fields' => array(
                     'titles' => array(
@@ -206,7 +219,16 @@ Please check your e-mail for more details.',
                         'name' => 'Please enter your name',
                         'phone' => 'Please enter your phone',
                         'email' => ' Please enter your e-mail',
+                        'city' => ' Please enter your city',
+                        'address' => ' Please enter your address',
                     ),
+                ),
+                'address_fields' => array (
+                    'titles' => array (
+                        'country' => 'Country',
+                        'city' => 'City',
+                        'address' => 'Address'
+                    )
                 ),
                 'plans' => array(
                     '1' => array(
@@ -225,6 +247,7 @@ Please check your e-mail for more details.',
                 'sim_types' => array(
                     'nano' => 'Nano',
                     'micro' => 'Micro',
+                    'standard' => 'Standard'
                 ),
             ),
         ),
