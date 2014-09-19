@@ -1,5 +1,5 @@
 <footer class="footer">
-    <ul class="menu {{ app.request.attributes.get('_route') == 'home' ? 'home' : 'inner' }}">
+    <ul class="terms_section">
         {% for menu, title in data.temp_menu %}
                 <li class="menu-i menu-i-tmp show_popup" data-action="terms">
                     <span class="menu-t">{{ title }}</span>

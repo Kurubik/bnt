@@ -32,6 +32,19 @@
                     </div>
                 {% endfor %}
             </div>
+          <div class="plans-s business">
+            <h3 class="e-title__it title_border">{{  index.business.title }}</h3>
+            <div class="plans-i plan_1">
+              <div class="plans-content banner_state">
+                <h4 class="e-title__hv hv_big">{{ index.business.content.business.title }}</h4>
+                <div class="plans-t_text">{{ index.business.content.business.top_text }}</div>
+                <a href="" class="plans-b_text-more">{{ index.business.content.business.bottom_text }}<div class="plans-l">{{ index.business.content.business.link_text }}</div></a>
+              </div>
+              <a href="" class="plans-button show_popup" data-action="plan" data-plan="business">
+                <div class="plans-button_text">{{ index.business.content.business.button_text }}<i class="ico-a_right"></i></div>
+              </a>
+            </div>
+          </div>
         {% endfor %}
     </section>
   {% include 'interface/banners.twig' %}

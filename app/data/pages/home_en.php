@@ -8,6 +8,20 @@ return array(
 
 
 
+      'business' => array (
+        'title' => 'business',
+        'content' => array (
+          'business' => array (
+            'title' => 'Business Pool',
+            'top_text' => 'Units (minutes and megabytes) by sign up',
+            'button_text' => 'Get a quote',
+            'bottom_text' => 'Account for business purposes. With possibility to use couple of numbers.',
+            'link_text' => 'Learn more',
+            'link' => 'home',
+          ),
+        )
+      ),
+
     'plans_banner' => array (
         'individual' => array (
             'title' => 'individual usage',
@@ -40,19 +54,6 @@ return array(
             )
         ),
 
-        'business' => array (
-            'title' => 'business',
-            'content' => array (
-                'business' => array (
-                                'title' => 'Business Pool',
-                                'top_text' => 'Units (minutes and megabytes) by sign up',
-                                'button_text' => 'Get a quote',
-                                'bottom_text' => 'Account for business purposes. With possibility to use couple of numbers.',
-                                'link_text' => 'Learn more',
-                                'link' => 'home',
-                            ),
-            )
-        )
     ),
 
     'bottom_section' => array (
