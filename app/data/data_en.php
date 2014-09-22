@@ -201,12 +201,11 @@ Please check your e-mail for more details.',
                 ),
 
                 'currency' => array (
-                  'EUR' => 'EUR, €',
-                  'USD' => 'USD, $'
+                  'EUR' => 'EUR, €'
                 ),
 
                 'invoice_fields' => array (
-                  'email' => 'By e-mail',
+                  'bank' => 'Bank transfer',
                   'credit' => 'Credit card'
                 ),
                 'info_fields' => array(
@@ -233,7 +232,7 @@ Please check your e-mail for more details.',
                 'plans' => array(
                     '1' => array(
                         'title' => 'Dialoq 3K',
-                        'conditions' => '2500 units for 375 €',
+                        'conditions' => '2500 units for 390 €',
                     ),
                     '2' => array(
                         'title' => 'Dialoq 5K',

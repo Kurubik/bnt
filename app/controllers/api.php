@@ -26,7 +26,12 @@ $api->post('/payment/', function() use ($app) {
     );
 
     $signature = $requestParams['signature'] = $generator->assemble($requestParams);
-    $src = 'https://terminal-sandbox.ecommpay.com/?site_id=' . $site_id . '&amount=' . $amount . '&currency=' . $currency . '&external_id=' . $external_id . '&signature=' . $signature;
+    $src = 'https://terminal-sandbox.ecommpay.com/?
+            site_id=' . $site_id .
+            '&amount=' . $amount .
+            '&currency=' . $currency .
+            '&external_id=' . $external_id .
+            '&signature=' . $signature;
     return $src;
 
 })->assert('_locale', 'en');
