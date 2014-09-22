@@ -44,23 +44,19 @@
         <input type="text" class="validate" id="address" name="address" data-validate="text">
         <div class="pers_info_input_error">{{ data.popups.order_sim.form.info_fields.errors.address }}</div>
       </div>
+      <div class="form_input">
+        <label for="zip">{{ data.popups.order_sim.form.address_fields.titles.zip }}</label>
+        <input type="text" class="validate" id="zip" name="address" data-validate="text">
+        <div class="pers_info_input_error">{{ data.popups.order_sim.form.info_fields.errors.zip }}</div>
+      </div>
 
 
       <h3 class="popup-title title_border">{{ data.popups.order_sim.form.headings.invoice }}</h3>
       <div class="form_radio">
-        <input type="radio" name="invoice" id="invoice_email" checked>
-        <label for="invoice_email">{{ data.popups.order_sim.form.invoice_fields.email }}</label>
-        <input type="radio" name="invoice" id="postal_address">
-        <label for="postal_address">{{ data.popups.order_sim.form.invoice_fields.credit }}</label>
-      </div>
-
-
-      <h3 class="popup-title title_border">{{ data.popups.order_sim.form.headings.currency }}</h3>
-      <div class="form_radio">
-        {% for currency, title in data.popups.order_sim.form.currency %}
-          <input type="radio" name="currency" id="currency_{{ currency }}" checked>
-          <label for="currency_{{ currency }}">{{ title }}</label>
-        {% endfor %}
+        <input type="radio" name="invoice" id="bank_pay" checked>
+        <label for="bank_pay">{{ data.popups.order_sim.form.invoice_fields.bank }}</label>
+        <input type="radio" name="invoice" id="credit_card">
+        <label for="credit_card">{{ data.popups.order_sim.form.invoice_fields.credit }}</label>
       </div>
 
       <h3 class="popup-title title_border">{{ data.popups.order_sim.form.headings.plan }}</h3>

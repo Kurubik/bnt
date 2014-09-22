@@ -219,20 +219,22 @@ Please check your e-mail for more details.',
                         'phone' => 'Please enter your phone',
                         'email' => ' Please enter your e-mail',
                         'city' => ' Please enter your city',
-                        'address' => ' Please enter your address',
+                        'address' => 'Please enter your address',
+                        'zip' => 'Please enter your Zip code'
                     ),
                 ),
                 'address_fields' => array (
                     'titles' => array (
                         'country' => 'Country',
                         'city' => 'City',
-                        'address' => 'Address'
+                        'address' => 'Address',
+                        'zip' => 'Zip code'
                     )
                 ),
                 'plans' => array(
                     '1' => array(
                         'title' => 'Dialoq 3K',
-                        'conditions' => '2500 units for 390 €',
+                        'conditions' => '2500 units for 390  €',
                     ),
                     '2' => array(
                         'title' => 'Dialoq 5K',
