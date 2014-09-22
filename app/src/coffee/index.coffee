@@ -13,7 +13,6 @@ Popups =
     $('form').on 'submit', Validation.submit
 
     $clickItem.on 'click', (e) ->
-      e.preventDefault()
       self.switchAction($(@))
 
     $closePopup.on 'click', (e) ->

@@ -26,7 +26,7 @@
                             <div class="plans-t_text">{{ title.top_text }}</div>
                             <a href="" class="plans-b_text-more">{{ title.bottom_text }}<div class="plans-l">{{ title.link_text }}</div></a>
                         </div>
-                        <a href="" class="plans-button show_popup" data-action="plan" data-plan="{{ banner }}">
+                        <a href="{{ path(title.link, {_locale: app.request.locale, plan: title.plan_name}) }}" class="plans-button">
                             <div class="plans-button_text">{{ title.button_text }}<i class="ico-a_right"></i></div>
                         </a>
                     </div>
@@ -40,7 +40,7 @@
                 <div class="plans-t_text">{{ index.business.content.business.top_text }}</div>
                 <a href="" class="plans-b_text-more">{{ index.business.content.business.bottom_text }}<div class="plans-l">{{ index.business.content.business.link_text }}</div></a>
               </div>
-              <a href="" class="plans-button show_popup">
+              <a href="" class="plans-button show_popup" data-action="plan" data-plan="">
                 <div class="plans-button_text">{{ index.business.content.business.button_text }}<i class="ico-a_right"></i></div>
               </a>
             </div>

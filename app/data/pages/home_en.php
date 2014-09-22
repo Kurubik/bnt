@@ -33,7 +33,8 @@ return array(
                         'button_text' => 'Order now',
                         'bottom_text' => 'Starters pack is perfectly suitable for active travellers and explorers.',
                         'link_text' => 'Learn more',
-                        'link' => 'home',
+                        'plan_name' => '3K',
+                        'link' => 'currentPlan',
                     ),
                 'dialoq5' => array (
                       'title' => 'Dialoq <br>5K',
@@ -41,7 +42,8 @@ return array(
                       'button_text' => 'Order now',
                       'bottom_text' => 'Excellent solution for frequent business trips and active internet users.',
                       'link_text' => 'Learn more',
-                      'link' => 'home',
+                      'plan_name' => '5K',
+                      'link' => 'currentPlan',
                     ),
                 'dialoq10' => array (
                         'title' => 'Dialoq <br>10K',
@@ -49,7 +51,8 @@ return array(
                         'button_text' => 'Order now',
                         'bottom_text' => 'Excellent solution for frequent business trips and active internet users.',
                         'link_text' => 'Learn more',
-                        'link' => 'home',
+                        'plan_name' => '10K',
+                        'link' => 'currentPlan',
                     ),
             )
         ),

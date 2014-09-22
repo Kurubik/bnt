@@ -8,6 +8,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 use app\data\Data;
 use lib\Signature;
+use App\Plans;
 
 $api = $app['controllers_factory'];
 
@@ -32,6 +33,9 @@ $api->post('/payment/', function() use ($app) {
             '&currency=' . $currency .
             '&external_id=' . $external_id .
             '&signature=' . $signature;
+
+
+    $oder = App\Plans\Order::createOrder();
     return $src;
 
 })->assert('_locale', 'en');

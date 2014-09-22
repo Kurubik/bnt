@@ -62,28 +62,20 @@
       <h3 class="popup-title title_border">{{ data.popups.order_sim.form.headings.plan }}</h3>
       <section class="plan_holder">
           <span class="plan_title">{{ data.popups.order_sim.form.headings.plan }}</span>
-          <div class="form_input">
-              <input type="radio" name="plan" id="dialoq3" value="37500">
-              <label for="dialoq3">{{ data.popups.order_sim.form.plans.1.title }}<span class="plan_conditions">{{ data.popups.order_sim.form.plans.1.conditions }}</span></label>
-          </div>
-          <div class="form_input">
-              <input type="radio" name="plan" id="dialoq5" value="45000">
-              <label for="dialoq5">{{ data.popups.order_sim.form.plans.2.title }}<span class="plan_conditions">{{ data.popups.order_sim.form.plans.2.conditions }}</span></label>
-          </div>
-          <div class="form_input">
-              <input type="radio" name="plan" id="dialoq10" value="75000">
-              <label for="dialoq10">{{ data.popups.order_sim.form.plans.3.title }}<span class="plan_conditions">{{ data.popups.order_sim.form.plans.3.conditions }}</span></label>
-          </div>
+          {% for plan in data.popups.order_sim.form.plans %}
+            <div class="form_input">
+              <input type="radio" name="plan" id="dialoq_{{ plan.value }}" value="{{ plan.value }}" {{ loop.first ? 'checked' : '' }}>
+              <label for="dialoq_{{ plan.value }}">{{ plan.title }}<span class="plan_conditions">{{ plan.conditions }}</span></label>
+            </div>
+          {% endfor %}
       </section>
 
       <div class="form_input sim_type">
           <div class="form_sim_heading">{{ data.popups.order_sim.form.headings.sim }}</div>
-          <input type="radio" name="sim" id="standard" checked>
-          <label for="standard">{{ data.popups.order_sim.form.sim_types.standard }}</label>
-          <input type="radio" name="sim" id="nano">
-          <label for="nano">{{ data.popups.order_sim.form.sim_types.nano }}</label>
-          <input type="radio" name="sim" id="micro">
-          <label for="micro">{{ data.popups.order_sim.form.sim_types.micro }}</label>
+          {% for sim, title in data.popups.order_sim.form.sim_types %}
+            <input type="radio" name="sim" id="{{ sim }}" {{ loop.first ? 'checked' : '' }}>
+            <label for="{{ sim }}">{{ title }}</label>
+          {% endfor %}
       </div>
 
       <div class="form_condition_agreement">

@@ -33,6 +33,10 @@ return array(
     'find' => 'Find out',
     'availability' => 'Availability check:',
     'type_country' => 'Type country name',
+    'back' => 'Back',
+    'form_support_text' => 'If you have any questions about order procces, please contact us:',
+    'form_support_phone' => '+ 371 27 777-22-22',
+    'form_support_real_phone' => '+371277772222',
 
 
     'contact_form' => array(
@@ -197,7 +201,8 @@ Please check your e-mail for more details.',
                     'currency' => 'Currency',
                     'invoice' => 'Payment method',
                     'sim' => 'Sim-card',
-                    'agreement' => 'I have read and agree to the terms and conditions',
+                    'agreement' => 'I have read and agree to the',
+                    'tc' => 'Terms and conditions',
                 ),
 
                 'currency' => array (
@@ -210,12 +215,14 @@ Please check your e-mail for more details.',
                 ),
                 'info_fields' => array(
                     'titles' => array(
-                        'name' => 'Name',
+                        'name' => 'First Name',
                         'phone' => 'Phone',
                         'email' => 'E-mail',
+                        'surname' => 'Last Name',
                     ),
                     'errors' => array(
-                        'name' => 'Please enter your name',
+                        'name' => 'Please enter your First Name',
+                        'surname' => 'Please enter Last Name',
                         'phone' => 'Please enter your phone',
                         'email' => ' Please enter your e-mail',
                         'city' => ' Please enter your city',
@@ -232,16 +239,22 @@ Please check your e-mail for more details.',
                     )
                 ),
                 'plans' => array(
-                    '1' => array(
+                    array(
+                        'value' => '39000',
+                        'link' => '3K',
                         'title' => 'Dialoq 3K',
                         'conditions' => '2500 units for 390  €',
                     ),
-                    '2' => array(
+                    array(
+                        'value' => '45000',
                         'title' => 'Dialoq 5K',
+                        'link' => '5K',
                         'conditions' => '4000 units for 450 €',
                     ),
-                    '3' => array(
+                    array(
+                        'value' => '75000',
                         'title' => 'Dialoq 10K',
+                        'link' => '10K',
                         'conditions' => '10000 units for 750 €',
                     ),
                 ),
