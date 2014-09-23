@@ -12,6 +12,15 @@ Class Translates
         return require_once ROOT . '/app/data/data_'. $locale .'.php';
     }
 
+    /**
+     * @param $locale
+     * @return array
+     */
+    public static function translateEmail($locale)
+    {
+        return require_once ROOT . '/app/data/email_'. $locale .'.php';
+    }
+
 
     /**
      * @param $locale

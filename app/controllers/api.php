@@ -45,14 +45,14 @@ $api->post('/payment/',
 
 $api->post('/email/',
     function() use ($app) {
-        $translates = Data\Translates::translateArray($app['locale']);
+        $translates = Data\Translates::translateEmail($app['locale']);
         $data = $_POST;
         $client_email = trim($data['email']);
         $client_name  = trim($data['name']);
         $message_text = trim($data['text']);
 
         echo '<pre>';
-        print_r($_POST);
+        print_r($translates);
 
 //        if (!empty($client_email) && !empty($client_name) && !empty($message_text)) {
 //
