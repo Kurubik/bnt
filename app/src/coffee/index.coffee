@@ -9,7 +9,7 @@ Popups =
     $clickItem = $('.show_popup')
     self = @
     $closePopup = $('.close_popup')
-    $confirmButton = $('#confirm_terms')
+    $confirmButton = $('.confirm_popup')
     @$popup = $('#popup')
     $('form').on 'submit', Validation.submit
 
@@ -54,10 +54,10 @@ Popups =
       when 'plan' then @showPlanPopup($item.data('plan'))
       when 'terms' then @showTerms()
       else false
-    @popupDefaultAction($item)
+    @popupDefaultAction($item.data('action'))
 
-  popupDefaultAction: ($item) ->
-    @$popup.find("[data-popup='#{$item.data('action')}']").css('display' , 'block').siblings('[data-popup]').css('display', 'none')
+  popupDefaultAction: (action) ->
+    @$popup.find("[data-popup='#{action}']").css('display' , 'block').siblings('[data-popup]').css('display', 'none')
     @$container = $('.e-popup_container')
     self = @
     @$popup.fadeIn(300, ->
@@ -155,7 +155,7 @@ Payment =
       data: $activeForm.serialize()
       type: 'POST'
       success: (data) ->
-        console.log 'sucess'
+        Popups.popupDefaultAction('sent')
       error: ->
         console.log 'error'
 
@@ -186,4 +186,4 @@ Payment =
 
 
   loadComplete: ->
-    Popups.popupDefaultAction($('.iframe_holder'))
+    Popups.popupDefaultAction('iframe')
