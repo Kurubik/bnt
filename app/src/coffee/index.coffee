@@ -1,5 +1,6 @@
 $(->
   Popups.init()
+  FormAction.init()
 )
 
 
@@ -49,7 +50,6 @@ Popups =
       $checkedFrield.prop('checked', true)
 
 
-
   switchAction: ($item) ->
     switch $item.data('action')
       when 'plan' then @showPlanPopup($item.data('plan'))
@@ -64,6 +64,32 @@ Popups =
     self = @
     @$popup.fadeIn(300, ->
       self.$container.addClass('showed')
+    )
+
+
+FormAction =
+  init: ->
+    $switcher = $('.form_switch')
+    self = @
+
+    $switcher.on 'click', ->
+      self.switchForm($(@).data('form'))
+
+
+  switchForm: (action) ->
+    switch action
+      when 'individual' then @showIndividual()
+      when 'legal' then @showLegal()
+      else throw new Error("#{action} action is disabled , or doesn't support")
+
+  showIndividual: ->
+    $('.form_input-company').stop().slideUp(250, ->
+      $(@).find('input').removeClass('validate')
+    )
+
+  showLegal: ->
+    $('.form_input-company').stop().slideDown(250, ->
+      $(@).find('input').addClass('validate')
     )
 
 

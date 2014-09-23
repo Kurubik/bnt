@@ -13,13 +13,18 @@
         <h1 class="form_heading">{{ data.popups.order_sim.heading }}</h1>
         <form class="popup_form popup_text" id="popup_form">
           <section class="form_radio">
-            <input type="radio" name="plan_type" id="individual" checked class="e-radio_hover">
+            <input type="radio" name="plan_type" id="individual" checked class="e-radio_hover form_switch" data-form="individual">
             <label for="individual">{{ data.popups.order_sim.order_type.individual }}</label>
-            <input type="radio" name="plan_type" id="legal_entity" class="e-radio_hover">
-            <label for="legal_entity">{{ data.popups.order_sim.order_type.legal_entity }}</label>
+            <input type="radio" name="plan_type" id="legal" class="e-radio_hover form_switch" data-form="legal">
+            <label for="legal">{{ data.popups.order_sim.order_type.legal_entity }}</label>
           </section>
 
           <h3 class="popup-title title_border">{{ data.popups.order_sim.form.headings.pers_info }}</h3>
+          <div class="form_input form_input-company">
+            <label for="company">{{ data.popups.order_sim.form.info_fields.titles.company }}</label>
+            <input type="text" name="company" id="company" data-validate="text">
+            <div class="pers_info_input_error">{{ data.popups.order_sim.form.info_fields.errors.company }}</div>
+          </div>
           <div class="form_input">
             <label for="name">{{ data.popups.order_sim.form.info_fields.titles.name }}</label>
             <input type="text" name="name" id="name" class="validate" data-validate="text">
@@ -102,10 +107,8 @@
             {{ data.popups.order_sim.button }}
             <i class="ico-a_right"></i>
           </button>
-        </form>
+    </form>
       </div>
-
-
     </div>
   </section>
 
