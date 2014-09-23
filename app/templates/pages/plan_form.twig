@@ -13,9 +13,9 @@
         <h1 class="form_heading">{{ data.popups.order_sim.heading }}</h1>
         <form class="popup_form popup_text" id="popup_form">
           <section class="form_radio">
-            <input type="radio" name="plan_type" id="individual" checked>
+            <input type="radio" name="plan_type" id="individual" checked class="e-radio_hover">
             <label for="individual">{{ data.popups.order_sim.order_type.individual }}</label>
-            <input type="radio" name="plan_type" id="legal_entity">
+            <input type="radio" name="plan_type" id="legal_entity" class="e-radio_hover">
             <label for="legal_entity">{{ data.popups.order_sim.order_type.legal_entity }}</label>
           </section>
 
@@ -71,7 +71,7 @@
             <span class="plan_title">{{ data.popups.order_sim.form.headings.plan }}</span>
             {% for plan in data.popups.order_sim.form.plans %}
               <div class="form_input">
-                <input type="radio" name="plan" id="dialoq_{{ plan.value }}" value="{{ plan.value }}" {{ plan.link == current_plan ? 'checked' : '' }}>
+                <input class="e-radio_hover" type="radio" name="plan" id="dialoq_{{ plan.value }}" value="{{ plan.value }}" {{ plan.link == current_plan ? 'checked' : '' }}>
                 <label for="dialoq_{{ plan.value }}">{{ plan.title }}<span class="plan_conditions">{{ plan.conditions }}</span></label>
               </div>
             {% endfor %}
@@ -80,16 +80,16 @@
           <div class="form_input sim_type">
             <div class="form_sim_heading">{{ data.popups.order_sim.form.headings.sim }}</div>
             {% for sim, title in data.popups.order_sim.form.sim_types %}
-              <input type="radio" name="sim" id="{{ sim }}" {{ loop.first ? 'checked' : '' }}>
+              <input class="e-radio_hover" type="radio" name="sim" id="{{ sim }}" {{ loop.first ? 'checked' : '' }}>
               <label for="{{ sim }}">{{ title }}</label>
             {% endfor %}
           </div>
 
           <h3 class="popup-title title_border">{{ data.popups.order_sim.form.headings.invoice }}</h3>
           <div class="form_radio">
-            <input type="radio" name="invoice" id="bank_pay" checked>
+            <input class="e-radio_hover" type="radio" name="invoice" id="bank_pay" checked>
             <label for="bank_pay">{{ data.popups.order_sim.form.invoice_fields.bank }}</label>
-            <input type="radio" name="invoice" id="credit_card">
+            <input class="e-radio_hover" type="radio" name="invoice" id="credit_card">
             <label for="credit_card">{{ data.popups.order_sim.form.invoice_fields.credit }}</label>
           </div>
 

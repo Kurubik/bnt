@@ -347,7 +347,21 @@
   display block
   line-height 20px
   padding-left 16px
+  transition opacity .2s ease-in-out
   .ico-a_right
     transform scale(-1)
     left 0
     top 8px
+
+  &:hover
+    opacity .5
+
+
+.e-overlay
+  position absolute
+  top 0
+  left 0
+  height 100%
+  width 100%
+  z-index 1
+  background-color rgba(0,0,0, 0.2)

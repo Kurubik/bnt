@@ -1,6 +1,9 @@
 {% extends 'layout.twig' %}
 {% block content %}
 <div class="content {{ app.request.attributes.get('_route') == 'home' ? 'home' : 'inner' }}">
+  {% if app.request.attributes.get('_route') == 'currentPlan' %}
+    <div class="e-overlay"></div>
+  {% endif %}
   {#<div class="wrapper">#}
     {#{% include 'interface/header.twig' %}#}
     {#{% block page %}{% endblock %}#}

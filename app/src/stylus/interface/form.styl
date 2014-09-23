@@ -41,6 +41,12 @@
     font-size 14px
     line-height 24px
 
+.form_input
+  input[type=text]
+    transition all .2s ease-in-out
+    &:focus
+      outline none
+
 
 
 .form_center
@@ -70,6 +76,9 @@
 
 .tc_click
   color #fff
+  transition opacity .2s ease-in-out
+  &:hover
+    opacity .5
 
 
 .pers_info_input_error
@@ -118,3 +127,28 @@
 .plan_form
   .form_input label
     color rgb(200,200,200)
+
+
+
+input:checked + label
+  color #fff !important
+
+
+.e-radio_hover:not(:checked) + label
+  &:hover
+    opacity .5
+
+input[type="checkbox"].input_error + label
+  color #f00 !important
+
+
+.popup_form
+  display block
+  width 390px
+  label
+    transition all .2s ease-in-out
+  input[type="text"]
+    border 1px solid transparent
+  input, label
+    display inline-block
+    vertical-align middle
