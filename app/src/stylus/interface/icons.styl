@@ -90,7 +90,7 @@
   transition background-color .3s ease-in-out
   vertical-align top
   &:hover
-    background-color rgba(255,255,255, 0.3)
+    background-color rgba(255,255,255, 0.5)
   + .ico-social
     margin-left 15px
 
@@ -262,3 +262,28 @@
     border none
     outline none
 
+
+.icon_svg
+  font-size 50px
+  line-height 1
+  font-family svgFont
+  vertical-align middle
+  display inline-block
+  &.icon_absolute
+    position absolute
+    top -16px
+    right -20px
+    + .icon_absolute
+      right -80px
+
+  &.icon-visa
+    &:before
+      content '\f328'
+  &.icon-mastercard
+    &:before
+      content '\f329'
+
+
+.icon_text
+  display inline-block
+  vertical-align middle

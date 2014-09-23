@@ -11,11 +11,11 @@
       </div>
       <div class="plan_form center">
         <h1 class="form_heading">{{ data.popups.order_sim.heading }}</h1>
-        <form class="popup_form popup_text" id="popup_form">
+        <form class="popup_form popup_text" id="popup_form" data-form_action="bank">
           <section class="form_radio">
-            <input type="radio" name="plan_type" id="individual" checked class="e-radio_hover form_switch" data-form="individual">
+            <input type="radio" name="plan_type" id="individual" checked class="e-radio_hover form_switch" data-form="individual" value="individual">
             <label for="individual">{{ data.popups.order_sim.order_type.individual }}</label>
-            <input type="radio" name="plan_type" id="legal" class="e-radio_hover form_switch" data-form="legal">
+            <input type="radio" name="plan_type" id="legal" class="e-radio_hover form_switch" data-form="legal" value="legal">
             <label for="legal">{{ data.popups.order_sim.order_type.legal_entity }}</label>
           </section>
 
@@ -92,10 +92,18 @@
 
           <h3 class="popup-title title_border">{{ data.popups.order_sim.form.headings.invoice }}</h3>
           <div class="form_radio">
-            <input class="e-radio_hover" type="radio" name="invoice" id="bank_pay" checked>
-            <label for="bank_pay">{{ data.popups.order_sim.form.invoice_fields.bank }}</label>
-            <input class="e-radio_hover" type="radio" name="invoice" id="credit_card">
-            <label for="credit_card">{{ data.popups.order_sim.form.invoice_fields.credit }}</label>
+            <div class="radio_item">
+              <input class="e-radio_hover payment_value" type="radio" name="invoice" id="bank_pay" checked value="bank">
+              <label for="bank_pay">{{ data.popups.order_sim.form.invoice_fields.bank }}</label>
+            </div>
+            <div class="radio_item">
+              <input class="e-radio_hover payment_value" type="radio" name="invoice" id="credit_card" value="payment">
+              <label for="credit_card">
+                <span class="icon_text">{{ data.popups.order_sim.form.invoice_fields.credit }}</span>
+                <i class="icon_svg icon-visa icon_absolute"></i>
+                <i class="icon_svg icon-mastercard icon_absolute"></i>
+              </label>
+            </div>
           </div>
 
           <div class="form_condition_agreement">

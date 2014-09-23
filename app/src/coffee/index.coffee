@@ -33,7 +33,7 @@ Popups =
   popupDispose: ->
     @$container.removeClass('showed')
     self = @
-    iframe = $('#iframe')
+    iframe = $('.iframe_holder')
     @$container.one('transitionend webkitTransitionEnd', (e) =>
       e.stopPropagation()
       self.$popup.fadeOut(250)
@@ -42,7 +42,6 @@ Popups =
 
   showPlanPopup: (plan) ->
     @$popup.find("##{plan}").click()
-
 
   showTerms: ->
     $checkedFrield = $('.form_condition_agreement').find('input[type="checkbox"]')
@@ -54,12 +53,11 @@ Popups =
     switch $item.data('action')
       when 'plan' then @showPlanPopup($item.data('plan'))
       when 'terms' then @showTerms()
-      else  throw new Error("Load action: #{$item.data('action')} doesn't exist")
+      else false
     @popupDefaultAction($item)
 
-
   popupDefaultAction: ($item) ->
-    @$popup.find("[data-popup='#{$item.data('action')}']").css('display' , 'block').siblings('.e-popup_section').css('display', 'none')
+    @$popup.find("[data-popup='#{$item.data('action')}']").css('display' , 'block').siblings('[data-popup]').css('display', 'none')
     @$container = $('.e-popup_container')
     self = @
     @$popup.fadeIn(300, ->
@@ -70,17 +68,21 @@ Popups =
 FormAction =
   init: ->
     $switcher = $('.form_switch')
+    $paySwitch = $('.payment_value')
     self = @
 
     $switcher.on 'click', ->
       self.switchForm($(@).data('form'))
+
+    $paySwitch.on 'click', ->
+      $(@).closest('form').data('form_action', $(@).val())
 
 
   switchForm: (action) ->
     switch action
       when 'individual' then @showIndividual()
       when 'legal' then @showLegal()
-      else throw new Error("#{action} action is disabled , or doesn't support")
+      else false
 
   showIndividual: ->
     $('.form_input-company').stop().slideUp(250, ->
@@ -129,31 +131,59 @@ Validation =
     if not Validation.validate.call(@)
       false
     else
-      Payment.sendRequest($activeForm)
+      Payment.switchAction($activeForm)
     false
 
   clearFields: ($form) ->
     $form[0].reset()
 
 
+
 Payment =
-  sendRequest: ($activeForm) ->
-    self = @
+  currentData : null
+  switchAction: ($activeForm) ->
+    switch $activeForm.data('form_action')
+      when 'payment' then @sendRequest($activeForm)
+      when 'bank' then @sendEmail($activeForm)
+      when 'business' then @sendEmail($activeForm)
+      else false
+
+
+  sendEmail: ($activeForm) ->
     $.ajax
-      url: '/en/api/payment/'
+      url: '/en/api/email/'
       data: $activeForm.serialize()
       type: 'POST'
       success: (data) ->
-        self.createIframe(data)
+        console.log 'sucess'
       error: ->
         console.log 'error'
 
-  createIframe: (src)->
+
+  sendRequest: ($activeForm) ->
+    self = @
+    formData = $activeForm.serialize()
+    if @currentData isnt formData
+      @currentData = formData
+      $.ajax
+        url: '/en/api/payment/'
+        data: @currentData
+        type: 'POST'
+        success: (data) ->
+          self.createIframe(data)
+        error: ->
+          console.log 'error'
+    else
+      @loadComplete()
+
+
+  createIframe: (src) ->
     @$iframe = $('#iframe')
     @$iframe.attr('src', src)
     @$iframe.load( =>
       @loadComplete()
     )
 
+
   loadComplete: ->
-    @$iframe.fadeIn(400)
+    Popups.popupDefaultAction($('.iframe_holder'))

@@ -31,18 +31,21 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
       )
 ));
 
-$app->register(new Silex\Provider\SwiftmailerServiceProvider());
 
 $app->register(new Silex\Provider\HttpCacheServiceProvider(), array(
     'http_cache.cache_dir' => ROOT .'/app/cache/http/',
     'http_cache.esi'       => null
 ));
 
+$app->register(new Silex\Provider\SwiftmailerServiceProvider());
+
+
+
 $app['swiftmailer.options'] = array(
     'host' => 'smtp.gmail.com',
     'port' => '465',
-    'username' => '',
-    'password' => '',
+    'username' => 'nevedimkax@gmail.com',
+    'password' => 'me291187',
     'encryption' => 'ssl',
     'auth_mode'  => 'login'
 );

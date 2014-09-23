@@ -130,7 +130,10 @@ select:focus
   .form_input label
     color rgb(200,200,200)
 
-
+.radio_item
+  display inline-block
+  vertical-align middle
+  position relative
 
 input:checked + label
   color #fff !important
@@ -147,6 +150,8 @@ input[type="checkbox"].input_error + label
 .popup_form
   display block
   width 390px
+  .e-popup_container &
+    padding-bottom 20px
   label
     transition all .2s ease-in-out
   input[type="text"]

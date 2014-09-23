@@ -13,7 +13,6 @@
         <div class="img-B_info-box">{{ index.info_box | raw }}</div>
 
     </section>
-
     <section class="plans-b plans-b-tmp">
         {% for plans,items in index.plans_banner %}
             <div class="plans-s {{ plans }}">
@@ -40,7 +39,7 @@
                 <div class="plans-t_text">{{ index.business.content.business.top_text }}</div>
                 <a href="" class="plans-b_text-more">{{ index.business.content.business.bottom_text }}<div class="plans-l">{{ index.business.content.business.link_text }}</div></a>
               </div>
-              <a href="" class="plans-button show_popup" data-action="plan" data-plan="">
+              <a href="" class="plans-button show_popup" data-action="plan" data-plan="plan">
                 <div class="plans-button_text">{{ index.business.content.business.button_text }}<i class="ico-a_right"></i></div>
               </a>
             </div>
