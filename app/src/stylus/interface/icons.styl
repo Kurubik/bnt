@@ -264,24 +264,20 @@
 
 
 .icon_svg
-  font-size 50px
-  line-height 1
-  font-family svgFont
-  vertical-align middle
+  position absolute
   display inline-block
-  &.icon_absolute
-    position absolute
-    top -16px
-    right -20px
-    + .icon_absolute
-      right -80px
-
+  width 36px
+  height 24px
+  top -2px
+  right -15px
+  opacity .5
+  transition opacity .2s ease-in-out
+  + .icon_svg
+    right -65px
   &.icon-visa
-    &:before
-      content '\f328'
+    background url('../images/visa.png') center no-repeat
   &.icon-mastercard
-    &:before
-      content '\f329'
+    background url('../images/mastercard.png') center no-repeat
 
 
 .icon_text
