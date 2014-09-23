@@ -11,6 +11,7 @@ Popups =
     $closePopup = $('.close_popup')
     $confirmButton = $('.confirm_popup')
     @$popup = $('#popup')
+    @$loader = $('#loader')
     $('form').on 'submit', Validation.submit
 
     $clickItem.on 'click', (e) ->
@@ -31,6 +32,7 @@ Popups =
 
 
   popupDispose: ->
+    @$loader.css('display', 'none')
     @$container.removeClass('showed')
     self = @
     iframe = $('.iframe_holder')
@@ -54,15 +56,21 @@ Popups =
       when 'plan' then @showPlanPopup($item.data('plan'))
       when 'terms' then @showTerms()
       else false
-    @popupDefaultAction($item.data('action'))
+    @popupDefaultAction($item.data('action'), false)
 
-  popupDefaultAction: (action) ->
+  popupDefaultAction: (action, loader) ->
     @$popup.find("[data-popup='#{action}']").css('display' , 'block').siblings('[data-popup]').css('display', 'none')
     @$container = $('.e-popup_container')
     self = @
-    @$popup.fadeIn(300, ->
-      self.$container.addClass('showed')
-    )
+    if not loader
+      @$popup.fadeIn(300, ->
+        self.$container.addClass('showed')
+      )
+    else
+      @$container.addClass('showed')
+      @$container.one('transitionend webkitTransitionEnd', (e) =>
+        @$loader.css 'display', 'none'
+      )
 
 
 FormAction =
@@ -131,6 +139,8 @@ Validation =
     if not Validation.validate.call(@)
       false
     else
+      Popups.$loader.css('display', 'block')
+      Popups.$popup.fadeIn(300)
       Payment.switchAction($activeForm)
     false
 
@@ -155,7 +165,7 @@ Payment =
       data: $activeForm.serialize()
       type: 'POST'
       success: (data) ->
-        Popups.popupDefaultAction('sent')
+        Popups.popupDefaultAction('sent', true)
       error: ->
         console.log 'error'
 
@@ -186,4 +196,4 @@ Payment =
 
 
   loadComplete: ->
-    Popups.popupDefaultAction('iframe')
+    Popups.popupDefaultAction('iframe', true)
