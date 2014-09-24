@@ -56,6 +56,7 @@ Popups =
       when 'plan' then @showPlanPopup($item.data('plan'))
       when 'terms' then @showTerms()
       else false
+
     @popupDefaultAction($item.data('action'), false)
 
   popupDefaultAction: (action, loader) ->
@@ -68,9 +69,8 @@ Popups =
       )
     else
       @$container.addClass('showed')
-      @$container.one('transitionend webkitTransitionEnd', (e) =>
-        @$loader.css 'display', 'none'
-      )
+      @$loader.css('display', 'none')
+      @$popup.find('.e-popup_section').removeClass('hidden')
 
 
 FormAction =
@@ -140,7 +140,11 @@ Validation =
       false
     else
       Popups.$loader.css('display', 'block')
-      Popups.$popup.fadeIn(300)
+      if Popups.$popup.css('display') == 'block'
+        $('.e-popup_section').addClass('hidden')
+      else
+        Popups.$popup.fadeIn(300)
+
       Payment.switchAction($activeForm)
     false
 
@@ -154,20 +158,23 @@ Payment =
   switchAction: ($activeForm) ->
     switch $activeForm.data('form_action')
       when 'payment' then @sendRequest($activeForm)
-      when 'bank' then @sendEmail($activeForm)
-      when 'business' then @sendEmail($activeForm)
+      when 'bank' then @sendEmail($activeForm, 'bank')
+      when 'business' then @sendEmail($activeForm, 'business')
       else false
 
 
-  sendEmail: ($activeForm) ->
+  sendEmail: ($activeForm, action) ->
     $.ajax
-      url: '/en/api/email/'
+      url: "/en/api/email/#{action}/"
       data: $activeForm.serialize()
       type: 'POST'
       success: (data) ->
-        Popups.popupDefaultAction('sent', true)
+        if data
+          Popups.popupDefaultAction('sent', true)
+        else
+          Popups.popupDefaultAction('error', true)
       error: ->
-        console.log 'error'
+        Popups.popupDefaultAction('error', true)
 
 
   sendRequest: ($activeForm) ->
@@ -180,9 +187,12 @@ Payment =
         data: @currentData
         type: 'POST'
         success: (data) ->
-          self.createIframe(data)
+          if data
+            self.createIframe(data)
+          else
+            Popups.popupDefaultAction('error', true)
         error: ->
-          console.log 'error'
+          Popups.popupDefaultAction('error', true)
     else
       @loadComplete()
 

@@ -5,6 +5,7 @@
  */
 
 require_once ROOT . '/app/data/control/data.php';
+require_once ROOT . '/app/data/control/validate.php';
 require_once ROOT . '/app/lib/SignatureGenerator.php';
 require_once ROOT . '/app/model/Order.php';
 

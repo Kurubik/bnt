@@ -13,9 +13,9 @@
         <h1 class="form_heading">{{ data.popups.order_sim.heading }}</h1>
         <form class="popup_form popup_text" id="popup_form" data-form_action="bank">
           <section class="form_radio">
-            <input type="radio" name="plan_type" id="individual" checked class="e-radio_hover form_switch" data-form="individual" value="individual">
+            <input type="radio" name="plan_type" id="individual" checked class="e-radio_hover form_switch" data-form="individual" value="{{ data.popups.order_sim.order_type.individual }}">
             <label for="individual"><span class="icon_text">{{ data.popups.order_sim.order_type.individual }}</span></label>
-            <input type="radio" name="plan_type" id="legal" class="e-radio_hover form_switch" data-form="legal" value="legal">
+            <input type="radio" name="plan_type" id="legal" class="e-radio_hover form_switch" data-form="legal" value="{{ data.popups.order_sim.order_type.legal_entity }}">
             <label for="legal"><span class="icon_text">{{ data.popups.order_sim.order_type.legal_entity }}</span></label>
           </section>
 
@@ -67,7 +67,7 @@
           </div>
           <div class="form_input">
             <label for="zip">{{ data.popups.order_sim.form.address_fields.titles.zip }}</label>
-            <input type="text" class="validate" id="zip" name="address" data-validate="text">
+            <input type="text" class="validate" id="zip" name="zip" data-validate="text">
             <div class="pers_info_input_error">{{ data.popups.order_sim.form.info_fields.errors.zip }}</div>
           </div>
 
@@ -85,7 +85,7 @@
           <div class="form_input sim_type">
             <div class="form_sim_heading">{{ data.popups.order_sim.form.headings.sim }}</div>
             {% for sim, title in data.popups.order_sim.form.sim_types %}
-              <input class="e-radio_hover" type="radio" name="sim" id="{{ sim }}" {{ loop.first ? 'checked' : '' }}>
+              <input class="e-radio_hover" type="radio" name="sim" id="{{ sim }}" {{ loop.first ? 'checked' : '' }} value="{{ title }}">
               <label for="{{ sim }}"><span class="icon_text">{{ title }}</span></label>
             {% endfor %}
           </div>

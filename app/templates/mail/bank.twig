@@ -1,0 +1,111 @@
+<strong>{{ translation.order }} ({{ data.plan_type }})</strong>
+<br><br>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2" style="border-bottom: 1px solid #000; font-style: italic; color: #000; font-size: 18px; padding-bottom: 8px">{{ translation.info }}</td>
+  </tr>
+  {% if data.company is defined %}
+    <tr style="height: 40px;border-collapse: collapse !important;">
+      <td style="font-size:15px; vertical-align: middle; width: 150px; padding: 10px 20px 10px 0;color: #474747; border-collapse: collapse !important;">
+        {{ translation.company }}
+      </td>
+      <td style="vertical-align: middle; padding: 10px 0 10px 0; border-collapse: collapse !important;">
+        {{ data.company }}
+      </td>
+    </tr>
+  {% endif %}
+  <tr style="height: 40px;border-collapse: collapse !important;">
+    <td style="font-size:15px; vertical-align: middle; width: 150px; padding: 10px 20px 10px 0;color: #474747; border-collapse: collapse !important;">
+      {{ translation.first_name }}
+    </td>
+    <td style="vertical-align: middle; padding: 10px 0 10px 0; border-collapse: collapse !important;">
+      {{ data.name }}
+    </td>
+  </tr>
+  <tr style="height: 40px;">
+    <td style="font-size:15px; vertical-align: middle; width: 150px; padding: 10px 20px 10px 0;color: #474747; border-collapse: collapse !important;">
+      {{ translation.last_name }}
+    </td>
+    <td style="vertical-align: middle; padding: 10px 0 10px 0; border-collapse: collapse !important;">
+      {{ data.surname }}
+    </td>
+  </tr>
+  <tr style="height: 40px;">
+    <td style="font-size:15px; vertical-align: middle; width: 150px; padding: 10px 20px 10px 0;color: #474747; border-collapse: collapse !important;">
+      {{ translation.phone }}
+    </td>
+    <td style="width: 300px; vertical-align: middle; padding: 10px 0 10px 0; border-collapse: collapse !important;">
+      {{ data.phone }}
+    </td>
+  </tr>
+  <tr style="height: 40px;">
+    <td style="font-size:15px; vertical-align: middle; width: 150px; padding: 10px 20px 10px 0;color: #474747; border-collapse: collapse !important;">
+      {{ translation.email }}
+    </td>
+    <td style="font-size:15px; width: 300px; vertical-align: middle; padding: 10px 0 10px 0; border-collapse: collapse !important;">
+      <a href="mailto:{{ data.email }}" style="color:#000;text-decoration: none">{{ data.email }}</a>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="border-bottom: 1px solid #000; font-style: italic; color: #000; font-size: 18px; padding:15px 0 8px 0">{{ translation.address_info }}</td>
+  </tr>
+  <tr style="height: 40px;">
+    <td style="font-size:15px; vertical-align: middle; width: 150px; padding: 10px 20px 10px 0;color: #474747; border-collapse: collapse !important;">
+      {{ translation.country }}
+    </td>
+    <td style="width: 300px; vertical-align: middle; padding: 10px 0 10px 0; border-collapse: collapse !important;">
+      {{ data.country }}
+    </td>
+  </tr>
+  <tr style="height: 40px;">
+    <td style="font-size:15px; vertical-align: middle; width: 150px; padding: 10px 20px 10px 0;color: #474747; border-collapse: collapse !important;">
+      {{ translation.country }}
+    </td>
+    <td style="width: 300px; vertical-align: middle; padding: 10px 0 10px 0; border-collapse: collapse !important;">
+      {{ data.country }}
+    </td>
+  </tr>
+  <tr style="height: 40px;">
+    <td style="font-size:15px; vertical-align: middle; width: 150px; padding: 10px 20px 10px 0;color: #474747; border-collapse: collapse !important;">
+      {{ translation.city }}
+    </td>
+    <td style="width: 300px; vertical-align: middle; padding: 10px 0 10px 0; border-collapse: collapse !important;">
+      {{ data.city }}
+    </td>
+  </tr>
+  <tr style="height: 40px;">
+    <td style="font-size:15px; vertical-align: middle; width: 150px; padding: 10px 20px 10px 0;color: #474747; border-collapse: collapse !important;">
+      {{ translation.address_info }}
+    </td>
+    <td style="width: 300px; vertical-align: middle; padding: 10px 0 10px 0; border-collapse: collapse !important;">
+      {{ data.address }}
+    </td>
+  </tr>
+  <tr style="height: 40px;">
+    <td style="font-size:15px; vertical-align: middle; width: 150px; padding: 10px 20px 10px 0;color: #474747; border-collapse: collapse !important;">
+      {{ translation.zip }}
+    </td>
+    <td style="width: 300px; vertical-align: middle; padding: 10px 0 10px 0; border-collapse: collapse !important;">
+      {{ data.zip }}
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="border-bottom: 1px solid #000; font-style: italic; color: #000; font-size: 18px; padding:15px 0 8px 0">{{ translation.plan }}</td>
+  </tr>
+  <tr style="height: 40px;">
+    <td style="font-size:15px; vertical-align: middle; width: 150px; padding: 10px 20px 10px 0;color: #474747; border-collapse: collapse !important;">
+      {{ translation.plan }}
+    </td>
+    <td style="width: 300px; vertical-align: middle; padding: 10px 0 10px 0; border-collapse: collapse !important;">
+      {{ data.plan }}
+    </td>
+  </tr>
+  <tr style="height: 40px;">
+    <td style="font-size:15px; vertical-align: middle; width: 150px; padding: 10px 20px 10px 0;color: #474747; border-collapse: collapse !important;">
+      {{ translation.sim }}
+    </td>
+    <td style="width: 300px; vertical-align: middle; padding: 10px 0 10px 0; border-collapse: collapse !important;">
+      {{ data.sim }}
+    </td>
+  </tr>
+</table>

@@ -7,6 +7,7 @@
 use Symfony\Component\HttpFoundation\Response;
 
 use app\data\Data;
+use app\Action;
 use lib\Signature;
 use App\Plans;
 
@@ -43,37 +44,55 @@ $api->post('/payment/',
 
 
 
-$api->post('/email/',
-    function() use ($app) {
+$api->post('/email/{name}/',
+    function($name) use ($app) {
         $translates = Data\Translates::translateEmail($app['locale']);
         $data = $_POST;
+        $company = trim($data['company']);
         $client_email = trim($data['email']);
         $client_name  = trim($data['name']);
-        $message_text = trim($data['text']);
 
-        echo '<pre>';
-        print_r($translates);
+        if (empty($company) && $name === 'bank') {
+            unset($data['company']);
+        }
 
-//        if (!empty($client_email) && !empty($client_name) && !empty($message_text)) {
-//
-//            $mails = array(
-//              'ka@vcgworld.com'
-//            );
-//
-//            $message = \Swift_Message::newInstance()
-//              ->setBody(
-//                $app['twig']->render('/mail/mail.twig', array('data' => $data, 'translation' => $translates)),
-//                'text/html'
-//              )
-//              ->setSubject($translates['contacts'] . ': barniarabia.com')
-//              ->setReplyTo($client_email, $client_name)
-//              ->setFrom('nevedimkax@gmail.com', $client_name)
-//              ->setTo($mails);
-//
-//            return $app['mailer']->send($message);
-//        } else {
-//            return false;
-//        }
+        // TODO use silex/symphony validator !!
+        $validate = Action\ValidateAction::validateEmail($data);
+
+        if ($validate) {
+
+            $subject = '';
+            switch ($name) {
+                case 'bank':
+                    $subject = $translates['order'];
+                    break;
+                case 'business':
+                    $subject = $translates['business'];
+                    break;
+            }
+
+            $mails = array(
+              'ka@vcgworld.com'
+            );
+
+            $message = \Swift_Message::newInstance()
+              ->setBody(
+                $app['twig']->render('/mail/'. $name .'.twig',
+                    array(
+                        'data' => $data,
+                        'translation' => $translates)
+                    ),
+                    'text/html'
+              )
+              ->setSubject($subject . ': dialoq.com')
+              ->setReplyTo($client_email, $client_name)
+              ->setFrom('dialoqtest@gmail.com', $client_name)
+              ->setTo($mails);
+
+              return $app['mailer']->send($message);
+        } else {
+            return false;
+        }
     }
 )->assert('_locale', 'en');
 

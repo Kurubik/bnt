@@ -44,8 +44,8 @@ $app->register(new Silex\Provider\SwiftmailerServiceProvider());
 $app['swiftmailer.options'] = array(
     'host' => 'smtp.gmail.com',
     'port' => '465',
-    'username' => 'nevedimkax@gmail.com',
-    'password' => 'me291187',
+    'username' => 'dialoqtest@gmail.com',
+    'password' => 'dialoqtest123',
     'encryption' => 'ssl',
     'auth_mode'  => 'login'
 );

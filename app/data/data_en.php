@@ -186,6 +186,10 @@ return array(
             'text' => 'Your order has been successfully placed.
 Please check your e-mail for more details.',
         ),
+        'error' => array (
+          'heading' => 'Sorry something wrong',
+          'text' => 'Ooops something wrong Ooops something wrong Ooops something wrong Ooops something wrong Ooops something wrong Ooops something wrong',
+        ),
         'order_sim' => array(
             'heading' => 'Order Dialoq sim-card',
             'button' => 'Order',
