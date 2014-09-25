@@ -39,7 +39,7 @@ $api->post('/payment/',
 
         $currentIp = App\Plans\Order::getClientIp();
 
-        exit($currentIp);
+//        exit($currentIp);
 
         $oder = App\Plans\Order::createOrder($app['db']);
         return $src;
