@@ -7,7 +7,7 @@ Class ValidateAction
      * @param array $data
      * @return bool
      */
-    public static function validateEmail($data = array())
+    public static function validate($data = array())
     {
         $noError = true;
         foreach ($data as $value) {
@@ -18,10 +18,5 @@ Class ValidateAction
         }
 
         return $noError;
-    }
-
-    public static function getPlanName($plan)
-    {
-
     }
 }

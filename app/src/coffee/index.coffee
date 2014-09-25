@@ -9,10 +9,12 @@ Popups =
     $clickItem = $('.show_popup')
     self = @
     $closePopup = $('.close_popup')
+    $closeConfirm = $('.close_confirm')
     $confirmButton = $('.confirm_popup')
     @$popup = $('#popup')
     @$loader = $('#loader')
     $('form').on 'submit', Validation.submit
+
 
     $clickItem.on 'click', (e) ->
       e.preventDefault()
@@ -47,8 +49,8 @@ Popups =
 
   showTerms: ->
     $checkedFrield = $('.form_condition_agreement').find('input[type="checkbox"]')
-    if not $checkedFrield.prop('checked')
-      $checkedFrield.prop('checked', true)
+#    if not $checkedFrield.prop('checked')
+#      $checkedFrield.prop('checked', true)
 
 
   switchAction: ($item) ->

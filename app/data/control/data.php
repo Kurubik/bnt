@@ -32,9 +32,23 @@ Class Translates
         return require_once ROOT . '/app/data/pages/'. $page .'_'. $locale .'.php';
     }
 
+    /**
+     * @return array
+     */
     public static function countryList()
     {
         return require_once ROOT . '/app/data/country.php';
+    }
+
+    /**
+     * @param string $country
+     * @return string
+     */
+    public static function getCountryShortName($country = '')
+    {
+        $country_list = self::countryList();
+        $name = array_search ($country, $country_list);
+        return $name;
     }
 
 }

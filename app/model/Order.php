@@ -7,6 +7,7 @@ Class Order
     public static $orderList = 'payments';
     public static $planID = 'plan';
     public static $simType = 'sim';
+    public static $planType = 'plan_types';
 
 
     /**
@@ -20,7 +21,10 @@ Class Order
         $client_id =  time() . '_' . str_replace('.', '', $ipAddress);
         $company = '';
 
-        if (isset($_POST['company']) && !empty($_POST['company'])) {
+        $legal = 2;
+        $individual = 1;
+
+        if (isset($_POST['company']) && !empty($_POST['company']) && $_POST['plan_type'] === $legal) {
             $company = $_POST['company'];
         }
 
@@ -114,5 +118,44 @@ Class Order
         }
 
         return $the_ip;
+    }
+
+
+    /**
+     * @param int $id
+     * @param $db
+     * @return mixed
+     */
+    public static function getPlanType($id = 0, $db)
+    {
+        $sql =
+          ('
+            SELECT `name`
+            FROM '. self::$planType .'
+            WHERE id = :id
+          ');
+
+        $prep = $db->prepare($sql);
+        $prep->bindValue(':id', $id, 'string');
+        $prep->execute();
+        $name = $prep->fetch();
+
+        return $name['name'];
+    }
+
+
+    public static function orderSuccess($db, $id)
+    {
+        $sql =
+          ('
+            UPDATE '. self::$orderList .'
+            SET `success` = 1
+            WHERE client_id = :id
+          ');
+
+        $prep = $db->prepare($sql);
+        $prep->bindValue(':id', $id, 'string');
+
+        return $prep->execute();
     }
 }

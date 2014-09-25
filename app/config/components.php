@@ -5,6 +5,11 @@
  */
 
 
+$app['salt'] = 'A4KedhE55XeqWHXN3+exDKES4p8=';
+$app['site_id'] = 245;
+
+
+
 $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 
 
@@ -25,7 +30,7 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
         'driver' => 'pdo_mysql',
         'dbname' => 'dialoq',
         'user' => 'root',
-        'password' => '',
+        'password' => 'brutalsql*1',
         'charset' => 'utf8',
         'host' => '127.0.0.1'
       )
