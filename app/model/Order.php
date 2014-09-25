@@ -8,18 +8,95 @@ Class Order
     public static $planID = 'plan';
     public static $simType = 'sim';
 
-    public static function getOrderId($db)
+
+    /**
+     * @param $db
+     * @param array $data
+     * @return string
+     */
+    public static function createOrder($db, $data = array())
     {
-        $id = 0;
-        return $id;
+        $ipAddress = self::getClientIp();
+        $client_id =  time() . '_' . str_replace('.', '', $ipAddress);
+        $company = '';
+
+        if (isset($_POST['company']) && !empty($_POST['company'])) {
+            $company = $_POST['company'];
+        }
+
+        $sql =
+          ('
+          INSERT INTO
+            '. self::$orderList .'
+          SET
+            client_id = :client_id,
+            name = :name,
+            surname = :surname,
+            phone = :phone,
+            email = :email,
+            country = :country,
+            city = :city,
+            address = :address,
+            zip = :zip,
+            plan = :plan,
+            plan_type = :plan_type,
+            sim = :sim,
+            company = :company,
+            ip_address = :ip,
+            success = 0
+          ');
+
+        $prep = $db->prepare($sql);
+
+        $prep->bindValue(':client_id', $client_id, 'string');
+        $prep->bindValue(':name', $_POST['name'], 'string');
+        $prep->bindValue(':surname', $_POST['surname'], 'string');
+        $prep->bindValue(':phone', $_POST['phone'], 'string');
+        $prep->bindValue(':email', $_POST['email'], 'string');
+        $prep->bindValue(':country', $_POST['country'], 'string');
+        $prep->bindValue(':city', $_POST['city'], 'string');
+        $prep->bindValue(':address', $_POST['address'], 'string');
+        $prep->bindValue(':zip', $_POST['zip'], 'string');
+        $prep->bindValue(':plan', $_POST['plan'], 'string');
+        $prep->bindValue(':plan_type', $_POST['plan_type'], 'integer');
+        $prep->bindValue(':sim', $_POST['sim'], 'string');
+        $prep->bindValue(':company', $company, 'string');
+        $prep->bindValue(':ip', $ipAddress, 'string');
+
+        $prep->execute();
+
+        return $client_id;
     }
 
-    public static function createOrder($db)
-    {
 
-        return true;
+    /**
+     * @param string $id
+     * @param $db
+     * @return int
+     */
+    public static function getPlanPrice($id = '', $db)
+    {
+        $price = array();
+
+        $sql =
+          ('
+            SELECT `price`
+            FROM '. self::$planID .'
+            WHERE id = :id
+          ');
+
+        $prep = $db->prepare($sql);
+        $prep->bindValue(':id', $id, 'string');
+        $prep->execute();
+        $price = $prep->fetch();
+
+        return $price['price'];
     }
 
+
+    /**
+     * @return mixed
+     */
     public static function getClientIp()
     {
         if ( function_exists( 'apache_request_headers' ) ) {

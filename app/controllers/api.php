@@ -17,9 +17,9 @@ $api->post('/payment/',
     function() use ($app) {
         $generator = new lib\Signature\SignatureGenerator('A4KedhE55XeqWHXN3+exDKES4p8=');
         $site_id = 245;
-        $external_id = rand();
         $currency = 'EUR';
-        $amount = (int)$_POST['plan'];
+        $amount = App\Plans\Order::getPlanPrice($_POST['plan'], $app['db']);
+        $external_id = App\Plans\Order::createOrder($app['db'], $_POST);
 
         $requestParams = array (
             'amount' => $amount,
@@ -29,19 +29,13 @@ $api->post('/payment/',
         );
 
         $signature = $requestParams['signature'] = $generator->assemble($requestParams);
-        $src = 'https://terminal-sandbox.ecommpay.com/?
-                site_id=' . $site_id .
+
+        $src = 'https://terminal-sandbox.ecommpay.com/?site_id=' . $site_id .
                 '&amount=' . $amount .
                 '&currency=' . $currency .
                 '&external_id=' . $external_id .
                 '&signature=' . $signature;
 
-
-        $currentIp = App\Plans\Order::getClientIp();
-
-//        exit($currentIp);
-
-        $oder = App\Plans\Order::createOrder($app['db']);
         return $src;
     }
 )->assert('_locale', 'en');
