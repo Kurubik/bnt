@@ -37,7 +37,11 @@ $api->post('/payment/',
                 '&signature=' . $signature;
 
 
-//        $oder = App\Plans\Order::createOrder();
+        $currentIp = App\Plans\Order::getClientIp();
+
+        exit($currentIp);
+
+        $oder = App\Plans\Order::createOrder($app['db']);
         return $src;
     }
 )->assert('_locale', 'en');

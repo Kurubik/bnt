@@ -51,7 +51,7 @@
             <label for="country">{{ data.popups.order_sim.form.address_fields.titles.country }}</label>
             <select id="country" name="country">
               {% for country, title in countries %}
-                <option value="{{ country }}">{{ title }}</option>
+                <option value="{{ title }}">{{ title }}</option>
               {% endfor %}
             </select>
           </div>
@@ -76,7 +76,7 @@
             <span class="plan_title">{{ data.popups.order_sim.form.headings.plan }}</span>
             {% for plan in data.popups.order_sim.form.plans %}
               <div class="form_input">
-                <input class="e-radio_hover" type="radio" name="plan" id="dialoq_{{ plan.value }}" value="{{ plan.value }}" {{ plan.link == current_plan ? 'checked' : '' }}>
+                <input class="e-radio_hover" type="radio" name="plan" id="dialoq_{{ plan.value }}" value="{{ plan.id }}" {{ plan.link == current_plan ? 'checked' : '' }}>
                 <label for="dialoq_{{ plan.value }}"><span class="icon_text">{{ plan.title }}<span class="plan_conditions">{{ plan.conditions }}</span></span></label>
               </div>
             {% endfor %}
