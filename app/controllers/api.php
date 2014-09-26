@@ -27,8 +27,8 @@ $api->post('/payment/',
             $generator = new lib\Signature\SignatureGenerator($app['salt']);
 
             $lang = $app['locale'];
-            $success = 'http://dialoq.ka.vivaxmedia.lv/success/';
-            $fail = 'http://dialoq.ka.vivaxmedia.lv/fail/';
+            $success = $app['current_host'] . '/success/';
+            $fail = $app['current_host'] . '/fail/';
             $callback_method = 4;
             $site_full_name = $data['name'] . ' ' . $data['surname'];
             $email = $data['email'];
@@ -50,8 +50,8 @@ $api->post('/payment/',
                 'site_id' => $site_id,
                 'external_id' => $external_id,
                 'language' => $lang,
-//                'success_url' => $success,
-//                'decline_url' => $fail,
+                'success_url' => $success,
+                'decline_url' => $fail,
                 'callback_method' => $callback_method,
                 'site_full_name' => $site_full_name,
                 'site_email' => $email,

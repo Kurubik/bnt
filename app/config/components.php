@@ -7,6 +7,7 @@
 
 $app['salt'] = 'A4KedhE55XeqWHXN3+exDKES4p8=';
 $app['site_id'] = 245;
+$app['current_host'] = 'http://' . $_SERVER['SERVER_NAME'];
 
 
 
@@ -29,10 +30,10 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
       'db.options' => array (
         'driver' => 'pdo_mysql',
         'dbname' => 'dialoq',
-        'user' => 'root',
+        'user' => 'test',
         'password' => 'brutalsql*1',
         'charset' => 'utf8',
-        'host' => '127.0.0.1'
+        'host' => '192.168.1.33'
       )
 ));
 

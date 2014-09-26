@@ -151,7 +151,9 @@ Validation =
     false
 
   clearFields: ($form) ->
-    $form[0].reset()
+    $form.find('input[type="text"]').each( ->
+      $(@).val('')
+    )
 
 
 
@@ -173,6 +175,7 @@ Payment =
       success: (data) ->
         if data
           Popups.popupDefaultAction('sent', true)
+          Validation.clearFields($activeForm)
         else
           Popups.popupDefaultAction('error', true)
       error: ->
@@ -192,8 +195,10 @@ Payment =
           if data
             self.createIframe(data)
           else
+            @currentData = null;
             Popups.popupDefaultAction('error', true)
         error: ->
+          @currentData = null;
           Popups.popupDefaultAction('error', true)
     else
       @loadComplete()
