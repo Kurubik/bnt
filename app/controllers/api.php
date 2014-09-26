@@ -30,14 +30,14 @@ $api->post('/payment/',
             $success = $app['current_host'] . '/success/';
             $fail = $app['current_host'] . '/fail/';
             $callback_method = 4;
-            $site_full_name = $data['name'] . ' ' . $data['surname'];
-            $email = $data['email'];
-            $phone = $data['phone'];
+            $site_full_name = htmlentities($data['name'] . ' ' . $data['surname']);
+            $email = htmlentities($data['email']);
+            $phone = htmlentities($data['phone']);
             $country = Data\Translates::getCountryShortName($data['country']);
-            $city = $data['city'];
-            $postal = $data['zip'];
-            $address = $data['address'];
-            $description = 'Plan ' . $data['plan'] . ',  ' . 'Sim ' . $data['sim'] . ',  ' . 'Order ' . $order_type;
+            $city = htmlentities($data['city']);
+            $postal = htmlentities($data['zip']);
+            $address = htmlentities($data['address']);
+            $description = htmlentities('Plan ' . $data['plan'] . ',  ' . 'Sim ' . $data['sim'] . ',  ' . 'Order ' . $order_type);
 
             $site_id = $app['site_id'];
             $currency = 'EUR';
@@ -50,8 +50,8 @@ $api->post('/payment/',
                 'site_id' => $site_id,
                 'external_id' => $external_id,
                 'language' => $lang,
-                'success_url' => $success,
-                'decline_url' => $fail,
+//                'success_url' => $success,
+//                'decline_url' => $fail,
                 'callback_method' => $callback_method,
                 'site_full_name' => $site_full_name,
                 'site_email' => $email,
@@ -65,14 +65,12 @@ $api->post('/payment/',
                 'description' => $description
             );
 
-            $finalRequest = '';
-            foreach ($requestParams as $key => $value) {
-                $finalRequest .= $key .  '=' . $value . '&';
-            }
-
             $signature = $requestParams['signature'] = $generator->assemble($requestParams);
-            $src = 'https://terminal-sandbox.ecommpay.com/?' . $finalRequest . 'signature=' . $signature;
-            return $src;
+            $signature_array = array ('signature' => $signature);
+            $requestData = array_merge ($requestParams, $signature_array);
+
+            $finalRequest = $app['ecommpay'] . '?' . http_build_query($requestData);
+            return $finalRequest;
         } else {
             return false;
         }

@@ -8,6 +8,7 @@
 $app['salt'] = 'A4KedhE55XeqWHXN3+exDKES4p8=';
 $app['site_id'] = 245;
 $app['current_host'] = 'http://' . $_SERVER['SERVER_NAME'];
+$app['ecommpay'] = 'https://terminal-sandbox.ecommpay.com/';
 
 
 
