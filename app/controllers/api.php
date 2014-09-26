@@ -113,7 +113,7 @@ $api->post('/email/{name}/',
             }
 
             $mails = array(
-              'ka@vcgworld.com',
+                'ka@vcgworld.com',
                 'eva@vcgworld.com'
             );
 

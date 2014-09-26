@@ -43,12 +43,16 @@
 
 .form_input
   input[type=text]
-    transition all .2s ease-in-out
+    transition all .15s ease-in-out
     &:focus
       outline none
+      box-shadow:  0 0 0 1px rgba(255,255,255, .2), 0 0 0 1px rgba(255,255,255, .2);
 
-select:focus
-  outline none
+
+select
+  &:focus
+    outline none
+    box-shadow:  0 0 0 1px rgba(255,255,255, .2), 0 0 0 1px rgba(255,255,255, .2);
 
 
 .form_center
@@ -143,6 +147,7 @@ input:checked + label
 input
   &:focus
     outline none
+    box-shadow:  0 0 0 1px rgba(255,255,255, .2), 0 0 0 1px rgba(255,255,255, .2);
 
 .e-radio_hover:not(:checked) + label
   &:hover
@@ -160,8 +165,6 @@ input[type="checkbox"].input_error + label
     padding-bottom 20px
   label
     transition all .2s ease-in-out
-  input[type="text"]
-    border 1px solid transparent
   input, label
     display inline-block
     vertical-align middle
