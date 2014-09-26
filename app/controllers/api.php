@@ -30,14 +30,14 @@ $api->post('/payment/',
             $success = $app['current_host'] . '/success/';
             $fail = $app['current_host'] . '/fail/';
             $callback_method = 4;
-            $site_full_name = htmlentities($data['name'] . ' ' . $data['surname']);
-            $email = htmlentities($data['email']);
-            $phone = htmlentities($data['phone']);
+            $site_full_name = $data['name'] . ' ' . $data['surname'];
+            $email = $data['email'];
+            $phone = $data['phone'];
             $country = Data\Translates::getCountryShortName($data['country']);
-            $city = htmlentities($data['city']);
-            $postal = htmlentities($data['zip']);
-            $address = htmlentities($data['address']);
-            $description = htmlentities('Plan ' . $data['plan'] . ',  ' . 'Sim ' . $data['sim'] . ',  ' . 'Order ' . $order_type);
+            $city = $data['city'];
+            $postal = $data['zip'];
+            $address = $data['address'];
+            $description = 'Plan ' . $data['plan'] . ',  ' . 'Sim ' . $data['sim'] . ',  ' . 'Order ' . $order_type;
 
             $site_id = $app['site_id'];
             $currency = 'EUR';
