@@ -112,7 +112,7 @@ $api->post('/email/{name}/',
 
             $mails = array(
                 'ka@vcgworld.com',
-                'eva@vcgworld.com'
+                'dv@dialoq.com'
             );
 
             $message = \Swift_Message::newInstance()
