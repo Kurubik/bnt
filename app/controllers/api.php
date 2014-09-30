@@ -12,7 +12,6 @@ use lib\Signature;
 use App\Plans;
 
 $api = $app['controllers_factory'];
-
 $api->post('/payment/',
     function() use ($app) {
         $data = $_POST;
