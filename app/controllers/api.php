@@ -112,15 +112,16 @@ $api->post('/email/{name}/',
 
             $mails = array(
                 'ka@vcgworld.com',
-                'dv@dialoq.com'
+//                'dv@dialoq.com'
             );
 
             $message = \Swift_Message::newInstance()
               ->setBody(
                 $app['twig']->render('/mail/'. $name .'.twig',
                     array(
-                        'data' => $data,
-                        'translation' => $translates)
+                            'data' => $data,
+                            'translation' => $translates
+                        )
                     ),
                     'text/html'
               )
