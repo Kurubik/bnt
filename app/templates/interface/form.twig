@@ -1,12 +1,12 @@
 <form class="e-contact_form">
   <label for="your_name">{{ data.contact_form.labels.name }}</label>
-  <input id="your_name" type="text" placeholder="{{ data.contact_form.placeholder.name }}">
+  <input id="your_name" class="validate" type="text" placeholder="{{ data.contact_form.placeholder.name }}" data-validate="text">
   <label for="email">{{ data.contact_form.labels.mail }}</label>
-  <input id="email" type="text" placeholder="{{ data.contact_form.placeholder.mail }}">
+  <input id="email" class="validate" type="text" placeholder="{{ data.contact_form.placeholder.mail }}" data-validate="email">
   <label for="phone_number">{{ data.contact_form.labels.phone }}</label>
-  <input id="phone_number" type="text" placeholder="{{ data.contact_form.placeholder.phone }}">
+  <input id="phone_number" class="validate" type="text" placeholder="{{ data.contact_form.placeholder.phone }}" data-validate="phone">
   <label for="your_message">{{ data.contact_form.labels.message }}</label>
-  <textarea id="your_message" placeholder="{{ data.contact_form.placeholder.message }}"></textarea>
+  <textarea id="your_message" class="validate" placeholder="{{ data.contact_form.placeholder.message }}" data-validate="text"></textarea>
   <button class="form_button e-hover_opacity" type="submit">
     {{ data.contact_form.labels.send }}
     <i class="ico-a_right"></i>
