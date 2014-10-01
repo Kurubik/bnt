@@ -6,7 +6,7 @@
       <div class="e-heading-inner">
         <h1 class="e-heading c__w">{{ index.page_title | raw }}</h1>
       </div>
-      <a href="{{ path(data.plans_button.link, {_locale: app.request.locale}) }}" class="e-inner-banner bg__trans_grey">
+      <a href="{{ path(data.plans_button.link, {_locale: app.request.locale}) }}" class="e-inner-banner bg__trans_grey e-hover_opacity">
         <div class="t-banner_s">
           <span class="t-banner_t">{{ data.plans_button.text }}</span>
           <div class="t-banner_h">{{ data.plans_button.title }}<i class="ico-a_big-right"></i></div>
@@ -81,7 +81,7 @@
             <form>
               <label for="country">{{ data.availability }}</label>
               <input type="text" name="country" id="country" placeholder="{{ data.type_country }}">
-              <button type="submit" class="ico_arrow-button button_absolute bg__brown"></button>
+              <button type="submit" class="ico_arrow-button button_absolute bg__brown e-hover_opacity"></button>
             </form>
           </div>
         </div>
