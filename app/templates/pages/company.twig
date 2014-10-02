@@ -7,7 +7,7 @@
                     {{ index.page_title|raw }}
                 </h1>
             </div>
-            <a href="{{ path(data.plans_button.link, {_locale: app.request.locale}) }}" class="e-inner-banner bg__trans_grey">
+            <a href="{{ path(data.plans_button.link, {_locale: app.request.locale}) }}" class="e-inner-banner bg__trans_grey e-hover_opacity">
                 <div class="t-banner_s">
                     <span class="t-banner_t">{{ data.plans_button.text }}</span>
                     <div class="t-banner_h">{{ data.plans_button.title }}<i class="ico-a_big-right"></i></div>
@@ -57,7 +57,7 @@
                     <div class="explore_text">
                         {{ index.posts.bottom_info.logo_text|raw }}
                     </div>
-                    <a href="">
+                    <a href="" class="e-hover_opacity">
                         <div class="explore_link">
                             {{ index.posts.bottom_info.explore|raw }}
                             <i class="ico-a_big-right"></i>
