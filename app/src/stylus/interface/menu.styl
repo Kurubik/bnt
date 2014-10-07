@@ -22,10 +22,9 @@
 
   .footer &
     color #fff
-    position relative
-    margin 0 auto
-    display table
-    padding-right 30px
+    position absolute
+    top 35px
+    left 150px
 
 
 .menu-i
@@ -44,3 +43,28 @@
   span&
     color menuHover
 
+
+
+.menu-i-info
+  position relative
+  .menu-t
+    font-size 14px
+    line-height 18px
+    font-family italic
+    color #9c9c9c
+    transition opacity 0.2s ease-in-out
+    cursor pointer
+    &:hover
+      opacity .5
+  + .menu-i-info
+    margin-left 28px
+    &:after
+      display block
+      position absolute
+      width 4px
+      height 4px
+      content ''
+      border-radius 50%
+      top 7px
+      left -15px
+      background-color #9c9c9c

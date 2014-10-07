@@ -17,7 +17,10 @@ return array(
     ),
 
     'languages' => array (
-      'en' => 'en'
+      'en' => 'en',
+      'ru' => 'ru',
+      'de' => 'de',
+      'cn' => 'cn',
     ),
 
     'support' => 'Online support',

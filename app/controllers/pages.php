@@ -20,7 +20,9 @@ $routes = array (
     'plans',
     'support',
     'contacts',
-    'company'
+    'company',
+    'privacy',
+    'terms',
 );
 
 
@@ -32,7 +34,7 @@ $pages->get('/{_locale}/',
         ));
     }
 )
-  ->assert('_locale', 'en')
+  ->assert('_locale', 'en|ru|de|cn')
   ->bind('home');
 
 
@@ -45,7 +47,7 @@ $pages->get('/{_locale}/plan/{plan}/',
         ));
     }
 )
-    ->assert('_local', 'en')
+    ->assert('_local', 'en|ru')
     ->bind('currentPlan');
 
 
@@ -95,7 +97,7 @@ $createRoute = function ($routeName, $app) use ($app) {
 
 foreach ($routes as $routeName) {
     $pages->get('/{_locale}/'.$routeName.'/', $createRoute($routeName, $app))
-      ->assert('_locale', 'en')
+      ->assert('_locale', 'en|ru')
       ->bind($routeName);
 }
 

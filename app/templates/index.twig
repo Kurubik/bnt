@@ -4,15 +4,10 @@
   {% if app.request.attributes.get('_route') == 'currentPlan' %}
     <div class="e-overlay"></div>
   {% endif %}
-  {#<div class="wrapper">#}
-    {#{% include 'interface/header.twig' %}#}
-    {#{% block page %}{% endblock %}#}
-    {#{% include 'interface/footer.twig' %}#}
-  {#</div>#}
   <div class="wrapper">
-      {% include 'interface/header.twig' %}
-      {% block page %}{% endblock %}
-      {% include 'interface/footer.twig' %}
+    {% include 'interface/header.twig' %}
+    {% block page %}{% endblock %}
+    {% include 'interface/footer.twig' %}
   </div>
   <div class="e-popup_holder" id="popup">
     <div class="e-popup_container">

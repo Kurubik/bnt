@@ -7,13 +7,14 @@
   width 12px
   height 14px
   display block
-  right 0
-  top 0
+  right 8px
+  top 11px
   &.a-bottom
+    &:before, &:after
+      background-color #fff
+      transition background-color .2s ease-in-out
     &.c__d:after, &.c__d:before
       background-color basecolor
-      .inner &
-        background-color #fff
     &:after
       position absolute
       content ''
@@ -31,6 +32,7 @@
       top 6px
 
 
+
 .ico-a_big-right
   position absolute
   width 10px
@@ -39,6 +41,7 @@
   top 50%
   margin-top -5px
   right 0
+  -webkit-backface-visibility hidden
   &:after
     position absolute
     content ''
@@ -54,6 +57,7 @@
     height 3px
     background-color #fff
     top 5px
+
 
 .ico-a_right
   position absolute

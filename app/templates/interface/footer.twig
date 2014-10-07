@@ -1,5 +1,9 @@
 <footer class="footer">
   {% include 'interface/menu.twig' %}
+  <ul class="terms_section">
+    <li class="menu-i menu-i-info"><a class="menu-t" href="{{ path('terms', {_locale: app.request.locale})}}">Terms & Conditions</a></li>
+    <li class="menu-i menu-i-info"><a class="menu-t" href="{{ path('privacy', {_locale: app.request.locale})}}">Privacy Policy</a></li>
+  </ul>
   <div class="social">
     <a href="http://facebook.com" target="_blank" class="ico-social social_fb"></a>
     <a href="http://twitter.com" target="_blank" class="ico-social social_tw"></a>

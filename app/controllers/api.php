@@ -74,7 +74,7 @@ $api->post('/payment/',
             return false;
         }
     }
-)->assert('_locale', 'en');
+)->assert('_locale', 'en|ru');
 
 
 
@@ -134,7 +134,7 @@ $api->post('/email/{name}/',
             return false;
         }
     }
-)->assert('_locale', 'en');
+)->assert('_locale', 'en|ru');
 
 
 
