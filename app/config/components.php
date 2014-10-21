@@ -4,14 +4,6 @@
  * @var \Silex\Application $app
  */
 
-
-$app['salt'] = 'A4KedhE55XeqWHXN3+exDKES4p8=';
-$app['site_id'] = 245;
-$app['current_host'] = 'http://' . $_SERVER['SERVER_NAME'];
-$app['ecommpay'] = 'https://terminal-sandbox.ecommpay.com/';
-
-
-
 $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 
 
@@ -30,9 +22,9 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array (
 $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
       'db.options' => array (
         'driver' => 'pdo_mysql',
-        'dbname' => 'dialoq',
+        'dbname' => '',
         'user' => 'test',
-        'password' => 'brutalsql*1',
+        'password' => '',
         'charset' => 'utf8',
         'host' => '192.168.1.33'
       )
@@ -51,8 +43,8 @@ $app->register(new Silex\Provider\SwiftmailerServiceProvider());
 $app['swiftmailer.options'] = array(
     'host' => 'smtp.gmail.com',
     'port' => '465',
-    'username' => 'dialoqtest@gmail.com',
-    'password' => 'dialoqtest123',
+    'username' => '',
+    'password' => '',
     'encryption' => 'ssl',
     'auth_mode'  => 'login'
 );
