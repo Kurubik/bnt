@@ -14,11 +14,6 @@ $pages->get('/', function() use ($app) {
 });
 
 
-$routes = array (
-    'service',
-);
-
-
 $pages->get('/{_locale}/',
     function() use ($app) {
         return $app['twig']->render('/pages/home.twig', array (
@@ -27,7 +22,7 @@ $pages->get('/{_locale}/',
         ));
     }
 )
-  ->assert('_locale', 'en|ru|de|cn')
+  ->assert('_locale', 'en')
   ->bind('home');
 
 return $pages;

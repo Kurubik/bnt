@@ -7,7 +7,6 @@
 use Symfony\Component\HttpFoundation\Response;
 
 use app\data\Data;
-use app\Action;;
 
 $api = $app['controllers_factory'];
 

@@ -19,25 +19,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array (
 ));
 
 
-$app->register(new Silex\Provider\DoctrineServiceProvider(), array(
-      'db.options' => array (
-        'driver' => 'pdo_mysql',
-        'dbname' => '',
-        'user' => 'test',
-        'password' => '',
-        'charset' => 'utf8',
-        'host' => '192.168.1.33'
-      )
-));
-
-
-$app->register(new Silex\Provider\HttpCacheServiceProvider(), array(
-    'http_cache.cache_dir' => ROOT .'/app/cache/http/',
-    'http_cache.esi'       => null
-));
-
 $app->register(new Silex\Provider\SwiftmailerServiceProvider());
-
 
 
 $app['swiftmailer.options'] = array(
