@@ -19,6 +19,19 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array (
 ));
 
 
+$app->register(new Silex\Provider\DoctrineServiceProvider(), array(
+    'db.options' => array (
+        'driver' => 'pdo_mysql',
+        'dbname' => 'conversion',
+        'user' => 'root',
+        'password' => 'me291187',
+        'charset' => 'utf8',
+        'host' => '127.0.0.1'
+    )
+));
+
+
+
 $app->register(new Silex\Provider\SwiftmailerServiceProvider());
 
 

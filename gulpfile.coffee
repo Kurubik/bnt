@@ -40,7 +40,12 @@ paths =
   assets:
     source: './app/src/assets/**/*.*'
     watch: './app/src/assets/**/*.*'
-    destination: './public/'
+    destination: './public/assets/'
+
+  js:
+    source: './app/src/js/**/*.*'
+    watch: './app/src/js/**/*.*'
+    destination: './public/js/'
 
   images:
     source: './src/assets/images/background/resize/*.jpg'
@@ -105,10 +110,18 @@ gulp.task 'assets', ->
   .pipe gulp.dest paths.assets.destination
 
 
+
+gulp.task 'js', ->
+  gulp
+  .src paths.js.source
+  .pipe gulp.dest paths.js.destination
+
+
 gulp.task "watch", ->
 
   gulp.watch paths.styles.watch, ['styles']
   gulp.watch paths.assets.watch, ['assets']
+  gulp.watch paths.assets.watch, ['js']
 
   bundle = watchify
     entries: [paths.scripts.source]
@@ -125,5 +138,5 @@ gulp.task "watch", ->
 
   .emit 'update'
 
-gulp.task "build", ['scripts', 'styles', 'assets']
+gulp.task "build", ['scripts', 'styles', 'assets', 'js']
 gulp.task "default", ["build", "watch"]

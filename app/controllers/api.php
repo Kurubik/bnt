@@ -10,4 +10,10 @@ use app\data\Data;
 
 $api = $app['controllers_factory'];
 
+$api->get('/managers/', function() use ($app) {
+    
+});
+
+
+
 return $api;

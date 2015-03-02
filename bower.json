@@ -8,9 +8,11 @@
     "name"        : "start",
     "version"     : "1.0.0",
     "dependencies": {
-        "backbone-amd": "latest",
-        "underscore-amd": "latest",
+        "angular": "1.3.x",
+        "angular-mocks": "1.3.x",
         "requirejs": "latest",
+        "angular-route": "1.3.x",
+        "angular-resource": "1.3.x",
         "normalize.styl": "~3.0.0"
     }
 }
