@@ -3,7 +3,11 @@
 {% include 'head.twig' %}
 <body>
 {% spaceless %}
-  {% block content %}{% endblock %}
+  <div class="e-wrapper">
+    {% include 'interface/header.twig' %}
+    {% block content %}{% endblock %}
+    {% include 'interface/footer.twig' %}
+  </div>
   {% include 'scripts.twig' %}
 {% endspaceless %}
 </body>

@@ -1,0 +1,83 @@
+$darkGrey = rgb(103,103,102)
+$lightGrey = rgb(185,186,186)
+$textGrey = rgb(80,80,80)
+$blue = rgb(0,130,158)
+$green = rgb(140,203,4)
+$white = rgb(255,255,255)
+$black = rgb(0,0,0)
+
+$book(n)
+  font-family officinaBook
+  font-size n
+
+$itallic(n)
+  font-family officinaItallic
+  font-size n
+
+$bold(n)
+  font-family officinaBold
+  font-size n
+
+$superBold(n)
+  font-family officinaSuperBold
+  font-size n
+
+html, body
+  width 100%
+  font-size 16px
+  color $textGrey
+
+body
+  background-color rgba(0,0,0,0.004)
+  margin-bottom  $remify(20px)
+
+ul
+  margin 0
+  padding 0
+  li
+    list-style-type none
+
+a
+  color inherit
+  text-decoration none
+  &:hover
+    color inherit
+    text-decoration none
+
+h1,h2,h3,h4,h5,h6
+  margin 0
+  padding 0
+
+.container
+  margin 0
+  padding 0
+  width 100%
+
+.col-xs-6
+  margin 0
+  padding 0
+  font-size 0
+
+.carousel-inner, .item, .carousel-caption
+  width 100%
+  height 100%
+
+.carousel-inner
+  position relative
+  z-index 1
+
+.carousel-caption
+  left 0
+  right 0
+  top 0
+  bottom 0
+  padding 0
+  margin 0
+  padding 0 $remify(40px)
+  box-sizing border-box
+  text-shadow none
+  text-align left
+
+.carousel-control.right, .carousel-control.left
+  background-image none
+  opacity 1

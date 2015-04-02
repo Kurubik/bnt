@@ -1,0 +1,94 @@
+.header-container
+  position relative
+  margin 0 auto
+  width $remify(1200px)
+
+.header-top_section
+  position relative
+  height $remify(50px)
+  border-bottom 1px solid $lightGrey
+  color $darkGrey
+
+
+.header_menu
+  $bold($remify(12px))
+  text-transform uppercase
+  li
+    display inline-block
+    margin-left $remify(6px)
+    &:first-child
+      margin 0
+      &:before
+        content none
+    &:before
+      content '\00B7'
+      $bold($remify(14px))
+      margin-right 3px
+    &:hover
+      color $lightGrey
+      &:before
+        color $darkGrey
+
+.header-lang_selector
+  position absolute
+  left $remify(42px)
+  top 50%
+  transform translateY(-50%)
+
+
+.header-top_menu
+  position absolute
+  right $remify(42px)
+  top 50%
+  transform translateY(-50%)
+
+.header-lower_section
+  position relative
+  height $remify(148px)
+
+.header-logo
+  position absolute
+  left $remify(42px)
+  top 50%
+  transform translateY(-50%)
+  width $remify(133px)
+
+.header-lower_menu
+  position absolute
+  right $remify(42px)
+  top 50%
+  transform translateY(-50%)
+  li
+    a
+      display block
+    position relative
+    display inline-block
+    vertical-align top
+    width $remify(162px)
+    padding-left $remify(10px)
+    box-sizing border-box
+    $bold($remify(16px))
+    line-height $remify(19px)
+    color $blue
+    text-transform uppercase
+    &:hover
+      color $green
+    &:before
+      position absolute
+      left 0
+      top 50%
+      transform translateY(-50%)
+      content ''
+      width 1px
+      height $remify(30px)
+      background-color $lightGrey
+    &:last-child
+      &:after
+        position absolute
+        right 0
+        top 50%
+        transform translateY(-50%)
+        content ''
+        width 1px
+        height $remify(30px)
+        background-color $lightGrey

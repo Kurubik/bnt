@@ -1,0 +1,140 @@
+.e-wrapper
+  position relative
+  margin auto
+  width $remify(1200px)
+  background-color $white
+
+.e-wide_holder
+  position relative
+  width 100%
+  height $remify(600px)
+  padding-top $remify(54px)
+  box-sizing border-box
+  background-size cover
+  color $white
+  text-align center
+
+.e-wide_title
+  $superBold($remify(58px))
+  line-height $remify(69px)
+  margin-bottom $remify(40px)
+
+.e-wide_subtitle
+  $bold($remify(16px))
+  line-height $remify(19px)
+
+.e-wide_subtitle_borders
+  display inline-block
+  text-transform uppercase
+  padding $remify(5px) $remify(14px) $remify(5px) $remify(14px)
+  border-top $remify(2px) solid $white
+  border-bottom $remify(2px) solid $white
+
+.e-quarterblock
+  position relative
+  width 100%
+  height $remify(300px)
+  padding 0 $remify(40px)
+  box-sizing border-box
+  $book($remify(16px))
+  line-height $remify(22px)
+  color $textGrey
+  background-color $white
+  text-align center
+
+.e-quarterblock_inside_wide
+  position absolute
+  right 0
+  bottom 0
+  width 25%
+  .e-quarterblock_text
+    margin-top $remify(70px)
+  .e-quarterblock_image
+    position absolute
+    left 50%
+    bottom $remify(60px)
+    transform translateX(-50%)
+    width $remify(120px)
+
+.e-quarterblock_link
+  position absolute
+  z-index 1
+  left 0
+  right 0
+  top 0
+  bottom 0
+  padding 0 $remify(40px)
+  box-sizing border-box
+  width 100%
+  height 100%
+
+.e-halfblock
+  width $remify(600px)
+  height $remify(600px)
+
+.e-small_carousel
+  position absolute
+  left 0
+  right 0
+  top 0
+  bottom 0
+
+.e-carousel_control_holder
+  position absolute
+  z-index 10
+  left $remify(40px)
+  top $remify(20px)
+  width $remify(39px)
+  height $remify(25px)
+  .carousel-control
+    width auto
+    height auto
+    position: absolute
+    display block
+    box-sizing content-box
+    padding 5px
+
+.left .e-carousel_controller
+  transform scale(-1)
+
+.e-carousel_controller
+  display block
+  width $remify(8px)
+  height $remify(15px)
+
+.e-news_date
+  margin-top $remify(55px)
+  margin-bottom $remify(4px)
+  $itallic($remify(13px))
+  color $lightGrey
+
+.e-news_title
+  margin-top $remify(51px)
+  $bold($remify(24px))
+  line-height $remify(29px)
+  color $green
+
+.e-news_text
+  position absolute
+  top $remify(136px)
+  width $remify(220px)
+  $book($remify(16px))
+  line-height $remify(22px)
+  color $textGrey
+
+.e-quarterblock_type_holder
+  position absolute
+  bottom $remify(32px)
+  left 50%
+  transform translateX(-50%)
+  width 100%
+  padding 0 $remify(40px)
+
+.e-quarterblock_type_icon
+  width $remify(20px)
+  height $remify(20px)
+
+.e-quarterblock_type_title
+  $bold($remify(12px))
+  text-transform uppercase
+  color $blue

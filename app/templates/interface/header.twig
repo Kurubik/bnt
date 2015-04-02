@@ -1,0 +1,38 @@
+<header>
+    <div class="header-container">
+        <section class="header-top_section">
+            <ul class="header_menu header-lang_selector">
+                {% for option in data.lang %}
+                    <li>
+                        <a href="{{ option }}">
+                            {{ option }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <ul class="header_menu header-top_menu">
+               {% for option in data.head_top_menu %}
+                   <li>
+                       <a href="{{ option.link }}">
+                           {{ option.title }}
+                       </a>
+                   </li>
+               {% endfor %}
+            </ul>
+        </section>
+        <section class="header-lower_section">
+            <a href="/">
+                <img class="header-logo" src="{{ app.request.basepath }}/public/assets/images/logo.png">
+            </a>
+            <ul class="header-lower_menu">
+                {% for option in data.head_low_menu %}
+                    <li>
+                        <a href="{{ option.link }}">
+                            {{ option.title|raw }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </div>
+</header>

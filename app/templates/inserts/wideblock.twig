@@ -1,0 +1,17 @@
+<div class="e-wide_holder" style="background-image:url('{{ app.request.basepath }}{{ index.wideblock.background }}')">
+    <a href="{{ index.wideblock.link }}">
+        <h1 class="e-wide_title">{{ index.wideblock.title|raw }}</h1>
+        <h2 class="e-wide_subtitle"><span class="e-wide_subtitle_borders">{{ index.wideblock.subtitle|raw }}</span></h2>
+    </a>
+    <div class="e-quarterblock e-quarterblock_inside_wide">
+        {% if index.wideblock.quarterblock.link is defined %}
+        <a class="e-quarterblock_link" href="{{ index.wideblock.quarterblock.link }}">
+            <div class="e-quarterblock_text">{{ index.wideblock.quarterblock.text }}</div>
+            <img class="e-quarterblock_image" src="{{ app.request.basepath }}{{ index.wideblock.quarterblock.image }}">
+        </a>
+        {% else %}
+            <div class="e-quarterblock_text">{{ index.wideblock.quarterblock.text }}</div>
+            <img class="e-quarterblock_image" src="{{ app.request.basepath }}{{ index.wideblock.quarterblock.image }}">
+        {% endif %}
+    </div>
+</div>
