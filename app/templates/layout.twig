@@ -2,6 +2,7 @@
 <html lang="{{ app.request.locale }}">
 {% include 'head.twig' %}
 <body>
+{% set currentRoute = app.request.attributes.get('_route') %}
 {% spaceless %}
   <div class="e-wrapper">
     {% include 'interface/header.twig' %}

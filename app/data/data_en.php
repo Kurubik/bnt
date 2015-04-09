@@ -29,7 +29,7 @@ return array (
     'head_low_menu' => array(
         'our_projects' => array(
             'title' => 'our<br>projects',
-            'link' => 'our_projects',
+            'link' => 'project_ecofuel',
         ),
         'products_n_services' => array(
             'title' => 'products &<br>services',
@@ -41,7 +41,7 @@ return array (
         ),
         'corporate_profile' => array(
             'title' => 'corporate<br>profile',
-            'link' => 'corporate_profile',
+            'link' => 'corporate_mission_and_vision',
         ),
     ),
     'footer' => array(

@@ -1,0 +1,170 @@
+.project-sidemenu
+  min-height $remify(300px)
+  padding $remify(58px) $remify(40px) 0
+  $bold($remify(12px))
+  line-height $remify(14px)
+  text-transform uppercase
+  color $blue
+  overflow auto
+  li
+    position relative
+    margin-bottom $remify(16px)
+    &:hover
+      color $green
+  li.selected
+    color $green
+    &:before
+      position absolute
+      content ""
+      left -10px
+      top $remify(1px)
+      bottom $remify(2px)
+      width 1px
+      background-color $green
+
+.project-sidemenu_afterfiller
+  background-color $blueFiller
+
+.project-mainbanner
+  padding $remify(52px) $remify(300px) 0 $remify(148px)
+  height $remify(300px)
+  background-size cover
+  color $white
+  .e-wide_title
+    position relative
+    color $white
+    margin-bottom $remify(56px)
+    &:after
+      content ''
+      position absolute
+      left $remify(2px)
+      bottom $remify(-28px)
+      width $remify(150px)
+      height 2px
+      background-color $white
+
+.project-mainbanner_text
+  $book($remify(20px))
+  line-height $remify(26px)
+
+.project-profile_properties
+  margin-bottom $remify(46px)
+  li
+    position relative
+    margin-bottom $remify(15px)
+
+.project-profile_property_heading, .project-profile_property_detail
+  display inline-block
+  vertical-align top
+  color $black
+
+.project-profile_property_heading
+  width $remify(190px)
+  $itallic($remify(16px))
+  line-height $remify(19px)
+
+.project-profile_property_detail
+  $book($remify(16px))
+  line-height $remify(22px)
+
+.project-technoblock_holder
+  margin-top $remify(22px)
+
+.project-technoblock
+  position relative
+  padding-top $remify(40px)
+  padding-right $remify(26px)
+
+.project-profile_heading, .project-profile_text
+  width $remify(450px)
+
+.project-profile_heading
+  margin-bottom $remify(12px)
+  $bold($remify(30px))
+  line-height $remify(36px)
+  color $black
+
+.project-profile_text
+  margin-bottom $remify(20px)
+  $book($remify(16px))
+  line-height $remify(22px)
+
+.project-technoblock_logo_container
+  position absolute
+  left 0
+  top 0
+  width 100%
+  height $remify(26px)
+
+.project-techoblock_logo
+  position relative
+  top 50%
+  transform translateY(-50%)
+  max-width $remify(63px)
+  max-height $remify(28px)
+
+.project-technoblock_title
+  margin-bottom $remify(8px)
+  $superBold($remify(20px))
+  line-height $remify(24px)
+  color $black
+
+.project-wideimage_text
+  $itallic($remify(13px))
+  line-height $remify(20px)
+  color $black
+
+.project-wideimage
+  display block
+  width 100%
+
+.project-wideimage_container
+  margin-bottom $remify(65px)
+
+.project-steps
+  li
+    position relative
+    margin-bottom $remify(20px)
+    padding-left $remify(46px)
+    &:last-child
+      .project-steps_arrow_ico
+        display none
+
+.project-steps_icon
+  position absolute
+  left 0
+  top $remify(2px)
+  margin-right $remify(14px)
+  width $remify(32px)
+  height $remify(32px)
+
+.project-steps_title
+  width $remify(130px)
+  $book($remify(16px))
+  line-height $remify(22px)
+  color $black
+
+.project-steps_arrow_ico
+  position absolute
+  left $remify(12px)
+  top $remify(44px)
+  width $remify(8px)
+
+.project-progress_list
+  width $remify(430px)
+  $book($remify(16px))
+  line-height $remify(22px)
+  color $black
+  li
+    position relative
+    margin-bottom $remify(15px)
+    &:before
+      content '\2014'
+      position absolute
+      left $remify(-25px)
+      color $green
+
+.project-progress_container
+  margin-top $remify(20px)
+  .project-technoblock_title
+    margin-bottom $remify(26px)

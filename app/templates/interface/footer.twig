@@ -1,94 +1,128 @@
 <footer class="footer container">
-    <div class="col-xs-6">
-        <div class="e-quarterblock footer-quarter_inline_block footer-bordered_blocks">
-            <div id="carousel-example-generic" class="footer-news_carousel carousel slide" data-ride="carousel">
-                <div class="carousel-inner" role="listbox">
-                    {% for news in data.footer.newsarchive.news %}
-                        {% if loop.first %}
-                            <div class="item active">
-                                <div class="carousel-caption">
-                                    <a class="e-quarterblock_link" href="{{ news.link }}">
-                                        <div class="e-news_date">{{ news.date }}</div>
-                                        <h3 class="e-news_title">{{ news.title }}</h3>
-                                        <div class="e-news_text">{{ news.text }}</div>
-                                    </a>
+    {% if currentRoute == 'home' %}
+        <div class="col-xs-6">
+            <div class="e-quarterblock footer-quarter_inline_block footer-bordered_blocks">
+                <div id="carousel-example-generic" class="footer-news_carousel carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        {% for news in data.footer.newsarchive.news %}
+                            {% if loop.first %}
+                                <div class="item active">
+                                    <div class="carousel-caption">
+                                        <a class="e-quarterblock_link" href="{{ news.link }}">
+                                            <div class="e-news_date">{{ news.date }}</div>
+                                            <h3 class="e-news_title">{{ news.title }}</h3>
+                                            <div class="e-news_text">{{ news.text }}</div>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                        {% else %}
-                            <div class="item">
-                                <div class="carousel-caption">
-                                    <a class="e-quarterblock_link" href="{{ news.link }}">
-                                        <div class="e-news_date">{{ news.date }}</div>
-                                        <h3 class="e-news_title">{{ news.title }}</h3>
-                                        <div class="e-news_text">{{ news.text }}</div>
-                                    </a>
+                            {% else %}
+                                <div class="item">
+                                    <div class="carousel-caption">
+                                        <a class="e-quarterblock_link" href="{{ news.link }}">
+                                            <div class="e-news_date">{{ news.date }}</div>
+                                            <h3 class="e-news_title">{{ news.title }}</h3>
+                                            <div class="e-news_text">{{ news.text }}</div>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-                <div class="e-carousel_control_holder">
-                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                        <img class="e-carousel_controller" src="{{ app.request.basepath }}/public/assets/images/carousel_controller.png">
-                    </a>
-                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                        <img class="e-carousel_controller" src="{{ app.request.basepath }}/public/assets/images/carousel_controller.png">
-                    </a>
-                </div>
-                <div class="e-quarterblock_type_holder">
-                    <img class="e-quarterblock_type_icon" src="{{ app.request.basepath }}/public/assets/images/plus_ico.svg">
-                    <h4 class="e-quarterblock_type_title">{{ data.footer.newsarchive.type }}</h4>
-                </div>
-            </div>
-        </div>
-        <div class="e-quarterblock footer-quarter_inline_block footer-bordered_blocks">
-            <a class="e-quarterblock_link" href="{{ data.footer.sustainability_info.link }}">
-                <h3 class="e-news_title">{{ data.footer.sustainability_info.title }}</h3>
-                <div class="e-news_text">{{ data.footer.sustainability_info.text }}</div>
-            </a>
-            <div class="e-quarterblock_type_holder">
-                <img class="e-quarterblock_type_icon" src="{{ app.request.basepath }}/public/assets/images/plus_ico.svg">
-                <h4 class="e-quarterblock_type_title">{{ data.footer.sustainability_info.type }}</h4>
-            </div>
-        </div>
-        <div class="e-quarterblock footer-quarter_inline_block footer-contact_block">
-            <h3 class="e-news_title">{{ data.footer.contact.title }}</h3>
-            <ul class="footer-contact_details">
-                <li>{{ data.footer.contact.address|raw }}</li>
-                <li>{{ data.footer.contact.phones|raw }}</li>
-                <li class="footer-contact_mail">
-                    <a href="mailto:{{ data.footer.contact.mail }}">{{ data.footer.contact.mail }}</a>
-                </li>
-            </ul>
-            <ul class="footer-contact_social">
-                <li class="footer-contact_social_title">{{ data.footer.contact.socialtitle }}</li>
-                {% for network in data.footer.contact.socialnetworks %}
-                    <li>
-                        <a href="{{ network.link }}" target="_blank">
-                            <img class="footer-social_icons" src="{{ app.request.basepath }}{{ network.icon }}">
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div class="e-carousel_control_holder">
+                        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                            <img class="e-carousel_controller" src="{{ app.request.basepath }}/public/assets/images/carousel_controller.png">
                         </a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
-    <div class="col-xs-6">
-        <div class="e-halfblock footer-halfblock" style="background-image: url('{{ app.request.basepath }}{{ data.footer.core.background }}')">
-            <div class="e-quarterblock e-quarterblock_inside_wide">
-                <a class="e-quarterblock_link" href="{{ data.footer.ecofuel.link }}">
-                    <h3 class="e-news_title">{{ data.footer.ecofuel.title }}</h3>
-                    <div class="e-news_text">{{ data.footer.ecofuel.text }}</div>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                            <img class="e-carousel_controller" src="{{ app.request.basepath }}/public/assets/images/carousel_controller.png">
+                        </a>
+                    </div>
+                    <div class="e-quarterblock_type_holder">
+                        <img class="e-quarterblock_type_icon" src="{{ app.request.basepath }}/public/assets/images/plus_ico.svg">
+                        <h4 class="e-quarterblock_type_title">{{ data.footer.newsarchive.type }}</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="e-quarterblock footer-quarter_inline_block footer-bordered_blocks">
+                <a class="e-quarterblock_link" href="{{ data.footer.sustainability_info.link }}">
+                    <h3 class="e-news_title">{{ data.footer.sustainability_info.title }}</h3>
+                    <div class="e-news_text">{{ data.footer.sustainability_info.text }}</div>
                 </a>
                 <div class="e-quarterblock_type_holder">
                     <img class="e-quarterblock_type_icon" src="{{ app.request.basepath }}/public/assets/images/plus_ico.svg">
-                    <h4 class="e-quarterblock_type_title">{{ data.footer.ecofuel.type }}</h4>
+                    <h4 class="e-quarterblock_type_title">{{ data.footer.sustainability_info.type }}</h4>
                 </div>
             </div>
-            <div class="e-quarterblock footer_halfblock_info_holder">
-                <h1 class="e-wide_title">{{ data.footer.core.title }}</h1>
-                <h3 class="e-small_subtitle">{{ data.footer.core.subtitle }}</h3>
-                <h2 class="e-wide_subtitle"><span class="e-wide_subtitle_borders">{{ data.footer.core.type }}</span></h2>
+            <div class="e-quarterblock footer-quarter_inline_block footer-contact_block">
+                <h3 class="e-news_title">{{ data.footer.contact.title }}</h3>
+                <ul class="footer-contact_details">
+                    <li>{{ data.footer.contact.address|raw }}</li>
+                    <li>{{ data.footer.contact.phones|raw }}</li>
+                    <li class="footer-contact_mail">
+                        <a href="mailto:{{ data.footer.contact.mail }}">{{ data.footer.contact.mail }}</a>
+                    </li>
+                </ul>
+                <ul class="footer-contact_social">
+                    <li class="footer-contact_social_title">{{ data.footer.contact.socialtitle }}</li>
+                    {% for network in data.footer.contact.socialnetworks %}
+                        <li>
+                            <a href="{{ network.link }}" target="_blank">
+                                <img class="footer-social_icons" src="{{ app.request.basepath }}{{ network.icon }}">
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
             </div>
         </div>
-    </div>
+        <div class="col-xs-6">
+            <div class="e-halfblock footer-halfblock" style="background-image: url('{{ app.request.basepath }}{{ data.footer.core.background }}')">
+                <div class="e-quarterblock e-quarterblock_inside_wide">
+                    <a class="e-quarterblock_link" href="{{ data.footer.ecofuel.link }}">
+                        <h3 class="e-news_title">{{ data.footer.ecofuel.title }}</h3>
+                        <div class="e-news_text">{{ data.footer.ecofuel.text }}</div>
+                    </a>
+                    <div class="e-quarterblock_type_holder">
+                        <img class="e-quarterblock_type_icon" src="{{ app.request.basepath }}/public/assets/images/plus_ico.svg">
+                        <h4 class="e-quarterblock_type_title">{{ data.footer.ecofuel.type }}</h4>
+                    </div>
+                </div>
+                <div class="e-quarterblock footer_halfblock_info_holder">
+                    <h1 class="e-wide_title">{{ data.footer.core.title }}</h1>
+                    <h3 class="e-small_subtitle">{{ data.footer.core.subtitle }}</h3>
+                    <h2 class="e-wide_subtitle"><span class="e-wide_subtitle_borders">{{ data.footer.core.type }}</span></h2>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <div class="col-xs-6 col-xs-border-top">
+            <div class="e-quarterblock footer-quarter_inline_block footer-contact_block footer-bordered_blocks_right">
+                <h3 class="e-news_title">{{ data.footer.contact.title }}</h3>
+                <ul class="footer-contact_details">
+                    <li>{{ data.footer.contact.address|raw }}</li>
+                    <li>{{ data.footer.contact.phones|raw }}</li>
+                    <li class="footer-contact_mail">
+                        <a href="mailto:{{ data.footer.contact.mail }}">{{ data.footer.contact.mail }}</a>
+                    </li>
+                </ul>
+                <ul class="footer-contact_social">
+                    <li class="footer-contact_social_title">{{ data.footer.contact.socialtitle }}</li>
+                    {% for network in data.footer.contact.socialnetworks %}
+                        <li>
+                            <a href="{{ network.link }}" target="_blank">
+                                <img class="footer-social_icons" src="{{ app.request.basepath }}{{ network.icon }}">
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <div class="e-halfblock footer-halfblock-halfed" style="background-image: url('{{ app.request.basepath }}{{ data.footer.core.background }}')">
+                <div class="e-quarterblock footer_halfblock_info_holder">
+                    <h1 class="e-wide_title">{{ data.footer.core.title }}</h1>
+                    <h3 class="e-small_subtitle">{{ data.footer.core.subtitle }}</h3>
+                    <h2 class="e-wide_subtitle"><span class="e-wide_subtitle_borders">{{ data.footer.core.type }}</span></h2>
+                </div>
+            </div>
+        </div>
+    {% endif %}
 </footer>
