@@ -24,7 +24,7 @@ $routes = array (
     array('project_ecofuel', 'our_projects'),
     array('project_ecoglycol', 'our_projects'),
     array('corporate_mission_and_vision', 'corporate_profile'),
-    array('corporate_board_of_directors_and_management', 'corporate_profile'),
+    array('corporate_board_of_directors', 'corporate_profile'),
     array('sustainability_enviromental_impact','sustainability_information'),
     array('sustainability_infrastructure','sustainability_information'),
     array('sustainability_economical_impact', 'sustainability_information')
