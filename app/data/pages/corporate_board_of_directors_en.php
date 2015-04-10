@@ -20,6 +20,7 @@ return array(
                 'link' => 'corporate_management_team',
             ),
         ),
+        'menu_parent' => 'corporate_profile',
         'mission' => array(
             'title' => 'Board of Directors',
             'title2' => 'Management Team',

@@ -8,7 +8,6 @@ $black = rgb(0,0,0)
 $blueFiller = rgb(218,230,246)
 $transBlack = rgba(0,0,0,0.3)
 
-
 $transition()
   transition all 0.3s ease-in-out
 
@@ -34,8 +33,7 @@ html, body
   color $textGrey
 
 body
-  background-color rgba(0,0,0,0.004)
-  margin-bottom  $remify(20px)
+  background-color #ebebeb
 
 ul
   margin 0
@@ -89,4 +87,15 @@ h1,h2,h3,h4,h5,h6
 .carousel-control.right, .carousel-control.left
   background-image none
   opacity 1
+
+@media (max-width: 1599px) and (min-width: 1400px)
+  html,body
+    font-size 110%
+
+@media (min-width:1600px)
+  html,body
+    font-size 115%
+
+
+
 

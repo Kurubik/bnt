@@ -26,7 +26,7 @@
       $bold($remify(14px))
       margin-right 3px
     &:hover
-      color $lightGrey
+      color $green
       &:before
         color $darkGrey
 
@@ -60,8 +60,25 @@
   top 50%
   transform translateY(-50%)
   li
+    a, span
+      &:before
+        position absolute
+        left 0
+        top 50%
+        transform translateY(-50%)
+        content ''
+        width 1px
+        height $remify(30px)
+
     a
       display block
+      &:before
+        background-color $lightGrey
+    span
+      display block
+      color $green
+      &:before
+        background-color $green
     position relative
     display inline-block
     vertical-align top
@@ -75,15 +92,7 @@
     $transition()
     &:hover
       color $green
-    &:before
-      position absolute
-      left 0
-      top 50%
-      transform translateY(-50%)
-      content ''
-      width 1px
-      height $remify(30px)
-      background-color $lightGrey
+
     &:last-child
       &:after
         position absolute

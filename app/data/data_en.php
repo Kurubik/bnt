@@ -30,18 +30,22 @@ return array (
         'our_projects' => array(
             'title' => 'our<br>projects',
             'link' => 'project_ecofuel',
+            'parent' => 'our_projects',
         ),
         'products_n_services' => array(
             'title' => 'products &<br>services',
             'link' => 'products_n_services',
+            'parent' => 'products_n_services',
         ),
         'sustainability_information' => array(
             'title' => 'sustainability<br>information',
-            'link' => 'sustainability_enviromental_impact',
+            'link' => 'sustainability_infrastructure',
+            'parent' => 'sustainability_information',
         ),
         'corporate_profile' => array(
             'title' => 'corporate<br>profile',
             'link' => 'corporate_mission_and_vision',
+            'parent' => 'corporate_profile',
         ),
     ),
     'footer' => array(

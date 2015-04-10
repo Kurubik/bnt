@@ -21,6 +21,7 @@ return array(
                 'link' => 'corporate_management_team',
             ),
         ),
+        'menu_parent' => 'corporate_profile',
         'mission' => array(
             'title' => 'Our Mission',
             'text' => 'Quisque non ne re plibus audis receatur abo. Nam, sum voluptaque. Ulpari quias essim fuga. Sequam, eum resent es rerioris doloribus:',

@@ -6,9 +6,11 @@
   text-transform uppercase
   color $blue
   overflow auto
+  border-top 1px solid $lightGrey
   li
     position relative
     margin-bottom $remify(16px)
+    $transition()
     &:hover
       color $green
   li.selected

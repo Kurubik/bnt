@@ -26,11 +26,19 @@
             </a>
             <ul class="header-lower_menu">
                 {% for option in data.head_low_menu %}
-                <li {{ (option.link == app.request.get('parent') ? 'class="selected"' : '')  }}>
-                        <a href="{{ path(option.link, {_locale: app.request.locale}) }}">
-                            {{ option.title|raw }}
-                        </a>
-                    </li>
+                    {% if option.parent == app.request.attributes.get('parent') %}
+                        <li>
+                            <span>
+                                {{ option.title|raw }}
+                            </span>
+                        </li>
+                    {% else %}
+                        <li>
+                            <a href="{{ path(option.link, {_locale: app.request.locale}) }}">
+                                {{ option.title|raw }}
+                            </a>
+                        </li>
+                    {% endif %}
                 {% endfor %}
             </ul>
         </section>

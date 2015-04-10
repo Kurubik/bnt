@@ -8,7 +8,6 @@ return array (
         'link' => '',
         'quarterblock' => array(
             'text' => 'Erspernat doloreicia veritio ratio. Dem con ea pre dignihit, offictem quam con nissinis rerovit.',
-                'link' => '',
             'image' => '/public/assets/images/baltic_ecofuel.png',
         ),
     ),
