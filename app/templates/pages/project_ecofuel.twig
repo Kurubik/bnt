@@ -13,7 +13,7 @@
                         </li>
                     {% else %}
                         <li>
-                            <a href="{{ option.link }}">
+                            <a href="{{ path(option.link, {_locale: app.request.locale}) }}">
                                 {{ option.title|raw }}
                             </a>
                         </li>

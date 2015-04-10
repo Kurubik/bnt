@@ -14,7 +14,14 @@ $pages->get('/', function() use ($app) {
 });
 
 $routes = array (
+    'media',
+    'investors',
+    'partners_n_suppliers',
+    'career',
+    'contacts',
+    'products_n_services',
     'project_ecofuel',
+    'project_ecoglycol',
     'corporate_mission_and_vision',
     'corporate_board_of_directors_and_management',
     'sustainability_enviromental_impact',
@@ -30,8 +37,8 @@ $pages->get('/{_locale}/',
         ));
     }
 )
-  ->assert('_locale', 'en')
-  ->bind('home');
+    ->assert('_locale', 'en|ru|de|cn')
+    ->bind('home');
 
 $createRoute = function ($routeName, $app) use ($app) {
     return function () use ($app, $routeName) {

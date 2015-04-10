@@ -13,7 +13,7 @@
             <ul class="header_menu header-top_menu">
                {% for option in data.head_top_menu %}
                    <li>
-                       <a href="{{ option.link }}">
+                       <a href="{{ path(option.link, {_locale: app.request.locale}) }}">
                            {{ option.title }}
                        </a>
                    </li>
@@ -27,7 +27,7 @@
             <ul class="header-lower_menu">
                 {% for option in data.head_low_menu %}
                     <li>
-                        <a href="{{ option.link }}">
+                        <a href="{{ path(option.link, {_locale: app.request.locale}) }}">
                             {{ option.title|raw }}
                         </a>
                     </li>
