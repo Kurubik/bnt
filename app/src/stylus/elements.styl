@@ -41,11 +41,35 @@
   line-height $remify(19px)
 
 .e-wide_subtitle_borders
+  position relative
   display inline-block
   text-transform uppercase
   padding $remify(5px) $remify(14px) $remify(5px) $remify(14px)
-  border-top $remify(2px) solid $white
-  border-bottom $remify(2px) solid $white
+  /*border-top $remify(2px) solid $white*/
+  /*border-bottom $remify(2px) solid $white*/
+  $transition()
+  -webkit-backface-visibility hidden
+  &:before, &:after
+    content ''
+    position absolute
+    left 0
+    right 0
+    height 2px
+    background-color $white
+  &:before
+    top -2px
+    $transition()
+  &:after
+    bottom -2px
+    $transition()
+  &:hover
+    transform scale(1.6)
+    &:before
+      top -20px
+      opacity 0
+    &:after
+      bottom -20px
+      opacity 0
 
 .e-quarterblock
   position relative
