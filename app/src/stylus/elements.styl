@@ -58,6 +58,9 @@
   color $textGrey
   background-color $white
   text-align center
+  &:hover
+    .e-quarterblock_type_icon
+      transform rotate(180deg)
 
 .e-quarterblock_inside_wide
   position absolute
@@ -150,6 +153,7 @@
 .e-quarterblock_type_icon
   width $remify(20px)
   height $remify(20px)
+  $transition()
 
 .e-quarterblock_type_title
   $bold($remify(12px))
