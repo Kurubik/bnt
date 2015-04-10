@@ -13,8 +13,12 @@ return array(
                 'link' => 'corporate_mission_and_vision',
             ),
             'ecology' => array(
-                'title' => 'Board of<br>directors and<br>Management team',
-                'link' => 'corporate_board_of_directors_and_management',
+                'title' => 'Board of<br>directors',
+                'link' => 'corporate_board_of_directors',
+            ),
+            'management' => array(
+                'title' => 'Management<br>team',
+                'link' => 'corporate_management_team',
             ),
         ),
         'mission' => array(
