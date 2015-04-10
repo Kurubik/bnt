@@ -29,6 +29,7 @@ $routes = array (
     'sustainability_economical_impact',
 );
 
+
 $pages->get('/{_locale}/',
     function() use ($app) {
         return $app['twig']->render('/pages/home.twig', array (
