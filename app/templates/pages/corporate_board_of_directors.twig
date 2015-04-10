@@ -45,19 +45,6 @@
                                 </li>
                             {% endfor %}
                         </ul>
-                        <h2 class="project-profile_heading">
-                            {{ index.project_page.mission.title2 }}
-                        </h2>
-                        <ul class="corporate-profile_list corporate-managers_list">
-                            {% for person in index.managers_list %}
-                                <li>
-                                    <img class="corporate-portrait" src="{{ app.request.basepath }}{{ person.photo }}">
-                                    <h3 class="project-technoblock_title">{{ person.name }}</h3>
-                                    <h4 class="corporate-title">{{ person.title|raw }}</h4>
-                                    <div class="corporate-text">{{ person.text|raw }}</div>
-                                </li>
-                            {% endfor %}
-                        </ul>
                     </div>
                 </div>
             </div>
