@@ -1,0 +1,68 @@
+{% extends 'index.twig' %}
+{% block page %}
+    <div>
+        <div class="container">
+            <div class="col-xs-3">
+                <ul class="project-sidemenu">
+                    {% for option in index.project_page.sidemenu %}
+                        {% if currentRoute == option.link %}
+                            <li class="selected">
+                                        <span>
+                                            {{ option.title|raw }}
+                                        </span>
+                            </li>
+                        {% else %}
+                            <li>
+                                <a href="{{ option.link }}">
+                                    {{ option.title|raw }}
+                                </a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+                <div class="e-quarterblock project-sidemenu_afterfiller e-around_left_column_paddings project-wideimage_text">
+                    {{ index.project_page.mission.sidetext|raw }}
+                </div>
+            </div>
+            <div class="col-xs-9">
+                <div class="project-mainbanner" style="background-image: url('{{ app.request.basepath }}{{ index.heading.backgroud }}')">
+                    <h1 class="e-wide_title">{{ index.heading.title }}</h1>
+                    <div class="project-mainbanner_text">
+                        {{ index.heading.text }}
+                    </div>
+                </div>
+                <div class="e-innerpage_content_paddings">
+                    <div class="project-profile">
+                        <h2 class="project-profile_heading">
+                            {{ index.project_page.mission.title }}
+                        </h2>
+                        <div class="project-profile_text">{{ index.project_page.mission.text }}</div>
+                    </div>
+                    <div class="container project-technoblock_holder">
+                        {% for data in index.technology_blocks %}
+                            <div class="col-xs-4 project-technoblock">
+                                <div class="project-technoblock_logo_container">
+                                    <img class="project-techoblock_logo {{ data.class }}" src="{{ app.request.basepath }}{{ data.logo }}">
+                                </div>
+                                <h3 class="project-technoblock_title">{{ data.title|raw }}</h3>
+                                <div class="project-technoblock_text">{{ data.text|raw }}</div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="e-wideimage_block" style="background-image: url('{{ app.request.basepath }}{{ index.middle_content.wideimage }}')">
+            <div class="e-wideimage_block_text_holder">
+                <ul class="e-wideimage_sidetext_list e-around_left_column_paddings">
+                    {% for detail in index.middle_content.wideimage_sidetext %}
+                        <li>
+                            <div class="e-wideimage_sidetext_area">{{ detail.area|raw }}</div>
+                            <div class="e-wideimage_sidetext_amout">{{ detail.amount|raw }}</div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

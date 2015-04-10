@@ -17,6 +17,9 @@ $routes = array (
     'project_ecofuel',
     'corporate_mission_and_vision',
     'corporate_board_of_directors_and_management',
+    'sustainability_enviromental_impact',
+    'sustainability_infrastructure',
+    'sustainability_economical_impact',
 );
 
 $pages->get('/{_locale}/',

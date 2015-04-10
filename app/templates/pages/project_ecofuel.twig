@@ -54,7 +54,7 @@
                         {% for data in index.technology_blocks %}
                             <div class="col-xs-4 project-technoblock">
                                 <div class="project-technoblock_logo_container">
-                                    <img class="project-techoblock_logo" src="{{ app.request.basepath }}{{ data.logo }}">
+                                    <img class="project-techoblock_logo {{ data.class }}" src="{{ app.request.basepath }}{{ data.logo }}">
                                 </div>
                                 <h3 class="project-technoblock_title">{{ data.title|raw }}</h3>
                                 <div class="project-technoblock_text">{{ data.text|raw }}</div>

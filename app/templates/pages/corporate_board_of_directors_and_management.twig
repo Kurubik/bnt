@@ -1,49 +1,64 @@
 {% extends 'index.twig' %}
 {% block page %}
-    <div class="container">
-        <div class="col-xs-3">
-            <ul class="project-sidemenu">
-                {% for option in index.project_page.sidemenu %}
-                    {% if currentRoute == option.link %}
-                        <li class="selected">
-                                <span>
-                                    {{ option.title|raw }}
-                                </span>
-                        </li>
-                    {% else %}
-                        <li>
-                            <a href="{{ option.link }}">
-                                {{ option.title|raw }}
-                            </a>
-                        </li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <div class="e-quarterblock project-sidemenu_afterfiller"></div>
-        </div>
-        <div class="col-xs-9">
-            <div class="project-mainbanner" style="background-image: url('{{ app.request.basepath }}{{ index.heading.backgroud }}')">
-                <h1 class="e-wide_title">{{ index.heading.title }}</h1>
-                <div class="project-mainbanner_text">
-                    {{ index.heading.text }}
-                </div>
-            </div>
-            <div class="e-innerpage_content_paddings">
-                <div class="project-profile">
-                    <h2 class="project-profile_heading">
-                        {{ index.project_page.mission.title }}
-                    </h2>
-                    <div class="project-profile_text">{{ index.project_page.mission.text }}</div>
-                    <ul class="e-page_profile_list">
-                        {% for person in index.directors_list %}
-                            <li>
-                                <img class="corporate-portrait" src="{{ app.request.basepath }}{{ person.photo }}">
-                                <h3 class="corporate-name">{{ person.name }}</h3>
-                                <h4 class="corporate-titme">{{ person.title|raw }}</h4>
-                                <div class="corporate-text">{{ person.text|raw }}</div>
+    <div class="e-page_board_of">
+        <div class="container">
+            <div class="col-xs-3">
+                <ul class="project-sidemenu">
+                    {% for option in index.project_page.sidemenu %}
+                        {% if currentRoute == option.link %}
+                            <li class="selected">
+                                    <span>
+                                        {{ option.title|raw }}
+                                    </span>
                             </li>
-                        {% endfor %}
-                    </ul>
+                        {% else %}
+                            <li>
+                                <a href="{{ option.link }}">
+                                    {{ option.title|raw }}
+                                </a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+                <div class="e-quarterblock project-sidemenu_afterfiller"></div>
+            </div>
+            <div class="col-xs-9">
+                <div class="project-mainbanner" style="background-image: url('{{ app.request.basepath }}{{ index.heading.backgroud }}')">
+                    <h1 class="e-wide_title">{{ index.heading.title }}</h1>
+                    <div class="project-mainbanner_text">
+                        {{ index.heading.text }}
+                    </div>
+                </div>
+                <div class="e-innerpage_content_paddings">
+                    <div class="project-profile">
+                        <h2 class="project-profile_heading">
+                            {{ index.project_page.mission.title }}
+                        </h2>
+                        <div class="project-profile_text">{{ index.project_page.mission.text }}</div>
+                        <ul class="corporate-profile_list">
+                            {% for person in index.directors_list %}
+                                <li>
+                                    <img class="corporate-portrait" src="{{ app.request.basepath }}{{ person.photo }}">
+                                    <h3 class="project-technoblock_title">{{ person.name }}</h3>
+                                    <h4 class="corporate-title">{{ person.title|raw }}</h4>
+                                    <div class="corporate-text">{{ person.text|raw }}</div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        <h2 class="project-profile_heading">
+                            {{ index.project_page.mission.title2 }}
+                        </h2>
+                        <ul class="corporate-profile_list corporate-managers_list">
+                            {% for person in index.managers_list %}
+                                <li>
+                                    <img class="corporate-portrait" src="{{ app.request.basepath }}{{ person.photo }}">
+                                    <h3 class="project-technoblock_title">{{ person.name }}</h3>
+                                    <h4 class="corporate-title">{{ person.title|raw }}</h4>
+                                    <div class="corporate-text">{{ person.text|raw }}</div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

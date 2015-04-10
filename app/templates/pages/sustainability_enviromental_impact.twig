@@ -1,15 +1,15 @@
 {% extends 'index.twig' %}
 {% block page %}
-    <div class="e-page_corporate">
+    <div class="e-page_sustainability">
         <div class="container">
             <div class="col-xs-3">
                 <ul class="project-sidemenu">
                     {% for option in index.project_page.sidemenu %}
                         {% if currentRoute == option.link %}
                             <li class="selected">
-                                <span>
-                                    {{ option.title|raw }}
-                                </span>
+                                        <span>
+                                            {{ option.title|raw }}
+                                        </span>
                             </li>
                         {% else %}
                             <li>
@@ -35,35 +35,8 @@
                             {{ index.project_page.mission.title }}
                         </h2>
                         <div class="project-profile_text">{{ index.project_page.mission.text }}</div>
-                        <div class="container project-technoblock_holder">
-                            {% for data in index.technology_blocks %}
-                                <div class="col-xs-4 project-technoblock">
-                                    <div class="project-technoblock_logo_container">
-                                        <img class="project-techoblock_logo {{ data.class }}" src="{{ app.request.basepath }}{{ data.logo }}">
-                                    </div>
-                                    <h3 class="project-technoblock_title">{{ data.title|raw }}</h3>
-                                    <div class="project-technoblock_text">{{ data.text|raw }}</div>
-                                </div>
-                            {% endfor %}
-                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="col-xs-3">
-                <div class="e-left_right_left_column_paddings project-wideimage_text">
-                    {{ index.vision.sidetext }}
-                </div>
-            </div>
-            <div class="col-xs-9">
-                <div class="e-left_paddings_right_column e-page_inner_text">
-                    <h2 class="project-profile_heading">
-                        {{ index.vision.maintitle }}
-                    </h2>
-                    <div class="project-profile_text">
-                        {{ index.vision.text|raw }}
-                    </div>
+                    <img class="project-wideimage" src="{{ app.request.basepath }}{{ index.project_page.mission.wideimage }}">
                 </div>
             </div>
         </div>

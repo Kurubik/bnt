@@ -37,7 +37,7 @@ return array (
         ),
         'sustainability_information' => array(
             'title' => 'sustainability<br>information',
-            'link' => 'sustainability_information',
+            'link' => 'sustainability_enviromental_impact',
         ),
         'corporate_profile' => array(
             'title' => 'corporate<br>profile',

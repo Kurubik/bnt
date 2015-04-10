@@ -53,16 +53,19 @@ return array(
             'logo' => '/public/assets/images/projects/state_of_art.svg',
             'title' => 'State-of-the-art process',
             'text' => 'that allows to maximize conver-sion of heavy hydrocarbons into high quality light oil products.',
+            'class' => 'e-ico_state_of_art',
         ),
         'ready_products' => array(
             'logo' => '/public/assets/images/projects/ready_products.svg',
             'title' => 'Ready for use products',
             'text' => 'of VCC Unit (without additional processing).',
+            'class' => 'e-ico_ready_products',
         ),
         'euro5' => array(
             'logo' => '/public/assets/images/projects/euro5.svg',
             'title' => 'Production of Euro 5',
             'text' => 'instead of utilizing feedstock in other less eco-friendly technologies.',
+            'class' => 'e-ico_euro5',
         ),
     ),
     'next_steps' => array(
