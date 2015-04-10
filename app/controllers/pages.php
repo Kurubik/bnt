@@ -14,6 +14,7 @@ $pages->get('/', function() use ($app) {
 });
 
 $routes = array (
+
     'media',
     'investors',
     'partners_n_suppliers',
