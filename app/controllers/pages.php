@@ -20,13 +20,13 @@ $routes = array (
     'career',
     'contacts',
     'products_n_services',
-    'project_ecofuel',
-    'project_ecoglycol',
-    'corporate_mission_and_vision',
-    'corporate_board_of_directors_and_management',
-    'sustainability_enviromental_impact',
-    'sustainability_infrastructure',
-    'sustainability_economical_impact',
+    array('project_ecofuel', 'our_projects'),
+    array('project_ecoglycol', 'our_projects'),
+    array('corporate_mission_and_vision', 'corporate_profile'),
+    array('corporate_board_of_directors_and_management', 'corporate_profile'),
+    array('sustainability_enviromental_impact','sustainability_information'),
+    array('sustainability_infrastructure','sustainability_information'),
+    array('sustainability_economical_impact', 'sustainability_information')
 );
 
 
@@ -50,9 +50,23 @@ $createRoute = function ($routeName, $app) use ($app) {
     };
 };
 
-foreach ($routes as $routeName) {
-    $app->get('/{_locale}/'.$routeName.'/', $createRoute($routeName, $app))
+foreach ($routes as $route) {
+
+    if (is_array($route)) {        
+        $routeName = $route[0];
+        $parentName = $route[1];
+    } else {       
+        $routeName = $route;
+        $parentName = '';
+    }
+
+    
+    //$path = "/{_locale}/" . ($parentName !== '' ? "$parentName/" : "") . "$routeName/";   
+    $path = "/{_locale}/" . ($parentName !== '' ? "{parent}/" : "") . "$routeName/";   
+
+    $app->get($path, $createRoute($routeName, $app))
         ->value('menu', $routeName)
+        ->value('parent', ($parentName !== '' ? $parentName : $routeName))
         ->bind($routeName);
 }
 

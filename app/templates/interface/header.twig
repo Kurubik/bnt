@@ -26,7 +26,7 @@
             </a>
             <ul class="header-lower_menu">
                 {% for option in data.head_low_menu %}
-                    <li>
+                <li {{ (option.link == app.request.get('parent') ? 'class="selected"' : '')  }}>
                         <a href="{{ path(option.link, {_locale: app.request.locale}) }}">
                             {{ option.title|raw }}
                         </a>
