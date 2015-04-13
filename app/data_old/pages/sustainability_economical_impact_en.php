@@ -3,7 +3,7 @@ return array(
     'heading' => array(
         'backgroud' => '/public/assets/images/projects/ecofuel.jpg',
         'title' => 'Economical Impact',
-        'text' => 'BNT is the most ambitious project in the history of modern Latvia and can dramatically affect the economy of the entire country.',
+        'text' => 'Agnit que moluptatur. Quisque non ne re plibus audis receatur abo. Nam, sum voluptaque. Rionse et excero di ut qui bla inusandic tem.Obis escimod ut.',
     ),
     'project_page' => array(
         'sidemenu' => array(
@@ -23,14 +23,14 @@ return array(
         'mission' => array(
             'title' => 'Opportunity',
             'text' => 'Quisque non ne re plibus audis receatur abo. Nam, sum voluptaque. Ulpari quias essim fuga. Sequam, eum resent es rerioris doloribus:',
-            'sidetext' => 'As a result of Baltic Eco fuel project Ventspils Free Port will yearly gain ~1.8mln. Eur as port dues, as well as reduce the dependency on Russian transit cargo.<br>350 new direct jobs and will be created in Ventspils.',
+            'sidetext' => 'Ximos es eostium essus moloreptas id ut facipicta vit, tem excestias aborectus molliame voluptatem quis eatiae volor adi dolendi gnihicid molupist, volum. Perspienda volor archica boriantur? Simolorit.',
         ),
     ),
     'technology_blocks' => array(
         'ice_port' => array(
             'logo' => '/public/assets/images/projects/industrial.svg',
             'title' => 'One of the largest ever industrial greenfield projects in the Baltics',
-            'text' => '',
+            'text' => 'e-ico_industrial',
             'class' => 'e-ico_industrial',
         ),
         'economics_zone' => array(

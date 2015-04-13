@@ -53,22 +53,28 @@ return array (
             'type' => 'news archive',
             'news' => array(
                 'award' => array(
-                    'date' => 'Oct 29, 2014',
+                    'date' => 'Jan 27, 2015',
                     'title' => 'Awards contracts for services',
-                    'text' => 'Goverment of the Republic of Latvia and European Comission approved tax relief in the amount of EUR 102 M',
+                    'text' => 'BNT has today, 7 January, awarded the service contracts for seven bases for the company in Latvia.',
+                    'link' => '',
+                ),
+                'dummy' => array(
+                    'date' => 'Aug 34, 2015',
+                    'title' => 'Mega super news services',
+                    'text' => 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium',
                     'link' => '',
                 ),
             ),
         ),
         'sustainability_info' => array(
             'title' => 'Environmental Impact',
-            'text' => 'High-tech production complex involves the use of the most friendly to the environment technologies.',
-            'type' => 'sustainability',
+            'text' => 'Agnit que moluptatur. Quisque non ne re plibus audis receatur abo. Nam, sum voluptaque.',
+            'type' => 'sustainability information',
             'link' => '',
         ),
         'ecofuel' => array(
             'title' => 'VCC Technology',
-            'text' => 'The VCC technology is a slurry phase hydrocracking process for converting petroleum residues at very high conversion rates.',
+            'text' => 'Tet que ne nihiliquidel et odit essitate plab idisit, tem volest, odi ute exeressequi as adici reptati.',
             'type' => 'Baltic ecofuel',
             'link' => '',
         ),
@@ -95,7 +101,7 @@ return array (
         ),
         'core' => array(
             'background' => '/public/assets/images/footer_halfblock.jpg',
-            'title' => '1–1.4M tpa',
+            'title' => '1–1,4M tpa',
             'subtitle' => 'BNT expected diesel production',
             'type' => 'core market',
         ),

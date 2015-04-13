@@ -3,7 +3,7 @@ return array(
     'heading' => array(
         'backgroud' => '/public/assets/images/projects/ecofuel.jpg',
         'title' => 'Mission & Vision',
-        'text' => 'BNT is committed to producing better fuels through exercising superior operational efficiency and state-of-the-art environmental and safety standards.',
+        'text' => 'Agnit que moluptatur. Quisque non ne re plibus audis receatur abo. Nam, sum voluptaque. Rionse et excero di ut qui bla inusandic tem.Obis escimod ut.',
     ),
 
     'project_page' => array(
@@ -24,7 +24,7 @@ return array(
         'menu_parent' => 'corporate_profile',
         'mission' => array(
             'title' => 'Our Mission',
-            'text' => 'BNT is committed to producing better fuels through exercising superior operational efficiency and state-of-the-art environmental and safety standards:',
+            'text' => 'Quisque non ne re plibus audis receatur abo. Nam, sum voluptaque. Ulpari quias essim fuga. Sequam, eum resent es rerioris doloribus:',
         ),
     ),
     'technology_blocks' => array(

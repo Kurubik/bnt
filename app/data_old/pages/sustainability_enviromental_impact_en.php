@@ -3,7 +3,7 @@ return array(
     'heading' => array(
         'backgroud' => '/public/assets/images/projects/ecofuel.jpg',
         'title' => 'Environmental Impact',
-        'text' => 'High-tech production complex involves the use of the most friendly to the environment technologies, preventing or minimizing any emission to the atmosphere and full and closed waste disposal.',
+        'text' => 'Agnit que moluptatur. Quisque non ne re plibus audis receatur abo. Nam, sum voluptaque. Rionse et excero di ut qui bla inusandic tem.Obis escimod ut.',
     ),
     'project_page' => array(
         'sidemenu' => array(
@@ -22,7 +22,7 @@ return array(
         ),
         'mission' => array(
             'title' => 'Technology Features',
-            'text' => 'The technology provides processing and cleaning in a closed cycle of heavy oil residues into light and highly demanded products – diesel and naphtha.',
+            'text' => 'Quisque non ne re plibus audis receatur abo. Nam, sum voluptaque. Ulpari quias essim fuga. Sequam, eum resent es rerioris doloribus:',
             'wideimage' => '/public/assets/images/sustain/technologies.jpg',
         ),
     ),
