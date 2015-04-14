@@ -86,14 +86,17 @@ return array (
             'socialtitle' => 'Social networks',
             'socialnetworks' => array(
                 'twitter' => array(
+                    'name' => 'twitter',
                     'icon' => '/public/assets/images/twitter.svg',
                     'link' => 'https://twitter.com/',
                 ),
                 'facebook' => array(
+                    'name' => 'facebook',
                     'icon' => '/public/assets/images/facebook.svg',
                     'link' => 'https://www.facebook.com',
                 ),
                 'linkedin' => array(
+                    'name' => 'linkedin',
                     'icon' => '/public/assets/images/linkedin.svg',
                     'link' => 'https://www.linkedin.com/',
                 ),

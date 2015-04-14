@@ -77,9 +77,10 @@
                     <li class="footer-contact_social_title">{{ data.footer.contact.socialtitle }}</li>
                     {% for network in data.footer.contact.socialnetworks %}
                         <li>
-                            <a href="{{ network.link }}" target="_blank">
-                                <img class="footer-social_icons" src="{{ app.request.basepath }}{{ network.icon }}">
+                            <a class="footer-social_icons" href="{{ network.link }}" target="_blank">
+                                {{ include("svg/#{network.name}.twig") }}
                             </a>
+
                         </li>
                     {% endfor %}
                 </ul>
