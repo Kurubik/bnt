@@ -1,6 +1,5 @@
 $(->
   $slideHover.init()
-  console.log 'da'
 )
 
 $slideHover = {

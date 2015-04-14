@@ -14,7 +14,6 @@ $pages->get('/', function() use ($app) {
 });
 
 $routes = array (
-
     'media',
     'investors',
     'partners_n_suppliers',
@@ -40,7 +39,7 @@ $pages->get('/{_locale}/',
         ));
     }
 )
-    ->assert('_locale', 'en|ru|de|cn')
+    ->assert('_locale', 'en|lv')
     ->bind('home');
 
 $createRoute = function ($routeName, $app) use ($app) {
