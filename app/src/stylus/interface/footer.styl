@@ -51,6 +51,11 @@
   line-height $remify(22px)
   li
     margin-bottom $remify(8px)
+  a
+    $transition()
+    &:hover
+      color $green
+
 .footer-contact_social
   margin-top $remify(11px)
   li
@@ -64,9 +69,17 @@
     color $mediumGrey
 
 .footer-social_icons
-  width 100%
-  max-width $remify(14px)
-  max-height $remify(14px)
+  display block
+  width $remify(14px)
+  height $remify(14px)
+  svg
+    max-width $remify(14px)
+    max-height $remify(14px)
+    path
+      $transition()
+  &:hover
+    svg path
+      fill $green
 
 .footer-contact_mail
   color $blue

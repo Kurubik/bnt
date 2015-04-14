@@ -2,12 +2,21 @@
     <div class="header-container">
         <section class="header-top_section">
             <ul class="header_menu header-lang_selector">
-                {% for option in data.lang %}
-                    <li>
-                        <a href="{{ option }}">
-                            {{ option }}
-                        </a>
-                    </li>
+                {% for option,lang in data.lang %}
+                    {% if app.request.attributes.get('_locale') == lang %}
+                        <li>
+                            <span>
+                                {{ option }}
+                            </span>
+
+                        </li>
+                    {% else %}
+                        <li>
+                            <a href="{{ path(app.request.attributes.get('_route'), {'_locale': option}) }}">
+                                {{ option }}
+                            </a>
+                        </li>
+                    {% endif %}
                 {% endfor %}
             </ul>
             <ul class="header_menu header-top_menu">

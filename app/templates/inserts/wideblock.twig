@@ -5,10 +5,16 @@
     </a>
     <div class="e-quarterblock e-quarterblock_inside_wide">
         {% if index.wideblock.quarterblock.link is defined %}
-        <a class="e-quarterblock_link" href="{{ index.wideblock.quarterblock.link }}">
-            <div class="e-quarterblock_text">{{ index.wideblock.quarterblock.text }}</div>
-            <img class="e-quarterblock_image" src="{{ app.request.basepath }}{{ index.wideblock.quarterblock.image }}">
-        </a>
+            <div class="e-quarterblock_hover_holder">
+                <div class="e-quarterblock_hover e-quarterblock_hover_top" data-hover="top"></div>
+                <div class="e-quarterblock_hover e-quarterblock_hover_right" data-hover="right"></div>
+                <div class="e-quarterblock_hover e-quarterblock_hover_bottom" data-hover="bottom"></div>
+                <div class="e-quarterblock_hover e-quarterblock_hover_left" data-hover="left"></div>
+            </div>
+            <a class="e-quarterblock_link" href="{{ path(index.wideblock.quarterblock.link, {_locale: app.request.locale}) }}">
+                <div class="e-quarterblock_text">{{ index.wideblock.quarterblock.text }}</div>
+                <img class="e-quarterblock_image" src="{{ app.request.basepath }}{{ index.wideblock.quarterblock.image }}">
+            </a>
         {% else %}
             <div class="e-quarterblock_text">{{ index.wideblock.quarterblock.text }}</div>
             <img class="e-quarterblock_image" src="{{ app.request.basepath }}{{ index.wideblock.quarterblock.image }}">

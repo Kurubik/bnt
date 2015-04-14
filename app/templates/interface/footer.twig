@@ -49,6 +49,12 @@
                 </div>
             </div>
             <div class="e-quarterblock footer-quarter_inline_block footer-bordered_blocks">
+                <div class="e-quarterblock_hover_holder">
+                    <div class="e-quarterblock_hover e-quarterblock_hover_top" data-hover="top"></div>
+                    <div class="e-quarterblock_hover e-quarterblock_hover_right" data-hover="right"></div>
+                    <div class="e-quarterblock_hover e-quarterblock_hover_bottom" data-hover="bottom"></div>
+                    <div class="e-quarterblock_hover e-quarterblock_hover_left" data-hover="left"></div>
+                </div>
                 <a class="e-quarterblock_link" href="{{ data.footer.sustainability_info.link }}">
                     <h3 class="e-news_title">{{ data.footer.sustainability_info.title }}</h3>
                     <div class="e-news_text">{{ data.footer.sustainability_info.text }}</div>
@@ -71,9 +77,10 @@
                     <li class="footer-contact_social_title">{{ data.footer.contact.socialtitle }}</li>
                     {% for network in data.footer.contact.socialnetworks %}
                         <li>
-                            <a href="{{ network.link }}" target="_blank">
-                                <img class="footer-social_icons" src="{{ app.request.basepath }}{{ network.icon }}">
+                            <a class="footer-social_icons" href="{{ network.link }}" target="_blank">
+                                {{ include("svg/#{network.name}.twig") }}
                             </a>
+
                         </li>
                     {% endfor %}
                 </ul>
@@ -82,6 +89,12 @@
         <div class="col-xs-6">
             <div class="e-halfblock footer-halfblock" style="background-image: url('{{ app.request.basepath }}{{ data.footer.core.background }}')">
                 <div class="e-quarterblock e-quarterblock_inside_wide">
+                    <div class="e-quarterblock_hover_holder">
+                        <div class="e-quarterblock_hover e-quarterblock_hover_top" data-hover="top"></div>
+                        <div class="e-quarterblock_hover e-quarterblock_hover_right" data-hover="right"></div>
+                        <div class="e-quarterblock_hover e-quarterblock_hover_bottom" data-hover="bottom"></div>
+                        <div class="e-quarterblock_hover e-quarterblock_hover_left" data-hover="left"></div>
+                    </div>
                     <a class="e-quarterblock_link" href="{{ data.footer.ecofuel.link }}">
                         <h3 class="e-news_title">{{ data.footer.ecofuel.title }}</h3>
                         <div class="e-news_text">{{ data.footer.ecofuel.text }}</div>

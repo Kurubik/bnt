@@ -63,7 +63,7 @@
     bottom -2px
     $transition()
   &:hover
-    transform scale(1.6)
+    transform scale(1.3)
     &:before
       top -20px
       opacity 0
@@ -314,14 +314,13 @@
   top 0
   width $remify(300px)
   height $remify(300px)
-  background-color #000066
   overflow hidden
 
 .e-quarterblock_hover
   position absolute
   width $remify(300px)
   height $remify(300px)
-  background-color rosybrown
+  background-color $greenHover
   $transition()
 
 .e-quarterblock_hover_top
@@ -329,12 +328,12 @@
   top -100%
 
 .e-quarterblock_hover_right
-  right -100%
+  left 100%
   top 0
 
 .e-quarterblock_hover_bottom
   left 0
-  bottom - 100%
+  top 100%
 
 .e-quarterblock_hover_left
   left -100%
