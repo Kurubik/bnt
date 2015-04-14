@@ -2,6 +2,12 @@
     {% if currentRoute == 'home' %}
         <div class="col-xs-6">
             <div class="e-quarterblock footer-quarter_inline_block footer-bordered_blocks">
+                <div class="e-quarterblock_hover_holder">
+                    <div class="e-quarterblock_hover e-quarterblock_hover_top" data-hover="top"></div>
+                    <div class="e-quarterblock_hover e-quarterblock_hover_right" data-hover="right"></div>
+                    <div class="e-quarterblock_hover e-quarterblock_hover_bottom" data-hover="bottom"></div>
+                    <div class="e-quarterblock_hover e-quarterblock_hover_left" data-hover="left"></div>
+                </div>
                 <div id="carousel-example-generic" class="footer-news_carousel carousel slide" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
                         {% for news in data.footer.newsarchive.news %}
@@ -43,9 +49,6 @@
                 </div>
             </div>
             <div class="e-quarterblock footer-quarter_inline_block footer-bordered_blocks">
-                {#<div class="e-quarterblock_hover_holder">#}
-                    {#<div class="e-quarterblock_hover e-quarterblock_hover_top"#}
-                {#</div>#}
                 <a class="e-quarterblock_link" href="{{ data.footer.sustainability_info.link }}">
                     <h3 class="e-news_title">{{ data.footer.sustainability_info.title }}</h3>
                     <div class="e-news_text">{{ data.footer.sustainability_info.text }}</div>
@@ -97,7 +100,7 @@
         </div>
     {% else %}
         <div class="col-xs-6 col-xs-border-top">
-            <div class="e-quarterblock footer-quarter_inline_block footer-contact_block footer-bordered_blocks_right">
+            <div class="e-quarterblock footer-quarter_inline_block footer-contact_block">
                 <h3 class="e-news_title">{{ data.footer.contact.title }}</h3>
                 <ul class="footer-contact_details">
                     <li>{{ data.footer.contact.address|raw }}</li>
