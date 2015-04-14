@@ -70,9 +70,16 @@
 
 .footer-social_icons
   display block
-  width 100%
-  max-width $remify(14px)
-  max-height $remify(14px)
+  width $remify(14px)
+  height $remify(14px)
+  svg
+    max-width $remify(14px)
+    max-height $remify(14px)
+    path
+      $transition()
+  &:hover
+    svg path
+      fill $green
 
 .footer-contact_mail
   color $blue
