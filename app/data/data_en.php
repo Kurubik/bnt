@@ -58,6 +58,12 @@ return array (
                     'text' => 'Goverment of the Republic of Latvia and European Comission approved tax relief in the amount of EUR 102 M',
                     'link' => '',
                 ),
+                'weird' => array(
+                    'date' => 'Oct 29, 2014',
+                    'title' => 'Awards contracts for services',
+                    'text' => 'Goverment of the Republic of Latvia and European Comission approved tax relief in the amount of EUR 102 M',
+                    'link' => '',
+                ),
             ),
         ),
         'sustainability_info' => array(
