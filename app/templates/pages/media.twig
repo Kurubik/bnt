@@ -1,6 +1,6 @@
 {% extends 'index.twig' %}
 {% block page %}
-    <div class="e-page_project">
+    <div class="e-page_media">
         <div class="container">
             <div class="col-xs-3">
                 <div class="e-quarterblock e-top_left_colum e-around_left_top_column_paddings col-xs-border-top">
@@ -18,7 +18,36 @@
                     </div>
                 </div>
                 <div class="project-content_holder e-innerpage_content_paddings">
-                    adaqsd
+                    <div class="e-separated_block_holder">
+                        {% for news in index.news.content %}
+                            <div class="e-content_separated_block">
+                                <a class="e-fullblock_link" href="{{ news.link }}">
+                                    <h3 class="e-news_date">{{ news.date }}</h3>
+                                    <h2 class="project-profile_heading">
+                                        {{ news.title }}
+                                    </h2>
+                                    <div class="project-profile_text">
+                                        {{ news.text }}
+                                    </div>
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <ul class="media_pagination">
+                        {% for amount in index.news.news_pagination %}
+                            <li class="media_switch">
+                                {% if loop.first %}
+                                    <span>
+                                        {{ amount|raw }}
+                                    </span>
+                                {% else %}
+                                    <a>
+                                        {{ amount|raw }}
+                                    </a>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
                 </div>
             </div>
         </div>

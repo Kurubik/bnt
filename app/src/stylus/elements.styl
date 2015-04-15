@@ -14,11 +14,22 @@
   margin-bottom $remify(20px)
   .e-innerpage_content_paddings
     padding-bottom 0
+  .project-profile_text
+    margin-bottom $remify(29px)
 
 .e-page_sustainability
   margin-bottom $remify(150px)
   .e-innerpage_content_paddings
     padding-bottom 0
+
+.e-page_media
+  margin-bottom $remify(68px)
+  .e-innerpage_content_paddings
+    padding-top $remify(21px)
+  .e-fullblock_link
+    padding-top $remify(22px)
+  .e-news_date
+    margin-bottom $remify(5px)
 
 .e-wide_holder
   position relative
@@ -379,3 +390,19 @@ a.e-capitalized_bold
 .e-top_left_colum
   .project-wideimage_text
     margin-bottom $remify(6px)
+
+.e-content_separated_block
+  position relative
+  border-bottom 1px solid $lightGrey
+  .e-news_date
+    margin-top 0
+
+.e-fullblock_link
+  display block
+  width 100%
+  height 100%
+  $transition()
+  &:hover
+    .project-profile_heading, .project-profile_text
+      color $green
+
