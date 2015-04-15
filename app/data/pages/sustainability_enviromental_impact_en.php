@@ -23,7 +23,7 @@ return array(
         'mission' => array(
             'title' => 'Technology Features',
             'text' => 'The technology provides processing and cleaning in a closed cycle of heavy oil residues into light and highly demanded products – diesel and naphtha.',
-            'wideimage' => '/public/assets/images/sustain/technologies.jpg',
+            'wideimage' => '/public/assets/images/sustain/technologies.png',
         ),
     ),
 );
