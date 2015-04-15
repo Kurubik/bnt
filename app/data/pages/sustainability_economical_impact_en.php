@@ -65,7 +65,7 @@ return array(
         ),
     ),
     'middle_content' => array(
-        'wideimage' => '/public/assets/images/map.jpg',
+        'wideimage' => '/public/assets/images/eu-map.jpg',
         'wideimage_sidetext' => 'Ximos es eostium essus moloreptas id ut facipicta vit, tem excestias aborectus molliame voluptatem quis eatiae volor adi dolendi gnihicid molupist, volum. Perspienda volor archica boriantur? Simolorit.',
     ),
 );

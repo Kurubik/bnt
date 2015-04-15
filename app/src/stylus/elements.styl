@@ -195,6 +195,10 @@
   padding $remify(40px) $remify(80px) 0 $remify(40px)
   text-align left
 
+.e-around_left_top_column_paddings
+  padding $remify(58px) $remify(40px) 0
+  text-align left
+
 .e-left_paddings
   padding-left $remify(40px)
 
@@ -229,12 +233,16 @@
     width 1px
     background-color $lightGrey
 
-
 .e-wideimage_block
   position relative
   width 100%
   height $remify(600px)
   background-size cover
+
+
+.e-wideimage_block_initial
+  background-size initial
+  background-position center
 
 .e-wideimage_block_text_holder
   position absolute
@@ -342,3 +350,32 @@
 .e-quarterblock_hover_active
   left 0
   top 0
+
+.e-smallest_haeding
+  margin-bottom $remify(10px)
+  $bold($remify(12px))
+  line-height $remify(14px)
+  text-transform uppercase
+  color $black
+
+.e-capitalized_bold
+  $bold($remify(12px))
+  line-height $remify(14px)
+  text-transform uppercase
+  $transition()
+  span
+    color $darkGrey
+    $transition()
+
+.e-blue
+  color $blue
+
+a.e-capitalized_bold
+  &:hover
+    color $green
+    span
+      color $green
+
+.e-top_left_colum
+  .project-wideimage_text
+    margin-bottom $remify(6px)

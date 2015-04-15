@@ -65,7 +65,7 @@ return array(
         ),
     ),
     'middle_content' => array(
-        'wideimage' => '/public/assets/images/ventspils_nafta.jpg',
+        'wideimage' => '/public/assets/images/project-map.jpg',
         'wideimage_sidetext' => array(
             '1' => array(
                 'area' => '20 000 m<sup>3</sup>',

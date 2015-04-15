@@ -1,0 +1,26 @@
+{% extends 'index.twig' %}
+{% block page %}
+    <div class="e-page_project">
+        <div class="container">
+            <div class="col-xs-3">
+                <div class="e-quarterblock e-top_left_colum e-around_left_top_column_paddings col-xs-border-top">
+                    <h3 class="e-smallest_haeding">{{ index.top_side_content.heading|raw }}</h3>
+                    <div class="project-wideimage_text">{{ index.top_side_content.text|raw }}</div>
+                    <a class="e-capitalized_bold e-blue" href="{{ index.top_side_content.link }}">{{ index.top_side_content.link_text|raw }}</a>
+                </div>
+                <div class="e-quarterblock project-sidemenu_afterfiller"></div>
+            </div>
+            <div class="col-xs-9">
+                <div class="project-mainbanner" style="background-image: url('{{ app.request.basepath }}{{ index.heading.backgroud }}')">
+                    <h1 class="e-wide_title">{{ index.heading.title }}</h1>
+                    <div class="project-mainbanner_text">
+                        {{ index.heading.text }}
+                    </div>
+                </div>
+                <div class="project-content_holder e-innerpage_content_paddings">
+                    adaqsd
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
