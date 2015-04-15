@@ -37,6 +37,18 @@
   .e-news_date
     margin-top $remify(5px)
 
+.e-page_career
+  margin-bottom $remify(69px)
+  .project-progress_list
+    margin-bottom $remify(4px)
+  .e-content_separated_block
+    margin-bottom $remify(42px)
+    padding-bottom $remify(44px)
+    &:last-of-type
+      border-bottom none
+      margin-bottom 0
+      padding-bottom 0
+
 .e-wide_holder
   position relative
   width 100%
@@ -99,6 +111,8 @@
   color $textGrey
   background-color $white
   text-align center
+  .e-blue_to_green_link
+    margin-top $remify(5px)
   &:hover
     .e-quarterblock_type_icon
       transform rotate(180deg)
@@ -416,3 +430,25 @@ a.e-capitalized_bold
   $superBold($remify(48px))
   line-height $remify(57px)
   color $black
+
+.e-after_text
+  $book($remify(16px))
+  line-height $remify(20px)
+  color $darkGrey
+  span, a
+    display inline-block
+    vertical-align middle
+  a
+    margin-left $remify(5px)
+    color $blue
+    $transition()
+    &:hover
+      color $green
+
+.e-blue_to_green_link
+  $book($remify(16px))
+  line-height $remify(22px)
+  color $blue
+  $transition()
+  &:hover
+    color $green

@@ -1,0 +1,39 @@
+{% extends 'index.twig' %}
+{% block page %}
+    <div class="e-page_career">
+        <div class="container">
+            <div class="col-xs-3">
+                <div class="e-quarterblock col-xs-border-top e-around_left_top_column_paddings">
+                    <div class="project-wideimage_text">{{ index.heading.sidetext }}</div>
+                    <a class="e-blue_to_green_link" href="mailto:{{ index.apply.apply_mail }}">{{ index.apply.apply_mail }}</a>
+                </div>
+                <div class="e-quarterblock project-sidemenu_afterfiller"></div>
+            </div>
+            <div class="col-xs-9">
+                <div class="project-mainbanner" style="background-image: url('{{ app.request.basepath }}{{ index.heading.backgroud }}')">
+                    <h1 class="e-wide_title">{{ index.heading.title }}</h1>
+                    <div class="project-mainbanner_text">
+                        {{ index.heading.text }}
+                    </div>
+                </div>
+                <div class="project-content_holder e-innerpage_content_paddings">
+                    {% for apply in index.apply.vacancies %}
+                      <div class="e-content_separated_block">
+                          <h2 class="project-profile_heading">{{ apply.heading }}</h2>
+                          <div class="project-profile_text">{{ apply.text }}</div>
+                          <ul class="project-progress_list">
+                              {% for point in apply.points %}
+                                  <li>{{ point }}</li>
+                              {% endfor %}
+                          </ul>
+                          <div class="e-after_text">
+                            <span>{{ index.apply.apply_title }}</span>
+                            <a href="mailto:{{ index.apply.apply_mail }}">{{ index.apply.apply_mail }}</a>
+                          </div>
+                      </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
