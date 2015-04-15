@@ -1,0 +1,25 @@
+{% extends 'index.twig' %}
+{% block page %}
+<div class="e-page_news">
+    <div class="container">
+        <div class="col-xs-3">
+            <div class="e-quarterblock project-sidemenu_afterfiller e-around_left_top_column_paddings">
+                <a class="e-capitalized_bold e-blue" href="{{ path(index.back_link, {_locale: app.request.locale}) }}">{{ index.back_title }}</a>
+            </div>
+        </div>
+        <div class="col-xs-9 e-innerpage_content_paddings">
+            <h3 class="e-news_date">{{ index.date }}</h3>
+            <h1 class="e-large_heading">{{ index.heading|raw }}</h1>
+            <div class="news_heading_separator"></div>
+            <div class="news_text">{{ index.text|raw }}</div>
+            <div class="news_image_holder">
+                <img class="project-wideimage" src="{{ app.request.basepath }}{{ index.image }}">
+                <div class="news_image_sidetext">
+                    {{ index.image_sidetext }}
+                </div>
+            </div>
+            <div class="news_text">{{ index.text2|raw }}</div>
+        </div>
+    </div>
+</div>
+{% endblock %}

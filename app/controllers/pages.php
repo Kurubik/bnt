@@ -28,7 +28,7 @@ $routes = array (
     array('sustainability_enviromental_impact','sustainability_information'),
     array('sustainability_infrastructure','sustainability_information'),
     array('sustainability_economical_impact', 'sustainability_information'),
-    'media',
+    array('news', 'media'),
 );
 
 
