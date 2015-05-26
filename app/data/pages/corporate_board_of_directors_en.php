@@ -3,7 +3,7 @@ return array(
     'heading' => array(
         'backgroud' => '/public/assets/images/projects/ecofuel.jpg',
         'title' => 'Company Management',
-        'text' => 'Agnit que moluptatur. Quisque non ne re plibus audis receatur abo. Nam, sum voluptaque. Rionse et excero di ut qui bla inusandic tem.Obis escimod ut.',
+        'text' => 'BNT benefits from a strong board of directors, bringing decades of experience in the petrochemical industry and a profound understanding of the entrepreneurial disciplines associated with developing a new and sustainable business.',
     ),
     'project_page' => array(
         'sidemenu' => array(
@@ -14,8 +14,7 @@ return array(
             'ecology' => array(
                 'title' => 'Board of<br>directors',
                 'link' => 'corporate_board_of_directors',
-            ),
-            'management' => array(
+            ), 'management' => array(
                 'title' => 'Management<br>team',
                 'link' => 'corporate_management_team',
             ),
@@ -24,42 +23,39 @@ return array(
         'mission' => array(
             'title' => 'Board of Directors',
             'title2' => 'Management Team',
-            'text' => 'Quisque non ne re plibus audis receatur abo. Nam, sum voluptaque. Ulpari quias essim fuga. Sequam, eum resent es rerioris doloribus:',
         ),
     ),
     'directors_list' => array(
         'jurijs' => array(
             'photo' => '/public/assets/images/company/jurijs.png',
             'name' => 'Jurijs Adamovics',
-            'title' => 'Chairman of the Council',
-            'text' => 'Seasoned executive with 10+ years experience in financial services, asset management, M&A, business development, corporate restructuring and turnarounds.<br><br>
-Since 2012, Mr. Adamovics is CEO of FRR, a leading asset management firm (Russia). Prior to that – Managing Director at MDM Bank (Russia), Senior Vice President, Board Member at Parex Bank (Latvia), Advisor to the Board of Directors of EBRD (UK).<br><br>
-Currently chairman of the boards of directors and non-executive director in several of his portfolio companies.<br><br>
+            'title' => 'Chairman of the Board of Directors',
+            'text' => 'Seasoned executive with 10+ yearÃ¢â‚¬â„¢s experience in financial services, asset management, M&A, business development, corporate restructuring and turnarounds.<br><br>
+Currently also Managing Partner at Nort Group, a Moscow-based private equity, investment management and advisory firm. Mr. Adamovics has been Chief Executive Officer of FRR, a leading Russian asset management firm, earlier, he was Managing Director at MDM Bank, a top 20 Russian bank, Senior Vice President and Board Member at Parex Bank in Latvia and Advisor to the Board of Directors of EBRD in the UK.<br><br>
 Holds MSc in Finance from the London Business School (UK), BA in International Economic Relations, Executive MBA and a Ph.D. (ABD) in Economic Science from the University of Latvia.',
-        ),
-        'alexey' => array(
+        ), 'alexey' => array(
             'photo' => '/public/assets/images/company/alexey.png',
             'name' => 'Alexey Mileev',
-            'title' => 'Deputy Chairman of the Council',
-            'text' => 'Russian entrepreneur with 25+ years experience. Established and developed several businesses in Russia.<br><br>
-Among his green field projects were a middle-sized oil refinery and the biggest in Eastern Europe PET plant. Having good knowledge how to deal with EPC contractors personally supervised key stages of his projects.<br><br>
-Currently is Chairman of the board of directors of a PET plant. Mr. Mileev holds degree in Mathematics.',
+            'title' => 'Deputy Chairman of the Board of Directors',
+            'text' => 'Russian entrepreneur with 25+ yearÃ¢â‚¬â„¢s experience. Established and developed several businesses in Russia.<br><br>
+Among his green field projects were a mid-sized oil refinery and the biggest PET plant in Eastern Europe. Brings a strong background in managing EPC contractors having personally supervised key stages in a number of major projects.<br><br>
+Previously served as Chairman of the Board of Directors of Alconaphta, a Kalingrad based PET plant, and Mari-El Oil Refinery. Mr. Mileev holds degree in Mathematics.',
         ),
         'douglas' => array(
             'photo' => '/public/assets/images/company/douglas.png',
             'name' => 'Douglas Harris',
-            'title' => 'Member of the Council',
+            'title' => 'Member of the Board of Directors',
             'text' => 'Senior Executive with 30+ years of experience in the Oil & Gas and minerals industries.<br><br>
-Mr. Harris’ extensive international leadership experience encompasses top management roles with BP, TNK-BP and Jacobs Engeneering Group. During his career he oversaw refining operations in Russia, Western Europe, Asia, Africa and the US with direct accountability for multiple complex refining operations, mining and pipelines transportation.<br><br>
-Mr. Harris holds MBA in Finance from University of Souther Caroline and BSc in Accounting from Colorado State University.',
+Mr. HarrisÃ¢â‚¬â„¢ extensive international leadership experience encompasses top management roles with BP, TNK-BP and Jacobs Engineering Group. During his career, he oversaw refining operations in Russia, Western Europe, Asia, Africa and the US with direct accountability for multiple complex refining operations, mining and pipelines transportation.<br><br>
+Mr. Harris holds an MBA in Finance from the University of Southern Carolina and a BSc in Accounting from Colorado State University.',
         ),
         'massimiliano' => array(
             'photo' => '/public/assets/images/company/massimiliano.png',
             'name' => 'Massimiliano Colombara',
-            'title' => 'Member of the Council',
-            'text' => 'Senior executive with 30+ years experience supervision and construction monitoring in chemical, petrochemical and fiber industries.<br><br>
-In 1974 as Mr. Colombara started his career as project engeneer with Foster Wheeler. During his tenure with the firm he held various managerial roles, including supervision of operations in Europe, Africa, Russia and CIS, most recently holding position of Executive Vice President in Foster Wheeler Global Sales & Marketing.<br><br>
-Mr. Colombara holds degree in Mechanical and Nuclear Engeneering from University of Genoa.',
+            'title' => 'Member of the Board of Directors',
+            'text' => 'Senior executive with 30+ yearÃ¢â‚¬â„¢s experience in the supervision and monitoring of construction projects in the chemical, petrochemical and fibre industries.<br><br>
+Mr. Colombara started his career as a project engineer with Foster Wheeler. During his tenure with the firm, he held various managerial roles, including supervision of operations in Europe, Africa, Russia and CIS, most recently holding the position of Executive Vice President in Foster Wheeler, Global Sales & Marketing.<br><br>
+Mr. Colombara holds a degree in Mechanical and Nuclear Engineering from the University of Genoa.',
         ),
     ),
 );
